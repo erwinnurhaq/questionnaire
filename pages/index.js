@@ -1,14 +1,22 @@
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  const { executeRecaptcha } = useGoogleReCaptcha();
+
   async function handleSubmit(ev) {
     ev.preventDefault();
-    const { name, email } = ev.currentTarget.elements;
-    console.log(name.value, email.value);
+    if (!executeRecaptcha) {
+      console.log('Execute recaptcha not yet available');
+      return;
+    }
 
     try {
+      const token = await executeRecaptcha('yourAction');
+      console.log(token)
+      const { name, email } = ev.currentTarget.elements;
       const response = await fetch("/api/questionnaire/send", {
         method: "POST",
         headers: {
