@@ -8,15 +8,16 @@ export default function Home() {
 
   async function handleSubmit(ev) {
     ev.preventDefault();
-    if (!executeRecaptcha) {
-      console.log('Execute recaptcha not yet available');
-      return;
-    }
-
+    const { name, email } = ev.currentTarget.elements;
+    
     try {
-      const token = await executeRecaptcha('yourAction');
-      console.log(token)
-      const { name, email } = ev.currentTarget.elements;
+      if (!executeRecaptcha) {
+        throw new Errow('Execute recaptcha not yet available');
+      }
+      const token = await executeRecaptcha('submit_questionnaire');
+      if (!token) {
+        throw new Errow('Fail reCaptcha')
+      }
       const response = await fetch("/api/questionnaire/send", {
         method: "POST",
         headers: {
@@ -28,7 +29,7 @@ export default function Home() {
       const result = await response.json();
       console.log(result)
     } catch (err) {
-      console.log(err);
+      console.log(err.message);
     }
   }
 
