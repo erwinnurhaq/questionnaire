@@ -1,0 +1,6 @@
+.footer {
+  position: absolute;
+  bottom: 1rem;
+  right: 5rem;
+  color: var(--light-gray-text-1);
+}

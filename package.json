@@ -13,6 +13,7 @@
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-google-recaptcha-v3": "1.9.7",
+    "rsuite": "5.13.0",
     "serverless-mysql": "1.5.4"
   },
   "devDependencies": {

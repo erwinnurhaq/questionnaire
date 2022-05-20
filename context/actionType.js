@@ -1,0 +1,8 @@
+export const SET_INITIAL_DATA = 'SET_INITIAL_DATA';
+export const SET_ACTIVE_CATEGORY = 'SET_ACTIVE_CATEGORY';
+export const SET_BIODATA = 'SET_BIODATA';
+export const SET_BIODATA_ERROR = 'SET_BIODATA_ERROR';
+export const SET_ANSWERS = 'SET_ANSWERS';
+export const SET_SCORE = 'SET_SCORE';
+export const SET_TOTAL_SCORE = 'SET_TOTAL_SCORE';
+export const SET_GRADE = 'SET_GRADE';
