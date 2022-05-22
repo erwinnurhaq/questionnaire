@@ -1,6 +1,7 @@
 import {
   SET_INITIAL_DATA,
-  SET_ACTIVE_CATEGORY,
+  SET_ACTIVE_STEP,
+  SET_GRADE_EXPECTATION,
   SET_BIODATA,
   SET_BIODATA_ERROR,
   SET_ANSWERS,
@@ -10,40 +11,20 @@ import {
 } from './actionType';
 
 export const initialState = {
-  active_category: 0,
+  step: 0,
+  ekspektasi_grade: '',
   biodata: {
     nama: '',
     email: '',
-    tingkatan_pengajaran: '',
+    tingkat_sekolah: '',
     mata_pelajaran: '',
-    mata_pelajaran_lainnya: '',
     pengalaman_mengajar: '',
+    pengalaman_digital: '',
   },
   biodata_error: {},
-  questions: {
-    PROFICIENCY_1: [],
-    PROFICIENCY_2: [],
-    PROFICIENCY_3: [],
-    PROFICIENCY_4: [],
-    PROFICIENCY_5: [],
-    PROFICIENCY_6: [],
-  },
-  answers: {
-    PROFICIENCY_1: [],
-    PROFICIENCY_2: [],
-    PROFICIENCY_3: [],
-    PROFICIENCY_4: [],
-    PROFICIENCY_5: [],
-    PROFICIENCY_6: [],
-  },
-  score: {
-    PROFICIENCY_1: 0,
-    PROFICIENCY_2: 0,
-    PROFICIENCY_3: 0,
-    PROFICIENCY_4: 0,
-    PROFICIENCY_5: 0,
-    PROFICIENCY_6: 0,
-  },
+  questions: {},
+  answers: {},
+  score: {},
   total_score: 0,
   grade: '',
 };
@@ -53,8 +34,11 @@ export const globalReducer = (state = initialState, { type, payload }) => {
     case SET_INITIAL_DATA: {
       return { ...state, ...payload };
     }
-    case SET_ACTIVE_CATEGORY: {
-      return { ...state, active_category: payload };
+    case SET_ACTIVE_STEP: {
+      return { ...state, active_step: payload };
+    }
+    case SET_GRADE_EXPECTATION: {
+      return { ...state, ekspektasi_grade: payload };
     }
     case SET_BIODATA: {
       return { ...state, biodata: payload };
@@ -63,7 +47,7 @@ export const globalReducer = (state = initialState, { type, payload }) => {
       return { ...state, biodata_error: payload };
     }
     case SET_ANSWERS: {
-      const answers = [...state.answers[payload.name]];
+      const answers = [...state.answers[payload.name] || []];
       answers[payload.index] = payload.value;
       return { ...state, answers: { ...state.answers, [payload.name]: answers } };
     }

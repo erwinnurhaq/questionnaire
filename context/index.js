@@ -3,7 +3,8 @@ import { STORAGE_KEY } from '~/constants';
 
 import {
   SET_INITIAL_DATA,
-  SET_ACTIVE_CATEGORY,
+  SET_ACTIVE_STEP,
+  SET_GRADE_EXPECTATION,
   SET_BIODATA,
   SET_BIODATA_ERROR,
   SET_ANSWERS,
@@ -23,8 +24,11 @@ export const GlobalProvider = ({ children }) => {
   const setInitialData = (values) => {
     dispatch({ type: SET_INITIAL_DATA, payload: values });
   };
-  const setActiveCategory = (values) => {
-    dispatch({ type: SET_ACTIVE_CATEGORY, payload: values });
+  const setActiveStep = (values) => {
+    dispatch({ type: SET_ACTIVE_STEP, payload: values });
+  };
+  const setGradeExpectation = (values) => {
+    dispatch({ type: SET_GRADE_EXPECTATION, payload: values });
   };
   const setBiodata = (values) => {
     dispatch({ type: SET_BIODATA, payload: values });
@@ -46,17 +50,18 @@ export const GlobalProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    const data = localStorage.getItem(STORAGE_KEY)
+    const data = localStorage.getItem(STORAGE_KEY);
     if (data) {
-      setInitialData(JSON.parse(data))
+      setInitialData(JSON.parse(data));
     }
-  }, []) // eslint-disable-line
+  }, []); // eslint-disable-line
 
   return (
     <GlobalContext.Provider value={state}>
       <GlobalDispatch.Provider
         value={{
-          setActiveCategory,
+          setActiveStep,
+          setGradeExpectation,
           setBiodata,
           setBiodataError,
           setAnswers,
