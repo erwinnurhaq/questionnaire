@@ -3,6 +3,10 @@
   height: 100%;
 }
 
+.title {
+  margin-bottom: 1rem;
+}
+
 .form {
   width: 100%;
   max-width: 24rem;

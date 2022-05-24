@@ -1,25 +1,6 @@
 import { Schema } from 'rsuite';
-import OperatePeopleIcon from '@rsuite/icons/OperatePeople';
-import CharacterAuthorizeIcon from '@rsuite/icons/CharacterAuthorize';
-import BarChartIcon from '@rsuite/icons/BarChart';
-import PageIcon from '@rsuite/icons/Page';
-import TextImageIcon from '@rsuite/icons/TextImage';
 
-export const STORAGE_KEY = 'questionnaire_ed';
-
-const iconSize = { fontSize: '1.2rem' };
-export const STEPS = [
-  { id: 1, step: 0, name: 'Introduction', icon: <OperatePeopleIcon style={iconSize} /> },
-  { id: 2, step: 1, name: 'Biodata', icon: <CharacterAuthorizeIcon style={iconSize} /> },
-  { id: 3, step: 2, name: 'Professional Engagement', icon: <PageIcon style={iconSize} /> },
-  { id: 4, step: 3, name: 'Digital Resources', icon: <PageIcon style={iconSize} /> },
-  { id: 5, step: 4, name: 'Teaching and Learning', icon: <PageIcon style={iconSize} /> },
-  { id: 6, step: 5, name: 'Assessment', icon: <PageIcon style={iconSize} /> },
-  { id: 7, step: 6, name: 'Empowering Learners', icon: <PageIcon style={iconSize} /> },
-  { id: 8, step: 7, name: `Facilitating Learners' Digital Competence`, icon: <PageIcon style={iconSize} /> },
-  { id: 9, step: 8, name: `Additional Info`, icon: <TextImageIcon style={iconSize} /> },
-  { id: 10, step: 9, name: `Result`, icon: <BarChartIcon style={iconSize} /> },
-];
+const { StringType } = Schema.Types;
 
 export const TINGKAT_SEKOLAH = [
   { id: 1, name: 'SD' },
@@ -62,7 +43,10 @@ export const GRADES = [
   { id: 6, name: 'Pelopor', min: 156, max: 186 },
 ];
 
-const { StringType } = Schema.Types;
+export const MODEL_HOME = Schema.Model({
+  ekspektasi_grade: StringType().isRequired('This field is required.'),
+});
+
 export const MODEL_BIODATA = Schema.Model({
   nama: StringType().isRequired('This field is required.'),
   email: StringType().isEmail('Please enter a valid email address.').isRequired('This field is required.'),

@@ -1,8 +1,11 @@
 import Head from 'next/head';
+import { Provider } from 'react-redux';
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
+import { PersistGate } from 'redux-persist/integration/react';
 import 'rsuite/dist/rsuite.min.css';
+
+import { store, persistor } from '~/store';
 import MainLayout from '~/layouts/MainLayout';
-import { GlobalProvider } from '~/context';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
@@ -14,9 +17,11 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="Questionnaire app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <GlobalProvider>
-        <MainLayout>{getLayout(<Component {...pageProps} />)}</MainLayout>
-      </GlobalProvider>
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+          <MainLayout>{getLayout(<Component {...pageProps} />)}</MainLayout>
+        </PersistGate>
+      </Provider>
     </GoogleReCaptchaProvider>
   );
 }

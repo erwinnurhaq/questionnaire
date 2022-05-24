@@ -1,55 +1,41 @@
-import { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { Button, Form, Input, SelectPicker } from 'rsuite';
+import { useDispatch, useSelector } from 'react-redux';
 
 import {
   MAPEL,
   PENGALAMAN_MENGAJAR,
   PENGALAMAN_DIGITAL,
   TINGKAT_SEKOLAH,
-  STORAGE_KEY,
   MODEL_BIODATA,
-} from '~/constants';
-import { GlobalContext, GlobalDispatch } from '~/context';
+} from '~/constants/forms';
+import { STEPS } from '~/constants/steps';
+import formatSelectOption from '~/helpers/formatSelectOption';
 import Field from '~/components/Field';
+import { setBiodata, setBiodataError } from '~/store/slices/biodataSlice';
+import { setCurrentStep, setLatestStep } from '~/store/slices/stepSlice';
 import styles from '~/styles/Home.module.css';
 
 export default function Biodata() {
   const router = useRouter();
-  const state = useContext(GlobalContext);
-  const actions = useContext(GlobalDispatch);
-  const { biodata, biodata_error } = state;
-  const { setActiveStep, setBiodata, setBiodataError } = actions;
+  const dispatch = useDispatch();
+  const { latest } = useSelector((state) => state.step);
+  const { biodata, biodata_error } = useSelector((state) => state.biodata);
 
-  const optionTingkatSekolah = TINGKAT_SEKOLAH.map((item) => ({
-    value: item.name,
-    label: item.name,
-  }));
-
-  const optionMataPelajaran = MAPEL.map((item) => ({
-    value: item.name,
-    label: item.name,
-  }));
-
-  const optionPengalamanMengajar = PENGALAMAN_MENGAJAR.map((item) => ({
-    value: item.name,
-    label: item.name,
-  }));
-
-  const optionPengalamanDigital = PENGALAMAN_DIGITAL.map((item) => ({
-    value: item.name,
-    label: item.name,
-  }));
-
-  function handleSubmit(_, ev) {
+  function handleSubmit(isValid, ev) {
     ev.preventDefault();
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    if (!isValid) return;
+    dispatch(setLatestStep(STEPS[2]))
+    dispatch(setCurrentStep(STEPS[2]))
     router.push(`/proficiencies/1`);
   }
 
   useEffect(() => {
-    setActiveStep(1);
+    if (latest.step < 1) {
+      router.push('/');
+    }
   }, []); // eslint-disable-line
 
   return (
@@ -63,8 +49,8 @@ export default function Biodata() {
         fluid
         model={MODEL_BIODATA}
         formValue={biodata}
-        onChange={(values) => setBiodata(values)}
-        onCheck={(error) => setBiodataError(error)}
+        onChange={(values) => dispatch(setBiodata(values))}
+        onCheck={(error) => dispatch(setBiodataError(error))}
         onSubmit={handleSubmit}
       >
         <Field
@@ -90,7 +76,7 @@ export default function Biodata() {
           placeholder="Pilih salah satu"
           accepter={SelectPicker}
           error={biodata_error.tingkat_sekolah}
-          data={optionTingkatSekolah}
+          data={formatSelectOption(TINGKAT_SEKOLAH)}
           searchable={false}
           block
           required
@@ -101,7 +87,7 @@ export default function Biodata() {
           placeholder="Pilih salah satu"
           accepter={SelectPicker}
           error={biodata_error.mata_pelajaran}
-          data={optionMataPelajaran}
+          data={formatSelectOption(MAPEL)}
           searchable={false}
           block
           required
@@ -112,7 +98,7 @@ export default function Biodata() {
           placeholder="Pilih salah satu"
           accepter={SelectPicker}
           error={biodata_error.pengalaman_mengajar}
-          data={optionPengalamanMengajar}
+          data={formatSelectOption(PENGALAMAN_MENGAJAR)}
           searchable={false}
           block
           required
@@ -123,7 +109,7 @@ export default function Biodata() {
           placeholder="Pilih salah satu"
           accepter={SelectPicker}
           error={biodata_error.pengalaman_digital}
-          data={optionPengalamanDigital}
+          data={formatSelectOption(PENGALAMAN_DIGITAL)}
           searchable={false}
           block
           required

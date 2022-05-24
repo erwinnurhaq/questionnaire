@@ -1,21 +1,12 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useContext, useEffect } from 'react';
 import { Button } from 'rsuite';
-import { GlobalDispatch } from '~/context';
 
-import Questionlayout from '~/layouts/QuestionLayout';
+import ProficiencyLayout from '~/layouts/ProficiencyLayout';
 
 export default function Proficiency() {
   const router = useRouter();
-  const actions = useContext(GlobalDispatch);
-
-  const { proficiencyNumber } = router.query;
-  const { setActiveStep } = actions;
-
-  useEffect(() => {
-    setActiveStep(Number(proficiencyNumber) + 2);
-  }, []); // eslint-disable-line
+  const proficiencyNumber = Number(router.query.proficiencyNumber);
 
   return (
     <div>
@@ -29,4 +20,4 @@ export default function Proficiency() {
   );
 }
 
-Proficiency.getLayout = (page) => <Questionlayout>{page}</Questionlayout>;
+Proficiency.getLayout = (page) => <ProficiencyLayout>{page}</ProficiencyLayout>;
