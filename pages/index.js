@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { Button, Form, SelectPicker } from 'rsuite';
+import { Form, IconButton, SelectPicker } from 'rsuite';
+import SortDown from '@rsuite/icons/SortDown';
 
 import { GRADES, MODEL_HOME } from '~/constants/forms';
 import formatSelectOption from '~/helpers/formatSelectOption';
@@ -18,14 +20,17 @@ export default function Home() {
 
   function handleSubmit(isValid, ev) {
     ev.preventDefault();
-    if(!isValid) return;
-    dispatch(setLatestStep(STEPS[1]))
-    dispatch(setCurrentStep(STEPS[1]))
+    if (!isValid) return;
+    dispatch(setLatestStep(STEPS[1]));
+    dispatch(setCurrentStep(STEPS[1]));
     router.push(`/biodata`);
   }
 
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Introduction | Questionnaire</title>
+      </Head>
       <h2 className={styles.title}>Questionnaire</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tortor sem, molestie sed neque ut,
@@ -55,10 +60,15 @@ export default function Home() {
           block
           required
         />
-        <Form.Group>
-          <Button type="submit" color="cyan" appearance="primary" className={styles.button}>
-            Next
-          </Button>
+        <Form.Group className={styles.button}>
+          <IconButton
+            className="pagination-button"
+            icon={<SortDown />}
+            type="submit"
+            color="cyan"
+            appearance="primary"
+            circle
+          />
         </Form.Group>
       </Form>
     </div>

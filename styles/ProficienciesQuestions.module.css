@@ -1,0 +1,23 @@
+.container {
+  width: 100%;
+  max-width: 1024px;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+.questioncard {
+  padding: 1.5rem;
+  border-radius: 0.2rem;
+  box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
+}
+
+.question {
+  margin-bottom: 1rem;
+}
+
+.buttonwrapper {
+  margin: 1rem 0;
+  float: right;
+}

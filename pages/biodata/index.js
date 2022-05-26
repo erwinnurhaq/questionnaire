@@ -1,7 +1,9 @@
 import { useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { Button, Form, Input, SelectPicker } from 'rsuite';
+import { IconButton, Form, Input, SelectPicker } from 'rsuite';
+import SortDown from '@rsuite/icons/SortDown';
+import SortUp from '@rsuite/icons/SortUp';
 import { useDispatch, useSelector } from 'react-redux';
 
 import {
@@ -16,7 +18,7 @@ import formatSelectOption from '~/helpers/formatSelectOption';
 import Field from '~/components/Field';
 import { setBiodata, setBiodataError } from '~/store/slices/biodataSlice';
 import { setCurrentStep, setLatestStep } from '~/store/slices/stepSlice';
-import styles from '~/styles/Home.module.css';
+import styles from '~/styles/Biodata.module.css';
 
 export default function Biodata() {
   const router = useRouter();
@@ -24,11 +26,15 @@ export default function Biodata() {
   const { latest } = useSelector((state) => state.step);
   const { biodata, biodata_error } = useSelector((state) => state.biodata);
 
+  function handlePrev() {
+    router.push('/')
+  }
+  
   function handleSubmit(isValid, ev) {
     ev.preventDefault();
     if (!isValid) return;
-    dispatch(setLatestStep(STEPS[2]))
-    dispatch(setCurrentStep(STEPS[2]))
+    dispatch(setLatestStep(STEPS[2]));
+    dispatch(setCurrentStep(STEPS[2]));
     router.push(`/proficiencies/1`);
   }
 
@@ -114,10 +120,16 @@ export default function Biodata() {
           block
           required
         />
-        <Form.Group>
-          <Button type="submit" color="cyan" appearance="primary" className={styles.button}>
-            Next
-          </Button>
+        <Form.Group className={styles.button}>
+          <IconButton className="pagination-button" icon={<SortUp />} circle onClick={handlePrev} />
+          <IconButton
+            className="pagination-button"
+            icon={<SortDown />}
+            type="submit"
+            color="cyan"
+            appearance="primary"
+            circle
+          />
         </Form.Group>
       </Form>
     </div>

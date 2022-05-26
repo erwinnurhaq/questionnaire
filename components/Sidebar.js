@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { Steps } from 'rsuite';
 
 import { STEPS } from '~/constants/steps';
-import styles from '~/styles/components/Sidebar.module.css';
 import { setCurrentStep } from '~/store/slices/stepSlice';
+import styles from '~/styles/components/Sidebar.module.css';
 import StepIcons from './StepIcons';
 
 export default function Sidebar() {

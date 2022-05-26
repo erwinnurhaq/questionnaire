@@ -13,7 +13,7 @@ export const proficiencySlice = createSlice({
   reducers: {
     setAnswers: (state, { payload }) => {
       const answers = [...(state.answers[payload.partNo] || [])];
-      answers[payload.questionNo] = payload.value;
+      answers[payload.questionNo - 1] = payload.value;
       state.answers[payload.partNo] = answers;
     },
     setScore: (state, { payload }) => {

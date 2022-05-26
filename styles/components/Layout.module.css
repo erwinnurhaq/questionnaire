@@ -10,5 +10,19 @@
   height: 100%;
   min-height: 100vh;
   position: relative;
-  padding: 2rem 2rem 5rem 20rem;
+  padding: 2rem 2rem 10rem 20rem;
+}
+
+.drawertrigger {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    padding: 4rem 2rem 10rem 2rem;
+  }
 }

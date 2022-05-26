@@ -1,21 +1,20 @@
-import { useRouter } from "next/router";
-import { useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
-export default function Questionlayout({ children }) {
+export default function ProficiencyLayout({ number, children }) {
   const router = useRouter();
   const { latest } = useSelector((state) => state.step);
-  const proficiencyNumber = Number(router.query.proficiencyNumber);
 
   useEffect(() => {
-    if (latest.step < proficiencyNumber + 1) {
-      if (proficiencyNumber === 1) {
+    if (latest.step < number + 1) {
+      if (number === 1) {
         router.push('/biodata');
       } else {
-        router.push(`/proficiencies/${proficiencyNumber - 1}`);
+        router.push(`/proficiencies/${number - 1}`);
       }
     }
-  }, [proficiencyNumber]); // eslint-disable-line
+  }, []); // eslint-disable-line
 
   return <div>{children}</div>;
 }

@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,8 +18,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+    Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -30,6 +32,41 @@ a:hover {
 }
 
 .rs-steps-item-title {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   padding-top: 0.2rem;
+}
+
+.rs-steps-item-status-finish:hover,
+.rs-steps-item-status-process:hover {
+  cursor: pointer;
+}
+
+.rs-steps-item-status-finish:hover .rs-steps-item-title,
+.rs-steps-item-status-process:hover .rs-steps-item-title {
+  font-weight: bold;
+}
+
+.rs-drawer-left.rs-drawer-xs {
+  width: 20rem;
+}
+
+.rs-drawer-body-close {
+  left: auto;
+  right: 15px;
+  top: 15px;
+}
+
+.pagination-button {
+  margin: 0.2rem;
+}
+
+.pagination-button .rs-icon {
+  font-size: 1.8rem !important;
+}
+
+
+@media screen and (max-width: 768px) {
+  .grecaptcha-badge {
+    display: none !important;
+  }
 }

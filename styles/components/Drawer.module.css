@@ -1,8 +1,9 @@
+.drawerbody {
+  background-color: var(--light-gray-bg-1);
+  padding: 0;
+}
+
 .container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
   display: flex;
   width: 18rem;
   height: 100%;
@@ -25,10 +26,4 @@
   height: 100%;
   padding: 2rem 1rem 1rem 1.5rem;
   background-color: var(--light-gray-bg-1);
-}
-
-@media screen and (max-width: 768px) {
-  .container {
-    display: none;
-  }
 }
