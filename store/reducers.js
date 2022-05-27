@@ -7,12 +7,14 @@ import step from './slices/stepSlice';
 import intro from './slices/introSlice';
 import biodata from './slices/biodataSlice';
 import proficiency from './slices/proficiencySlice';
+import additional from './slices/additionalSlice';
 
 const rootReducer = combineReducers({
   step,
   intro,
   biodata,
   proficiency,
+  additional
 });
 
 const persistConfig = {

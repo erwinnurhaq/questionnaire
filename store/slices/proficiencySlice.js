@@ -25,15 +25,9 @@ export const proficiencySlice = createSlice({
     setGrade: (state, { payload }) => {
       state.grade = payload;
     },
-    setInitialProficiency: (state, { payload }) => {
-      state.answers = payload.answers
-      state.score = payload.score
-      state.total_score = payload.total_score
-      state.grade = payload.grade
-    }
   },
 });
 
-export const { setAnswers, setScore, setTotalScore, setGrade, setInitialProficiency } = proficiencySlice.actions;
+export const { setAnswers, setScore, setTotalScore, setGrade } = proficiencySlice.actions;
 
 export default proficiencySlice.reducer;

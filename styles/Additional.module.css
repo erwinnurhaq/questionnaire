@@ -1,0 +1,53 @@
+.container {
+  width: 100%;
+  max-width: 1024px;
+}
+
+.additionalcontainer {
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.questionscontainer {
+  padding: 0 1rem;
+}
+
+.questionradiowrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem 0 1rem 1rem;
+}
+
+.questionradio {
+  padding: 0 1rem 0 0.2rem;
+  border: 1px solid var(--light-gray-bg-1);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.questionradio:hover {
+  background-color: var(--light-gray-bg-2);
+}
+
+.questionradio[aria-checked='true'] {
+  background-color: var(--light-gray-bg-2);
+}
+
+.buttonwrapper {
+  margin: 1rem 0;
+  float: right;
+}
+
+@media screen and (max-width: 900px) {
+  .questionradiowrapper {
+    flex-direction: column;
+  }
+}

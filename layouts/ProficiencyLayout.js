@@ -14,7 +14,7 @@ export default function ProficiencyLayout({ number, children }) {
         router.push(`/proficiencies/${number - 1}`);
       }
     }
-  }, []); // eslint-disable-line
+  }, [latest.step, number]); // eslint-disable-line
 
   return <div>{children}</div>;
 }

@@ -14,17 +14,13 @@ export const stepSlice = createSlice({
       state.current = payload;
     },
     setLatestStep: (state, { payload }) => {
-      if (payload.step > state.current.step) {
+      if (payload.step > state.latest.step) {
         state.latest = payload;
       }
-    },
-    setInitialStep: (state, { payload }) => {
-      state.current = payload.current;
-      state.latest = payload.latest;
     },
   },
 });
 
-export const { setCurrentStep, setLatestStep, setInitialStep } = stepSlice.actions;
+export const { setCurrentStep, setLatestStep } = stepSlice.actions;
 
 export default stepSlice.reducer;

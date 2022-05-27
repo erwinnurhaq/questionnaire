@@ -22,13 +22,9 @@ export const biodataSlice = createSlice({
     setBiodataError: (state, { payload }) => {
       state.biodata_error = payload;
     },
-    setInitialBiodata: (state, { payload }) => {
-      state.biodata = payload.biodata;
-      state.biodata_error = payload.biodata_error;
-    },
   },
 });
 
-export const { setBiodata, setBiodataError, setInitialBiodata } = biodataSlice.actions;
+export const { setBiodata, setBiodataError } = biodataSlice.actions;
 
 export default biodataSlice.reducer;

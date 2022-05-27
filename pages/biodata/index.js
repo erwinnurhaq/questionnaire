@@ -27,9 +27,9 @@ export default function Biodata() {
   const { biodata, biodata_error } = useSelector((state) => state.biodata);
 
   function handlePrev() {
-    router.push('/')
+    router.push('/');
   }
-  
+
   function handleSubmit(isValid, ev) {
     ev.preventDefault();
     if (!isValid) return;
@@ -121,9 +121,16 @@ export default function Biodata() {
           required
         />
         <Form.Group className={styles.button}>
-          <IconButton className="pagination-button" icon={<SortUp />} circle onClick={handlePrev} />
           <IconButton
             className="pagination-button"
+            title="Kembali"
+            icon={<SortUp />}
+            circle
+            onClick={handlePrev}
+          />
+          <IconButton
+            className="pagination-button"
+            title="Berikutnya"
             icon={<SortDown />}
             type="submit"
             color="cyan"

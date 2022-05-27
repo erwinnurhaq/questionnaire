@@ -17,13 +17,9 @@ export const introSlice = createSlice({
     setIntroError: (state, { payload }) => {
       state.intro_error = payload;
     },
-    setInitialIntro: (state, { payload }) => {
-      state.intro = payload.intro;
-      state.intro_error = payload.intro_error;
-    }
   },
 });
 
-export const { setIntro, setIntroError, setInitialIntro } = introSlice.actions;
+export const { setIntro, setIntroError } = introSlice.actions;
 
 export default introSlice.reducer;

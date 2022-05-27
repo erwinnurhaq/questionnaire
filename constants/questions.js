@@ -32,7 +32,7 @@ export const additional1 = {
   choices: new Array(5).fill({}).map((_, index2) => ({
     id: index2 + 1,
     value: index2 + 1,
-    text: 'something agree',
+    text: `option ${index2 + 1}`,
   })),
   questions: new Array(4).fill({}).map((_, index) => ({
     id: index + 1,
@@ -50,7 +50,7 @@ export const additional2 = {
   choices: new Array(5).fill({}).map((_, index2) => ({
     id: index2 + 1,
     value: index2 + 1,
-    text: 'something agree',
+    text: `option ${index2 + 1}`,
   })),
   questions: new Array(7).fill({}).map((_, index) => ({
     id: index + 1,

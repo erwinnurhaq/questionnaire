@@ -12,6 +12,7 @@ import { setAnswers } from '~/store/slices/proficiencySlice';
 import { questions } from '~/constants/questions';
 import { STEPS } from '~/constants/steps';
 import styles from '~/styles/ProficienciesQuestions.module.css';
+import QuestionsLayout from '~/layouts/QuestionsLayout';
 
 export async function getServerSideProps({ query }) {
   const proficiencyNumber = Number(query.proficiencyNumber);
@@ -67,46 +68,61 @@ export default function ProficiencyQuestion({ proficiency, question, nextProfici
 
   return (
     <ProficiencyLayout number={proficiency.no}>
-      <Head>
-        <title>{proficiency.name} | Questionnaire</title>
-      </Head>
-      <div className={styles.container}>
-        <h4 className={styles.title}>
-          {proficiency.no}. {proficiency.name}
-        </h4>
-        <div className={styles.questioncard}>
-          <p className={styles.question}>
-            <b>
-              {proficiency.no}.{question.no}.
-            </b>{' '}
-            <span dangerouslySetInnerHTML={{ __html: question.question }}></span>
-          </p>
-          <div>
-            {question.choices.map((choice) => (
-              <Radio
-                key={choice.id}
-                value={choice.value}
-                checked={answer === choice.value}
-                onClick={() => handleCheckRadio(choice.value)}
-              >
-                <span dangerouslySetInnerHTML={{ __html: choice.text }}></span>
-              </Radio>
-            ))}
+      <QuestionsLayout
+        questionNo={question.no}
+        totalNo={proficiency.questions.length}
+        isAnswered={answer !== undefined}
+        isAllAnswered={answers[proficiency.no].length === proficiency.questions.length}
+      >
+        <Head>
+          <title>{proficiency.name} | Questionnaire</title>
+        </Head>
+        <div className={styles.container}>
+          <h4 className={styles.title}>
+            {proficiency.no}. {proficiency.name}
+          </h4>
+          <div className={styles.questioncard}>
+            <p className={styles.question}>
+              <b>
+                {proficiency.no}.{question.no}.
+              </b>{' '}
+              <span dangerouslySetInnerHTML={{ __html: question.question }}></span>
+            </p>
+            <div>
+              {question.choices.map((choice) => (
+                <Radio
+                  key={choice.id}
+                  className={styles.questionradio}
+                  value={choice.value}
+                  checked={answer === choice.value}
+                  onClick={() => handleCheckRadio(choice.value)}
+                >
+                  <span dangerouslySetInnerHTML={{ __html: choice.text }}></span>
+                </Radio>
+              ))}
+            </div>
+          </div>
+          <div className={styles.buttonwrapper}>
+            <IconButton
+              className="pagination-button"
+              title="Kembali"
+              icon={<SortUp />}
+              circle
+              onClick={handlePrev}
+            />
+            <IconButton
+              className="pagination-button"
+              title="Berikutnya"
+              icon={<SortDown />}
+              color="cyan"
+              appearance="primary"
+              circle
+              disabled={answer === undefined}
+              onClick={handleNext}
+            />
           </div>
         </div>
-        <div className={styles.buttonwrapper}>
-          <IconButton className="pagination-button" icon={<SortUp />} circle onClick={handlePrev} />
-          <IconButton
-            className="pagination-button"
-            icon={<SortDown />}
-            color="cyan"
-            appearance="primary"
-            circle
-            disabled={answer === undefined}
-            onClick={handleNext}
-          />
-        </div>
-      </div>
+      </QuestionsLayout>
     </ProficiencyLayout>
   );
 }

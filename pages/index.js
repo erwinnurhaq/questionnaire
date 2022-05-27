@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { Form, IconButton, SelectPicker } from 'rsuite';
 import SortDown from '@rsuite/icons/SortDown';
+import PlusRound from '@rsuite/icons/PlusRound';
 
 import { GRADES, MODEL_HOME } from '~/constants/forms';
 import formatSelectOption from '~/helpers/formatSelectOption';
@@ -16,11 +17,8 @@ export default function Home() {
   const router = useRouter();
   const dispatch = useDispatch();
   const intro = useSelector((state) => state.intro.intro);
-  const introError = useSelector((state) => state.intro.intro_error);
 
-  function handleSubmit(isValid, ev) {
-    ev.preventDefault();
-    if (!isValid) return;
+  function handleNext() {
     dispatch(setLatestStep(STEPS[1]));
     dispatch(setCurrentStep(STEPS[1]));
     router.push(`/biodata`);
@@ -40,7 +38,36 @@ export default function Home() {
         mauris dolor fermentum tellus, id pellentesque tellus elit in ex. Phasellus lectus metus, lobortis id
         lacinia pretium, rhoncus sed felis.
       </p>
-      <Form
+      <h5 className={styles.subtitle}>Ekspektasi Grade:</h5>
+      <div className={styles.expectationwrapper}>
+        {formatSelectOption(GRADES).map((grade) => (
+          <button
+            key={grade.value}
+            type="button"
+            className={
+              intro.ekspektasi_grade === grade.value ? styles.expectationactive : styles.expectationinactive
+            }
+            onClick={() => dispatch(setIntro({ ekspektasi_grade: grade.value }))}
+          >
+            <PlusRound className={styles.expectationicon} />
+            <p>{grade.label}</p>
+          </button>
+        ))}
+      </div>
+      <div className={styles.buttonwrapper}>
+        <IconButton
+          className="pagination-button"
+          title="Berikutnya"
+          disabled={intro.ekspektasi_grade === ''}
+          icon={<SortDown />}
+          type="submit"
+          color="cyan"
+          appearance="primary"
+          circle
+          onClick={handleNext}
+        />
+      </div>
+      {/* <Form
         fluid
         className={styles.form}
         formValue={intro}
@@ -70,7 +97,7 @@ export default function Home() {
             circle
           />
         </Form.Group>
-      </Form>
+      </Form> */}
     </div>
   );
 }

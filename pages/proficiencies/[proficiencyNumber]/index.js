@@ -42,9 +42,16 @@ export default function Proficiency({ proficiency, previousProficiency }) {
           {proficiency.no}. {proficiency.name}
         </h2>
         <div>
-          <IconButton className="pagination-button" icon={<SortUp />} circle onClick={handlePrev} />
           <IconButton
             className="pagination-button"
+            title="Kembali"
+            icon={<SortUp />}
+            circle
+            onClick={handlePrev}
+          />
+          <IconButton
+            className="pagination-button"
+            title="Berikutnya"
             icon={<SortDown />}
             color="cyan"
             appearance="primary"

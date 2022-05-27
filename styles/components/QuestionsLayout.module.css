@@ -1,0 +1,44 @@
+.container {
+  width: 100%;
+  max-width: 1024px;
+}
+
+.progresscontainer {
+  background-color: white;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.progresswrapper {
+  display: flex;
+  align-items: center;
+  height: 1.5rem;
+  padding: 0 1rem 0 0;
+}
+
+.progressbarcomplete > div > div{
+  background: var(--light-green-text-1);
+}
+
+.progressinfo {
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .progresscontainer {
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .progresswrapper {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    padding: 0 2rem 0 3rem;
+  }
+}
