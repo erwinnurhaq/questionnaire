@@ -1,14 +1,14 @@
 import { useDispatch, useSelector } from 'react-redux';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { Form, IconButton, SelectPicker } from 'rsuite';
+import { IconButton } from 'rsuite';
 import SortDown from '@rsuite/icons/SortDown';
 import PlusRound from '@rsuite/icons/PlusRound';
+import { AnimatePresence, motion } from 'framer-motion';
 
-import { GRADES, MODEL_HOME } from '~/constants/forms';
+import { GRADES } from '~/constants/forms';
 import formatSelectOption from '~/helpers/formatSelectOption';
-import Field from '~/components/Field';
-import { setIntro, setIntroError } from '~/store/slices/introSlice';
+import { setIntro } from '~/store/slices/introSlice';
 import styles from '~/styles/Home.module.css';
 import { setCurrentStep, setLatestStep } from '~/store/slices/stepSlice';
 import { STEPS } from '~/constants/steps';
@@ -29,44 +29,61 @@ export default function Home() {
       <Head>
         <title>Introduction | Questionnaire</title>
       </Head>
-      <h2 className={styles.title}>Questionnaire</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tortor sem, molestie sed neque ut,
-        vulputate iaculis tortor. Aliquam vel enim placerat, tincidunt tortor at, mollis risus. Quisque ut
-        massa dolor. Maecenas rhoncus augue risus, ut aliquam orci commodo quis. Aliquam pharetra tincidunt
-        porttitor. Proin in tempor ligula, aliquam lobortis sapien. Sed ullamcorper, nulla ut aliquet laoreet,
-        mauris dolor fermentum tellus, id pellentesque tellus elit in ex. Phasellus lectus metus, lobortis id
-        lacinia pretium, rhoncus sed felis.
-      </p>
-      <h5 className={styles.subtitle}>Ekspektasi Grade:</h5>
-      <div className={styles.expectationwrapper}>
-        {formatSelectOption(GRADES).map((grade) => (
-          <button
-            key={grade.value}
-            type="button"
-            className={
-              intro.ekspektasi_grade === grade.value ? styles.expectationactive : styles.expectationinactive
-            }
-            onClick={() => dispatch(setIntro({ ekspektasi_grade: grade.value }))}
-          >
-            <PlusRound className={styles.expectationicon} />
-            <p>{grade.label}</p>
-          </button>
-        ))}
-      </div>
-      <div className={styles.buttonwrapper}>
-        <IconButton
-          className="pagination-button"
-          title="Berikutnya"
-          disabled={intro.ekspektasi_grade === ''}
-          icon={<SortDown />}
-          type="submit"
-          color="cyan"
-          appearance="primary"
-          circle
-          onClick={handleNext}
-        />
-      </div>
+      <AnimatePresence exitBeforeEnter>
+        <motion.div
+          key={router.route}
+          initial="hidden"
+          animate="enter"
+          exit="exit"
+          variants={{
+            hidden: { opacity: 0 },
+            enter: { opacity: 1 },
+            exit: { opacity: 0 },
+          }}
+          transition={{ duration: 0.4, type: 'tween', ease: 'easeOut' }}
+        >
+          <h2 className={styles.title}>Questionnaire</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tortor sem, molestie sed neque ut,
+            vulputate iaculis tortor. Aliquam vel enim placerat, tincidunt tortor at, mollis risus. Quisque ut
+            massa dolor. Maecenas rhoncus augue risus, ut aliquam orci commodo quis. Aliquam pharetra
+            tincidunt porttitor. Proin in tempor ligula, aliquam lobortis sapien. Sed ullamcorper, nulla ut
+            aliquet laoreet, mauris dolor fermentum tellus, id pellentesque tellus elit in ex. Phasellus
+            lectus metus, lobortis id lacinia pretium, rhoncus sed felis.
+          </p>
+          <h5 className={styles.subtitle}>Ekspektasi Grade:</h5>
+          <div className={styles.expectationwrapper}>
+            {formatSelectOption(GRADES).map((grade) => (
+              <button
+                key={grade.value}
+                type="button"
+                className={
+                  intro.ekspektasi_grade === grade.value
+                    ? styles.expectationactive
+                    : styles.expectationinactive
+                }
+                onClick={() => dispatch(setIntro({ ekspektasi_grade: grade.value }))}
+              >
+                <PlusRound className={styles.expectationicon} />
+                <p>{grade.label}</p>
+              </button>
+            ))}
+          </div>
+          <div className={styles.buttonwrapper}>
+            <IconButton
+              className="pagination-button"
+              title="Berikutnya"
+              disabled={intro.ekspektasi_grade === ''}
+              icon={<SortDown />}
+              type="submit"
+              color="cyan"
+              appearance="primary"
+              circle
+              onClick={handleNext}
+            />
+          </div>
+        </motion.div>
+      </AnimatePresence>
       {/* <Form
         fluid
         className={styles.form}

@@ -5,6 +5,7 @@ import { IconButton, Form, Input, SelectPicker } from 'rsuite';
 import SortDown from '@rsuite/icons/SortDown';
 import SortUp from '@rsuite/icons/SortUp';
 import { useDispatch, useSelector } from 'react-redux';
+import { AnimatePresence, motion } from 'framer-motion';
 
 import {
   MAPEL,
@@ -50,95 +51,110 @@ export default function Biodata() {
         <title>Biodata | Questionnaire</title>
       </Head>
       <h2 className={styles.title}>Biodata</h2>
-      <Form
-        className={styles.form}
-        fluid
-        model={MODEL_BIODATA}
-        formValue={biodata}
-        onChange={(values) => dispatch(setBiodata(values))}
-        onCheck={(error) => dispatch(setBiodataError(error))}
-        onSubmit={handleSubmit}
-      >
-        <Field
-          name="nama"
-          label="Nama"
-          placeholder="Masukkan nama anda"
-          accepter={Input}
-          error={biodata_error.nama}
-          required
-        />
-        <Field
-          name="email"
-          label="Email"
-          placeholder="Masukkan email anda"
-          type="email"
-          accepter={Input}
-          error={biodata_error.email}
-          required
-        />
-        <Field
-          name="tingkat_sekolah"
-          label="Tingkat Sekolah"
-          placeholder="Pilih salah satu"
-          accepter={SelectPicker}
-          error={biodata_error.tingkat_sekolah}
-          data={formatSelectOption(TINGKAT_SEKOLAH)}
-          searchable={false}
-          block
-          required
-        />
-        <Field
-          name="mata_pelajaran"
-          label="Mata Pelajaran"
-          placeholder="Pilih salah satu"
-          accepter={SelectPicker}
-          error={biodata_error.mata_pelajaran}
-          data={formatSelectOption(MAPEL)}
-          searchable={false}
-          block
-          required
-        />
-        <Field
-          name="pengalaman_mengajar"
-          label="Pengalaman Mengajar"
-          placeholder="Pilih salah satu"
-          accepter={SelectPicker}
-          error={biodata_error.pengalaman_mengajar}
-          data={formatSelectOption(PENGALAMAN_MENGAJAR)}
-          searchable={false}
-          block
-          required
-        />
-        <Field
-          name="pengalaman_digital"
-          label="Pengalaman Menggunakan Teknologi Digital"
-          placeholder="Pilih salah satu"
-          accepter={SelectPicker}
-          error={biodata_error.pengalaman_digital}
-          data={formatSelectOption(PENGALAMAN_DIGITAL)}
-          searchable={false}
-          block
-          required
-        />
-        <Form.Group className={styles.button}>
-          <IconButton
-            className="pagination-button"
-            title="Kembali"
-            icon={<SortUp />}
-            circle
-            onClick={handlePrev}
-          />
-          <IconButton
-            className="pagination-button"
-            title="Berikutnya"
-            icon={<SortDown />}
-            type="submit"
-            color="cyan"
-            appearance="primary"
-            circle
-          />
-        </Form.Group>
-      </Form>
+      <AnimatePresence exitBeforeEnter>
+        <motion.div
+          key={router.route}
+          initial="hidden"
+          animate="enter"
+          exit="exit"
+          variants={{
+            hidden: { opacity: 0 },
+            enter: { opacity: 1 },
+            exit: { opacity: 0 },
+          }}
+          transition={{ duration: 0.4, type: 'tween', ease: 'easeOut' }}
+        >
+          <Form
+            className={styles.form}
+            fluid
+            model={MODEL_BIODATA}
+            formValue={biodata}
+            onChange={(values) => dispatch(setBiodata(values))}
+            onCheck={(error) => dispatch(setBiodataError(error))}
+            onSubmit={handleSubmit}
+          >
+            <Field
+              name="nama"
+              label="Nama"
+              placeholder="Masukkan nama anda"
+              accepter={Input}
+              error={biodata_error.nama}
+              required
+            />
+            <Field
+              name="email"
+              label="Email"
+              placeholder="Masukkan email anda"
+              type="email"
+              accepter={Input}
+              error={biodata_error.email}
+              required
+            />
+            <Field
+              name="tingkat_sekolah"
+              label="Tingkat Sekolah"
+              placeholder="Pilih salah satu"
+              accepter={SelectPicker}
+              error={biodata_error.tingkat_sekolah}
+              data={formatSelectOption(TINGKAT_SEKOLAH)}
+              searchable={false}
+              block
+              required
+            />
+            <Field
+              name="mata_pelajaran"
+              label="Mata Pelajaran"
+              placeholder="Pilih salah satu"
+              accepter={SelectPicker}
+              error={biodata_error.mata_pelajaran}
+              data={formatSelectOption(MAPEL)}
+              searchable={false}
+              block
+              required
+            />
+            <Field
+              name="pengalaman_mengajar"
+              label="Pengalaman Mengajar"
+              placeholder="Pilih salah satu"
+              accepter={SelectPicker}
+              error={biodata_error.pengalaman_mengajar}
+              data={formatSelectOption(PENGALAMAN_MENGAJAR)}
+              searchable={false}
+              block
+              required
+            />
+            <Field
+              name="pengalaman_digital"
+              label="Pengalaman Menggunakan Teknologi Digital"
+              placeholder="Pilih salah satu"
+              accepter={SelectPicker}
+              error={biodata_error.pengalaman_digital}
+              data={formatSelectOption(PENGALAMAN_DIGITAL)}
+              searchable={false}
+              block
+              required
+            />
+            <Form.Group className={styles.button}>
+              <IconButton
+                className="pagination-button"
+                title="Kembali"
+                icon={<SortUp />}
+                circle
+                onClick={handlePrev}
+              />
+              <IconButton
+                className="pagination-button"
+                title="Berikutnya"
+                icon={<SortDown />}
+                type="submit"
+                color="cyan"
+                appearance="primary"
+                circle
+              />
+            </Form.Group>
+          </Form>
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 }

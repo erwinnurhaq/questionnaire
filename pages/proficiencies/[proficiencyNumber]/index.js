@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { IconButton } from 'rsuite';
 import SortDown from '@rsuite/icons/SortDown';
 import SortUp from '@rsuite/icons/SortUp';
+import { AnimatePresence, motion } from 'framer-motion';
 
 import ProficiencyLayout from '~/layouts/ProficiencyLayout';
 import { questions } from '~/constants/questions';
@@ -37,29 +38,44 @@ export default function Proficiency({ proficiency, previousProficiency }) {
       <Head>
         <title>{proficiency.name} | Questionnaire</title>
       </Head>
-      <div className={styles.container}>
-        <h2 className={styles.title}>
-          {proficiency.no}. {proficiency.name}
-        </h2>
-        <div>
-          <IconButton
-            className="pagination-button"
-            title="Kembali"
-            icon={<SortUp />}
-            circle
-            onClick={handlePrev}
-          />
-          <IconButton
-            className="pagination-button"
-            title="Berikutnya"
-            icon={<SortDown />}
-            color="cyan"
-            appearance="primary"
-            circle
-            onClick={handleNext}
-          />
-        </div>
-      </div>
+      <AnimatePresence exitBeforeEnter>
+        <motion.div
+          key={router.asPath}
+          initial="hidden"
+          animate="enter"
+          exit="exit"
+          variants={{
+            hidden: { opacity: 0 },
+            enter: { opacity: 1},
+            exit: { opacity: 0 },
+          }}
+          transition={{ duration: 0.4, type: 'tween', ease: 'easeOut' }}
+        >
+          <div className={styles.container}>
+            <h2 className={styles.title}>
+              {proficiency.no}. {proficiency.name}
+            </h2>
+            <div>
+              <IconButton
+                className="pagination-button"
+                title="Kembali"
+                icon={<SortUp />}
+                circle
+                onClick={handlePrev}
+              />
+              <IconButton
+                className="pagination-button"
+                title="Berikutnya"
+                icon={<SortDown />}
+                color="cyan"
+                appearance="primary"
+                circle
+                onClick={handleNext}
+              />
+            </div>
+          </div>
+        </motion.div>
+      </AnimatePresence>
     </ProficiencyLayout>
   );
 }
