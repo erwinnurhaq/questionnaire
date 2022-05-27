@@ -70,14 +70,13 @@ export default function ProficiencyQuestion({ proficiency, question, nextProfici
     }
   }
 
-  console.log(router.asPath);
   return (
     <ProficiencyLayout number={proficiency.no}>
       <QuestionsLayout
         questionNo={question.no}
         totalNo={proficiency.questions.length}
         isAnswered={answer !== undefined}
-        isAllAnswered={answers[proficiency.no].length === proficiency.questions.length}
+        isAllAnswered={answers[proficiency.no]?.length === proficiency.questions.length}
       >
         <Head>
           <title>{proficiency.name} | Questionnaire</title>

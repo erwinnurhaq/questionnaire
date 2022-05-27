@@ -1,13 +1,13 @@
 import { Progress } from 'rsuite';
 import styles from '~/styles/components/QuestionsLayout.module.css';
 
-export default function QuestionsLayout({ questionNo, totalNo, isAnswered, children }) {
+export default function QuestionsLayout({ questionNo, totalNo, isAnswered, isAllAnswered, children }) {
   return (
     <div className={styles.container}>
       <div className={styles.progresscontainer}>
         <div className={styles.progresswrapper}>
           <Progress.Line
-            className={styles.progressbarcomplete}
+            className={isAllAnswered ? styles.progressbarcomplete : ''}
             percent={((questionNo - (isAnswered ? 0 : 1)) / totalNo) * 100}
             showInfo={false}
             strokeColor="#ffc107"
