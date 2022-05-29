@@ -1,0 +1,222 @@
+{
+  "id": 3,
+  "no": 3,
+  "name": "TEACHING and LEARNING",
+  "questions": [
+    {
+      "id": 1,
+      "no": 1,
+      "name": "Belajar dan Mengajar – Pengajaran",
+      "question": "Mendesain, mengembangkan dan mendukung pembelajaran dengan menggunakan teknologi digital untuk meningkatkan hasil pembelajaran",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "Saya <b>menyadari</b> bahwa teknologi digital dapat membantu dan meningkatkan proses belajar mengajar (menggunakan aplikasi program/software, aplikasi seluler/mobile, sumber belajar online dan berbasis awan/<i>cloud-based</i>)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "Saya <b>telah mencoba</b> menggunakan teknologi digital untuk membantu dan atau meningkatkan praktik mengajar saya (menggunakan aplikasi program/software tertentu, aplikasi seluler, sumber belajar online dan <i>cloud-based</i>, layar/papan tulis interaktif)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "Saya <b>menggunakan </b>beragam teknologi digital yang dapat membantu inovasi pendekatan pedagogi, dan meningkatkan keterlibatan aktif siswa dalam pembelajaran (pembelajaran berbasis inkuiri, pembelajaran berbasis proyek, pembelajaran berbasis permainan, penilaian diri dan kelompok, portofolio digital, dan pelatih siswa)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "Saya <b>memilih </b>dan menggunakan teknologi digital dalam desain pembelajaran saya, sehingga sesuai dengan tujuan belajar dan mengajar saya (menggunakan simulasi, permainan digital, alat interaktif daring, dan membuat lingkungan kolaboratif)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "Bersama dengan siswa-siswi, saya <b>merefleksikan dan mendesain ulang</b> penggunaan teknologi digital untuk meningkatkan praktik pengajaran dan pendekatan pembelajaran yang inovatif (siswa sebagai pelatih, menggunakan teknologi-teknologi baru, modeling dan saran dari siswa)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "Saya <b>menginisiasi </b>dan <b>mempromosikan </b>desain praktek belajar mengajar yang inovatif dan membagikannya pada lingkungan sekolah dan komunitas yang lebih luas (<i>workshop</i> online, desain pembelajaran sepenuhnya menggunakan teknologi digital, aktif dalam <i>micro-teaching</i> dan <i>co-teaching</i>, juga pada diskusi reflektif tentang efektivitas penggunaan teknologi digital dalam pembelajaran)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "no": 2,
+      "name": "Belajar dan Mengajar – Bimbingan",
+      "question": "Menggunakan teknologi digital untuk menyediakan <i>feedback</i> dan kesempatan dalam berefleksi, yang mengarah pada penyesuaian kembali praktek belajar mengajar baik kepada guru maupun kepada peserta didik",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "Saya <b>menyadari</b> bahwa teknologi digital dapad digunakan untuk menyediakan dan menerima <i>feedback</i> serta membuka kesempatan untuk refleksi pada praktik belajar mengajar (melalui email, chat, atau video)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "Saya <b>telah mencoba</b> menggunakan teknologi digital untuk menyediakan <i>feedback</i> dan bantuan kepada siswa (seperti tutorial online, melalui chat, <i>feedback </i>otomatis/langsung, atau tautan untuk tanya jawab secara online)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "Saya <b>menggunakan </b>beragam teknologi digital untuk menyediakan timbal balik dan kesempatan bagi siswa saya berefleksi terhadap apa yang telah mereka pelajari, baik secara <i>real-time</i> (menggunakan aplikasi kelas online seperti Zoom, Google Meet, dll) atau <i>asynchronous</i> (menggunakan aplikasi LMS seperti Google Classroom, Edmodo, dll)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "Saya <b>memilih </b>dan menggunakan teknologi digital untuk meyediakan kesempatan bagi para siswa agar dapat terlibat dalam penliaian diri dan kelompok, dan <b>mendesain </b>pembelajaran mereka (membagikan dokumen secara online, merekam kegiatan pembelajaran, dan kerangka refleksi)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "Bersama dengan siswa, saya <b>merefleksi dan mendesain ulang </b>kegiatan belajar mengajar, berdasarkan pada bukti-bukti yang ditangkap dan diambil melalui teknologi digital (poling onlne, survey online, rekaman online, dan analisis pembelajaran)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "Saya <b>menginisiasi </b>dan <b>mempromosikan </b>cara-cara dimana teknologi digital dapat digunakan untuk membantu <i>feedback</i> dan refleksi untuk guru dan siswa di sekolah dan sekitarnya (forum diskusi online atau chat, berbagi dokumen-dokumen secara online, dan lainnya)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "no": 3,
+      "name": "Belajar dan Mengajar – Pembelajaran Kolaboratif",
+      "question": "Menggunakan teknologi digital untuk menumbuhkan dan meningkatkan kolaborasi siswa untuk pembelajaran individu dan kolektif",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "Saya <b>menyadari</b> bahwa teknologi digital dapat digunakan untuk menumbuhkan dan meningkatkan kolaborasi siswa ke arah pembelajaran individu dan kolektif (kolaborasi online, berbagi sumber belajar online)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "Saya <b>telah mencoba</b> menggunakan teknologi digital untuk mendukung dan meningkatkan aktivitas kolaboratif antar siswa (berbagi dokumen, atau berkontribusi dalam diskusi pada forum)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "Saya <b>menggunakan </b>beragam teknologi digital untuk mendukung dan meningkatkan pembelajaran kolaboratif siswa, baik secara tatap muka dan atau dalam pembelajaran online (berbagi dokumen, diskusi maupun menulis bersama pada forum online, wiki, atau blog)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "Saya <b>memilih </b>dan menggunakan teknologi digital pada desain pembelajaran saya berdasarkan fitur-fiturnya untuk meningkatkan dan mendukung pembelajaran kolaboratif siswa baik secara daring dan atau secara luring (kolaborasi dalam membuat, mendesain sesuatu dalam pembelajaran, atau asesmen secara kelompok serta refleksi kelompok)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "Bersama dengan siswa, saya <b>merefleksi dan mendesain ulang </b>penggunaan teknologi digital dalam pembelajaran kolaboratif dan atau individual (mengubah dan mengembangkan konten bersama, berpartisipasi dalam proyek kolaborasi, pertukaran secara virtual, penggunaan alat digital untuk manajemen tugas dan waktu)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "Saya <b>menginisiasi </b>dan <b>mempromosikan </b>penggunaan teknologi digital di sekolah saya dan komunitas yang lebih luas, dengan menyediakan kesempatan berkolaborasi untuk mendukung pembelajaran individu maupun kolektif, di dalam maupun diluar sekolah (menggunakan alat pembelajaran <i>synchronous </i>dan <i>asynchronous </i>secara online, pertemuan bersama guru-guru lainnya, proyek bersama, mengorganisasi kegiatan online bersama, dan kolaborasi dalam membuat materi pembelajaran)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "no": 4,
+      "name": "Belajar dan Mengajar – Pembelajaran Mandiri",
+      "question": "Menggunakan teknologi digital untuk meningkatkan proses pembelajaran mandiri siswa, mendorong pembelajaran aktif dan mandiri yang membentuk siswa dapat lebih bertanggung jawab pada pembelajaran yang mereka terima sehingga mengubah fokus dari pengajaran menjadi pembelajaran.",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "Saya <b>menyadari</b> bahwa teknologi digital dapat digunakan untuk pembinaan dalam pembelajaran yang aktif dan mandiri (merencanakan, mengatur tujuan, merekam perkembangan)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "Saya <b>telah mencoba</b> menggunakan teknologi digital untuk mendukung siswa dalam merencanakan pembelajaran mereka sendiri (merencanakan dan menjadwalkan menggunakan kalender digital, mengatur dan memilih tujuan pembelajaran menggunakan jurnal digital, dan merekam perkembangannya)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "Saya <b>menggunakan </b>beragam teknologi digital untuk mendukung rencana pembelajaran siswa dan mengatur pembelajaran mereka sendiri (lingkungan belajar online, repositori sumber online, alat dan ruang kolaboratif, jurnal pembelajaran dan e-portofolio)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "Saya <b>memilih </b>dan menggunakan teknologi digital dalam desain pembelajaran berdasarkan fitur-fiturnya sehingga memudahkan dalam memfasilitasi keterampilan belajar mandiri siswa saya dan otonomi pembelajar (mengambil inisiatif terhadap pembelajaran mereka sendiri, menjadi kreatif dan responsive terhadap situasi belajar yang baru, terlibat dalam refleksi diri untuk merencanakan dan memandu kemajuan mereka)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "Bersama dengan siswa, saya <b>merekfleksikan </b>dan mendukung mereka untuk mendesain ulang pembelajaran mereka, melalui dan menggunakan teknologi digital, sambil mempromosikan pembelajaran mandiri dan otonomi belajar mereka (mengidentifikasi kebutuhan mereka, mengatur tujuan belajar mereka, mendeskripsikan strategi untuk mencapai tujuan, implementas tugas belajar mereka, mengumpulkan bukti pembelajaran, merefleksikannya dan membagikan hasil pembelajaran yang mereka dapatkan)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "Saya <b>menginisiasi </b>dan <b>mempromosikan </b>strategi dan praktek tentang bagaimana teknologi digital dapat mendukung pembelajaran mandiri di sekolah dan komunitas yang lebih luas lagi (ruang pembelajaran dengan menggunakan teknologi digital untuk mengakomodasi kegiatan langsung, dan <i>coaching</i> untuk siswa)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "no": 5,
+      "name": "Belajar dan Mengajar – Teknologi Baru",
+      "question": "Menggunakan teknologi baru yang muncul dengan cara yang etis untuk mengeksploarsi pengalaman dan konten pembelajaran yang baru",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "Saya <b>menyadari</b> teknologi baru yang digunakan di lingkungan Pendidikan (virtual dan realitas buatan, kecerdasan buatan/ A.I.)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "Saya <b>telah mencoba</b> teknologi baru untuk melihat relevansiya terhadap pengajaran saya dan siswa saya (virtual dan realitas buatan, robot, AI)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "Saya <b>menggunakan </b>beragam teknologi baru untuk menyediakan pengalaman belajar dan jenis pembelajaran yang baru untuk mendorong perkembangan keterampilan transversal (pengalaman belajar yang melibatkan simulasi/modeling, permainan, pemikiran komputasional, kreatif dan inovatif, serta pengambilan keputusan berdasarkan data)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "Saya <b>memilih </b>dan menggunakan teknologi baru dalam desain pembelajaran saya untuk melibatkan siswa dalam kesempatan belajar baru, sambil mempertimbangkan implikasi etikanya (pembelajaran yang mendalam, berpikir komputasional, menangani identitas siswa ketika berinteraksi dengan AI)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "Bersama dengan siswa, saya <b>merefleksi dan mendesain ulang </b>kegiatan pengajaran dan pembelajaran, melibatkan mereka dalam desain dan kreasi aplikasi bersama mengunakan teknologi yanglebih mendalam dan juga penanganan terhadap implikasi etika (mendesain skenario realitas buatan/<i>augmented reality,</i> dan expedisi 3 dimensi, memprogram robot humanoid, menggunakan keterlibatan datafikasi dan AI dalam pengambilan keputusan)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "Saya <b>menginisiasi </b>dan <b>mempromosikan </b>strategi dan praktek di dalam sekolah dan lingkungan yang lebih luas yang dapat mendukung kolega guru lainnya dan siswa dalam penggunaan teknologi yang lebih mendalam untuk menyediakan pengalaman pengajaran, pembelajaran dan konten belajar baru sambil mempertimbangkan implikasi etikanya (mengkostumisasi dunia virtual untuk kegiatan pembelajaran, mendorong keterlibatan manusia dalam pengambilan keputusan berbasis data, kolaborasi dengan perusahaan-perusahaan teknologi)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    }
+  ]
+}

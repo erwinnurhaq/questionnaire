@@ -43,14 +43,11 @@ export const GRADES = [
   { id: 6, name: 'Pelopor', min: 156, max: 186 },
 ];
 
-export const MODEL_HOME = Schema.Model({
-  ekspektasi_grade: StringType().isRequired('This field is required.'),
-});
-
 export const MODEL_BIODATA = Schema.Model({
   nama: StringType().isRequired('This field is required.'),
   email: StringType().isEmail('Please enter a valid email address.').isRequired('This field is required.'),
   tingkat_sekolah: StringType().isRequired('This field is required.'),
+  nomor_telepon: StringType().isRequired('This field is required.'),
   mata_pelajaran: StringType().isRequired('This field is required.'),
   pengalaman_mengajar: StringType().isRequired('This field is required.'),
   pengalaman_digital: StringType().isRequired('This field is required.'),

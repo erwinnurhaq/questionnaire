@@ -4,6 +4,7 @@ const initialState = {
   biodata: {
     nama: '',
     email: '',
+    nomor_telepon: '',
     tingkat_sekolah: '',
     mata_pelajaran: '',
     pengalaman_mengajar: '',

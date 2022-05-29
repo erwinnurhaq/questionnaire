@@ -6,14 +6,13 @@ import { Button, Radio } from 'rsuite';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import ConfirmSubmit from '~/components/ConfirmSubmit';
-import { questions, additional1, additional2 } from '~/constants/questions';
+import { questions, additionals } from '~/constants/questions';
 import { MODAL } from '~/constants/modals';
 import { setAdditionalAnswers } from '~/store/slices/additionalSlice';
 import styles from '~/styles/Additional.module.css';
 
 export async function getServerSideProps() {
   const lastProficiency = questions[questions.length - 1];
-  const additionals = [additional1, additional2];
   return { props: { additionals, lastProficiency } };
 }
 
@@ -79,10 +78,7 @@ export default function Additional({ additionals, lastProficiency }) {
         >
           {additionals.map((additional) => (
             <div key={additional.id} className={styles.additionalcontainer}>
-              <h3 className={styles.title}>{additional.name}</h3>
-              <p className={styles.subtitle}>
-                {additional.no}. {additional.title}
-              </p>
+              <h4 className={styles.subtitle}>{additional.no}. {additional.name}</h4>
               <div className={styles.questionscontainer}>
                 {additional.questions.map((question) => (
                   <div key={question.id}>

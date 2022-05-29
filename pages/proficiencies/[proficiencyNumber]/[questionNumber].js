@@ -99,12 +99,12 @@ export default function ProficiencyQuestion({ proficiency, question, nextProfici
               transition={{ duration: 0.4, type: 'tween', ease: 'easeOut' }}
             >
               <div className={styles.questioncard}>
-                <p className={styles.question}>
-                  <b>
-                    {proficiency.no}.{question.no}.
-                  </b>{' '}
-                  <span dangerouslySetInnerHTML={{ __html: question.question }}></span>
-                </p>
+                <div className={styles.question}>
+                  <p
+                    dangerouslySetInnerHTML={{ __html: `${proficiency.no}.${question.no}. ${question.name}` }}
+                  ></p>
+                  <p dangerouslySetInnerHTML={{ __html: question.question }}></p>
+                </div>
                 <div>
                   {question.choices.map((choice) => (
                     <Radio

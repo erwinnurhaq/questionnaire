@@ -1,0 +1,69 @@
+{
+  "id": 8,
+  "no": 8,
+  "name": "Pertanyaan Tambahan 2",
+  "choices": [
+    {
+      "id": 1,
+      "value": 1,
+      "text": "Sangat Tidak Setuju"
+    },
+    {
+      "id": 2,
+      "value": 2,
+      "text": "Tidak Setuju"
+    },
+    {
+      "id": 3,
+      "value": 3,
+      "text": "Netral"
+    },
+    {
+      "id": 4,
+      "value": 4,
+      "text": "Setuju"
+    },
+    {
+      "id": 5,
+      "value": 5,
+      "text": "Sangat Setuju"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "no": 1,
+      "question": "Tersedia peralatan digital dalam ruangan kelas saya (proyektor, computer, atau papan tulis interaktif)"
+    },
+    {
+      "id": 2,
+      "no": 2,
+      "question": "Terdapat koneksi internet yang cepat dan reliabel di sekolah saya"
+    },
+    {
+      "id": 3,
+      "no": 3,
+      "question": "Siswa memiliki akses terhadap perangkat digital (laptop, tablet, smartphone) di dalam kelas"
+    },
+    {
+      "id": 4,
+      "no": 4,
+      "question": "Siswa memiliki akses terhadap perangkatn digital dengan akses internet dirumah mereka"
+    },
+    {
+      "id": 5,
+      "no": 5,
+      "question": "Pemimpin sekolah mendukung integrasi teknologi digital dalam kegiatan belajar mengajar"
+    },
+    {
+      "id": 6,
+      "no": 6,
+      "question": "Sekolah saya mengorganisasi/mengadakan aktivitas pengembangan profesional untuk kompetensi digital guru"
+    },
+    {
+      "id": 7,
+      "no": 7,
+      "question": "Banyak dari kolega guru saya menggunakan teknologi digital dalam praktik pengajaran mereka"
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "id": 2,
+  "no": 2,
+  "name": "DIGITAL RESOURCES",
+  "questions": [
+    {
+      "id": 1,
+      "no": 1,
+      "name": "Sumber Daya Digital - Mencari dan Memilih",
+      "question": "Menggunakan kriteria pencarian dan pemilihan untuk mengidentifikasi sumber digital untuk kegiatan belajar-mengajar",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "Saya <b>menyadari</b> bahwa saya dapat mencari sumber daya digital secara online (menggunakan mesin pencarian, link/tautan, dan berkunjung pada halaman repositori digital)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "Saya <b>telah mencoba</b> mencari secara online untuk menemukan sumber daya digital yang dapat digunakan dalam kegiatan belajar-mengajar (melalui link, menggunakan kata kunci di mesin pencarian, menyaring sumber di halaman repositori online)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "Saya <b>menggunakan</b> beragam portal dan alat daring untuk mencari perangkat sumber daya digital yang luas dan beragam yang sesuai dengan kebutuhan Pendidikan (memilih sumber daya yang beranotasi, menggunakan berbagai mesin pencari, repositori, perpustakaan digital, media sosial, dan komunitas belajar)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "Saya <b>menganalisa dan memilih</b> sumber daya digital berdasarkan kriteria yang sesuai dengan tujuan belajar-mengajar secara umum dan spesifik (sesuai dengan nilai pedagogi, relevansi, reliabilitas sumber, kualitas, dan lisesnsi sumber)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "Saya <b>merefleksikan</b> hasil pencarian saya dan kemudian menyesuaikan Kembali kriteria seleksi sumber daya digital (mempertimbangkan bahwa hasil pencarian saya dapat dipengaruhi faktor lokasi geografis, preferensi, atau pencarian sebelumnya)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "Saya <b>mengusulkan</b> strategi dan alat untuk membantu kolega guru dalam mencari dan memilih sumber daya digital dari beragam sumber yang sejalan dengan kebutuhan kurikulum dan pembelajaran (menyediakan kumpulan kata kunci, daftar seleksi sumber, rubrik evaluasi sumber digital, dan menyertakan referensi dari portal-portal sumber tersebut)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "no": 2,
+      "name": "Sumber Daya Digital – Membuat",
+      "question": "Membuat sumber daya digital yang dapat mendukung dan meningkatkan tujuan kegiatan belajar-mengajar",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "Saya <b>menyadari</b> bahwa saya dapat membuat media belajar dalam bentuk digital (teks/tulisan digital, gambar, foto, audio, dan video)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "Saya <b>telah mencoba</b> menggunakan menggunakan alat/perangkat digital untuk membuat sumber digital (menggunakan editor teks online, aplikasi editing audio visual, alat/aplikasi pembuat multimedia lainnya)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "Saya <b>menggunakan</b> beragam alat digital berdasarkan fitur-fitur yang tersedia untuk membuat sumber daya digital yang memenuhi kebutuhan pembelajaran siswa (teks interaktif, presentasi multimedia, kuis, permainan, dan pembelajaran serta aktivitas online)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "Saya <b>mengaplikasikan prinsip desain </b>untuk membuat sumber daya digital yang memenuhi tujuan pengajaran dan pembelajaran (mengidentifikasi kebutuhan, desain, mengembangkan, implementasi, penilaian, menyesuakan, serta membagikan sumber daya digital)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "Saya berbagi sumber daya digital yang saya buat dan kemudian <b>berefleksi dan menyesuaikan</b>nya sesuai dengan <i>feedback</i> yang saya dapatkan (menggabungkan pendekatan pedagogis yang berpusat pada peserta didik yang ditingkatkan dengan dukungan teknologi digital)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "Saya <b>menginisiasi dan berkontribusi</b> untuk bersama membuat sumber daya digital untuk Pendidikan bersama orang lain, organisasi, atau komunitas baik pada tingkat sekolah maupun sekitarnya (penelitian, menerbitkan <i>educational content</i>, dan bekerjasama dengan perusahaan/organisasi teknologi bidang Pendidikan)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "no": 3,
+      "name": "Sumber Daya Digital – Memodifikasi",
+      "question": "Memodifikasi/mengubah sumber daya digital yang sudah ada untuk mendukung dan meningkatkan tujuan belajar mengajar dengan menghormati kebijakan hak cipta dan aturan lisensi sumber daya digital",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "Saya <b>menyadari</b> bahwa Ketika saya memodifikasi sumber digital yang ada, saya harus menghormati hak cipta dan aturan lisensi sumber tersebut (penambahan gambar pada teks, menambahkan konten baru pada sumber tersebut, mengubah atau menghapus bagian-bagian konten, menambahkan <i>hyperlink</i>)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "Saya <b>telah mencoba</b> cara-cara memodifikasi sumber digital yang sudah ada, sambil tetap menghormati hak cipta pembuat konten dan atribusi terhadap lisensi sumber tersebut (mengubah presentasi, memodifikasi gambar, mengubah format video, mengubah kuis, mengadaptasikan pengaturan umum sumber tersebut)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "Saya <b>menggunakan</b> beragam alat digital berdasarkan fitur-fiturnya untuk memodifikasi dan menggunakan kembali sumber daya digital untuk memenuhi kebutuhan Pendidikan dan pembelajaran (mengkostumisasi konten dari pembelajaran daring orang lain, memanfaatkan fitur-fitur lingkungan virtual, menggunakan alat editing e-book)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "Saya <b>memilih </b>sumber daya digital yang sudah ada, kemudian mempertimbangkan hak cipta dan lisensi distribusinya, untuk <b>mengubah</b> dan <b>mengadaptasi </b>sumber tersebut agar dapat memenuhi tujuan kegiatan belajar mengajar (lisensi sumber terbuka, konten-konten dibawah lisensi umum kreatif, konten yang bebas hak cipta, sumber daya yang dapat diedit ulang)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "Saya <b>merefleksikan dan mendesain ulang</b> sumber daya digital yang sudah ada untuk mengitegerasikannya menjadi aktivitas yang interaktif dan berpusat pada peserta didik (mengadaptasi sumber digital dan meningkatkannya secara digital menjadi program pembelajaran daring, penilaian daring, proyek kolaborasi daring, pada ruang belajar virtual)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "Saya <b>menginisiasi </b>dan <b>berkontribusi</b> untuk memberikan panduan tingkat sekolah kepada guru maupun siswa dalam modifikasi sumber digital yang ada agar sejalan dengan kebutuhan dan tujuan kurikulum dan pembelajaran (strategi untuk merevisi sumber digital, meningkatkan dan menggunakan kembali sumber digital yang digunakan sekolah, mempertimbangkan penggunaan hak cipta, Kerjasama dengan <i>stakeholder </i>eksternal dan penerbit)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "no": 4,
+      "name": "Sumber Daya Digital – Mengelola dan Memproteksi",
+      "question": "Mengorganisasi dan mengelola konten digital, memungkinkan akses konten yang aman dan mudah untuk siswa, orang tua dan guru, sambil melindungi data personal dan sensitif lainnya",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "Saya <b>menyadari</b> bahwa teknologi digital dapat membantu saya menyimpan, mengorganisasi, dan menyediakan akses aman pada konten digital (penyimpanan lokal dalam perangkat dan online, memproteksi password, dan klasifikasi konten-konten digital)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "Saya <b>telah mencoba</b> berbagai cara untuk menyimpan, mengelola, dan mengakses konten digital dari dan pada tempat penyimpanan lokal maupun online pada perangkat saya (lewat hardisk dalam perangkat, hardisk eksternal, dan <i>cloud space</i> seperti Google Drive dan lainnya)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "Saya <b>menggunakan</b> beragam Teknik dan alat untuk menyimpan, mengelola dan memfasilitasi akses konten digital (struktur penyimpanan konten yang rapi, dan penggunaan metadata atau tag)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "Saya <b>mendefinisikan </b>dan <b>menerapkan </b>Langkah-langkah perlindungan dan keamanan terhadap penyimpanan, manajemen dan akes konten digital (menggunakan password yang kuat untuk konten sensitif, menerapkan limitasi pada akses, menggunakan protokol enkrpisi data, mencadangkan data secara berkala, memilih penyimpanan dan layanan daring pada kebijakan data, panduan penggunaan, keamanan dan keselamatan data pengguna)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "Saya <b>mendesain </b>dan <b>mengembangkan </b>strategi untuk memastikan kemudahan, keadilan, dan keamanan manajemen serta akses konten digital untuk kolega dan siswa saya (klasifikasi konten, membatasi akses terhadap target pengguna, menggunakan protokol enkripsi, mencadangkan data secara berkala)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "Saya <b>menginisiasi </b>dan <b>mempromosikan</b> ruang digital umum di tingkat sekolah yang memfasilitasi penyimpanan data yang aman, serta manajemen akses konten digital untuk beragam pengguna (seperti siswa, guru, dan atau staf sekolah)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "no": 5,
+      "name": "Sumber Daya Digital – <i>Sharing</i>",
+      "question": "Berbagi konten digital dengan mengormati kekayaan intelektual dan aturan hak cipta",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "Saya <b>menyadari</b> bahwa aturan hak cipta berlaku pada sumber daya digital yang saya pakai untuk tujuan Pendidikan (hak cipta gambar, teks, audio, video)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "Saya <b>telah mencoba</b> beragam cara memberikan atribusi hasil kerja kreator sumber daya digital yang saya pakai (mengutip nama penulis, dan link sumber aslinya)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "Saya <b>membagikan </b>sumber daya digital dengan menghubungkan kreator asli dari konten tersebut dan memilih saluran paling tepat untuk penggunaan secara pribadi, terbatas, dan public (menggunakan lampiran email untuk penggunaan pribadi dan penggunaan terbatas, menggunakan link, dan atau di dalam repositori online, media sosial, dan juga mengelola metadata)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "Saya <b>memilih </b>dan <b>menerapkan</b> lisensi hak cipta ketika membagikan sumber daya digital yang saya buat, sebagai dukungan sumber daya edukasi yang terbuka (menerapkan lisensi umum kreatif)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "Saya <b>mendesain </b>dan <b>mengembangkan </b>beragam cara untuk saya dan kolega guru bisa membagikan, mengkurasi, dan juga menggunakan ulang sumber daya digital untuk memastikan kesetaraan dan penggunaan konten yang mudah (mengembangkan konsep dan kategori untuk mengelola sumber konten digital, menetapkan cara-cara untuk mengurasi konten, dan mengkontekstualisasikan konten tersebut)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "Saya <b>menginisiasi </b>dan <b>mempromosikan </b>ruang daring untuk berbagi konten edukasi digital dengan lingkungan sekolah (menerapkan kata kunci/tag/metadata pada konten, membuka akses komentar untuk memperbaiki, menilai, memodifikasi, dan atau berkolaborasi)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    }
+  ]
+}

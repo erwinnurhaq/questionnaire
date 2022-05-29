@@ -16,6 +16,11 @@
   margin-bottom: 1rem;
 }
 
+.question > p:first-child {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
 .questionradio {
   padding: 0 1rem 0 0.2rem;
   border-radius: 4px;

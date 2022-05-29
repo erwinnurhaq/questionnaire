@@ -1,0 +1,136 @@
+{
+  "id": 4,
+  "no": 4,
+  "name": "ASSESSMENT",
+  "questions": [
+    {
+      "id": 1,
+      "no": 1,
+      "name": "Penilaian – Strategi Penilaian",
+      "question": "Menggunakan teknologi digital untuk mendukung penilaian formatif dan sumatif pembelajaran",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "Saya <b>menyadari</b> bahwa teknologi digital dapat mendukung penilaian formatif maupun sumatif (kuis digital, poling online)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "Saya <b>telah mencoba</b> teknologi digital untuk mendukung penilaian formatif dan sumatif (kuis online, permainan, isian, aplikasi mobile)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "Saya <b>menggunakan </b>beragam teknologi digital untuk mendukung penilaian formatif dan sumatif (membuat ujian secara digital, menggunakan <i>platform</i> penilaian digital yang menawarkan <i>feedback</i> berkala untuk siswa)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "Saya <b>memilih </b>dan menggunakan teknologi digital untuk mendukung aspek spesifik dalam, untuk dan sebagai pembelajaran dan menangkap sebaik-baiknya sifat dari hasil belajar yang akan di nilai (rubrik refleksi diri, tugas yang menawarkan <i>feedback</i> berkala kepada siswa, berbagi dokumen yang mendukung <i>review</i> dan <i>feedback </i>kelompok)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "Saya <b>merefleksi dan melibatkan<i> </i></b>siswa saya dalam membuat penilaian yang didukung secara digital, memilih teknologi digital yang paling sesuai untuk mendukung tujuan dan konten penilaian (memutuskan kriteria dan indikator penilaian, kreasi rubrik bersama, mendesain format penilaian bersama dan individu, dasar dan kisi penilaian formatif dan sumatif)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "Saya <b>mengusulkan </b>dan <b>mempromosikan</b> strategi dan teknologi digital didalam sekolah saya maupun komunitas yang lebih luas untuk mendukung penilaian dari, untuk dan sebagai pembelajaran (penilaian diri dan kelompok, mempromosikan keterampilan transversal, penilaian berbasis pekerjaan/tugas, portofolio digital)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "no": 2,
+      "name": "Penilaian – Menganalisa Bukti",
+      "question": "Menggunakan teknologi digital untuk mengumpulkan dan menganalisa bukti-bukti proses dan hasil belajar siswa",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "Saya <b>menyadari</b> teknologi digital dapat menangkap proses belajar dan hasil belajar siswa (kuis digital, poling online, <i>platform</i> penilaian online)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "Saya <b>telah mencoba</b> teknologi digital untuk mendapatkan bukti tentang aktivitas belajar siswa baik individu maupun kelompok (kuis digital, poling online, survey)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "Saya <b>menggunakan </b>beragam teknologi digital untuk mengumpulkan dan menganalisa data/bukti pembelajaran siswa baik individu maupun kelompok (poling online, format isian, analisis pembelajaran, lembar kerja)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "Saya <b>memilih </b>teknologi digital yang dapat memfasilitasi penyajian dan analisis data pembelajaran untuk mendukung refleksi diri saya dalam praktek pengajaran saya dan juga pembelajaran siswa saya (rekaman dan representasi data secara visual, grafik otomatis, alat <i>mind mapping</i>, papan instrument digital)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "Bersama dengan siswa, saya <b>merefleksi dan melibatkan</b> siswa saya dalam menangkap dan menganalisa data pembelajaran mereka, yang dapat digunakan untuk merencanakan pembelajaran berikutnya di masa depan (catatan pembelajaran reflektif, software untuk mengatur tujuan-tujuan personal)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "Saya <b>menginisiasi </b>dan <b>mempromosikan </b>strategi dan praktek di dalam sekolah dan komunitas yang lebih luas tentang penggunaan teknologi digital untuk mempelajari bukti/data pembelajaran, dan menggunakan data penilaian dalam mendukung pengambilan keputusan untuk intervensi yang ditargetkan (digunakan untuk keputusan pedagogi, administrasi seperti presensi siswa, dan data pada pembelajaran siswa seperti nilai)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "no": 3,
+      "name": "Penilaian – Perencanaan dan timbal balik",
+      "question": "Menggunakan teknologi digital untuk menyediakan timbal balik/<i>feedback</i> kepada siswa, memfasilitasi perencanaan tindakan lebih lanjut",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "Saya <b>menyadari</b> teknologi digital dapat digunakan untuk menyediakan timbal balik pembelajaran kepada siswa termasuk timbal balik otomatis (blog, poling online, format isian online, aplikasi yang menggunakan kecerdasan buatan/AI)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "Saya <b>telah mencoba</b> teknologi digital yang dapat mendukung integrasi timbal balik dan refleksi pada pembelajaran siswa (blog, wiki, timbal balik melalui media video, anotasi digital pada tugas-tugas)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "Saya <b>menggunakan </b>beragam teknologi digital untuk menyediakan timbal balik berkala kepada siswa, termasuk timbal balik otomatis (aplikasi/software dengan otomisasi penilaian/timbal balik, tes online dengan penilaian otomatis, poling online dengan tampilan hasil visual otomatis)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "Saya <b>memilih </b>dan menggunakan teknologi digital yang dapat membantu saya penyediaan, penerimaan, dan analisa timbal balik untuk menginformasi kegiatan pengajaran dan meningkatkan desain pemebelajaran secara terus menerus (poling dan survey online, instrument digital untuk manajemen nilai dan timbal balik, timbal balik yang bergantung pada konteks)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "Saya <b>merefleksikan dan melibatkan </b>siswa saya dalam penggunaan teknologi digital untuk mengumpulkan dan menganalisa timbal balik untuk perencaaan tindakan perbakan lebih lanjut (dokumen yang dibagikan, blog, alat mind mapping, catatan refleksi pembelajaran, jurnal pembelajaran, portofolio digital)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "Saya <b>menginisiasi </b>dan <b>mempromosikan </b>strategi di dalam sekolah dan komunitas yang lebih luas dalam penggunaan teknologi digital yang memfasilitasi pemberian, penerimaan, dan analisa timbal balik untuk mendukung perencanaan Tindakan perbaikan lebih lanjut dari pembelajaran (portofolio digital, timbal balik yang bergantung konteks, cerita digital)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    }
+  ]
+}

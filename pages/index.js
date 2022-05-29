@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 import { GRADES } from '~/constants/forms';
 import formatSelectOption from '~/helpers/formatSelectOption';
-import { setIntro } from '~/store/slices/introSlice';
+import { setExpectation1 } from '~/store/slices/expectationSlice';
 import styles from '~/styles/Home.module.css';
 import { setCurrentStep, setLatestStep } from '~/store/slices/stepSlice';
 import { STEPS } from '~/constants/steps';
@@ -16,7 +16,7 @@ import { STEPS } from '~/constants/steps';
 export default function Home() {
   const router = useRouter();
   const dispatch = useDispatch();
-  const intro = useSelector((state) => state.intro.intro);
+  const ekspektasiGrade = useSelector((state) => state.expectation.ekspektasi_grade);
 
   function handleNext() {
     dispatch(setLatestStep(STEPS[1]));
@@ -42,15 +42,52 @@ export default function Home() {
           }}
           transition={{ duration: 0.4, type: 'tween', ease: 'easeOut' }}
         >
-          <h2 className={styles.title}>Questionnaire</h2>
+          <h2 className={styles.title}>Assessment Kompetensi Digital</h2>
+          <h4>Instrusksi Pengisian Instrumen</h4>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tortor sem, molestie sed neque ut,
-            vulputate iaculis tortor. Aliquam vel enim placerat, tincidunt tortor at, mollis risus. Quisque ut
-            massa dolor. Maecenas rhoncus augue risus, ut aliquam orci commodo quis. Aliquam pharetra
-            tincidunt porttitor. Proin in tempor ligula, aliquam lobortis sapien. Sed ullamcorper, nulla ut
-            aliquet laoreet, mauris dolor fermentum tellus, id pellentesque tellus elit in ex. Phasellus
-            lectus metus, lobortis id lacinia pretium, rhoncus sed felis.
+            Terima kasih telah meluangkan waktu bapak/ibu guru untuk mengisi instrumen Asesmen Kompetensi
+            Digital untuk mengukur kemampuan penggunaan Teknologi Digital bapak/ibu guru dalam kapasitasnya
+            sebagai seorang Guru. Untuk dapat mengisi asesmen ini dengan baik, mohon dapat membaca beberapa
+            aturan dan hal-hal yang harus diperhatikan dalam asesmen ini agar data yang dihasilkan dapat valid
+            dan reliabel.
           </p>
+          <p>Persiapan:</p>
+          <ol>
+            <li>
+              Instrumen Asesmen Digital ini memiliki 8 bagian yang teridiri dari Pengisian Biodata, 6
+              tingkatan Kecakapan, dan informasi tambahan yang harus bapak/ibu isi seluruhnya
+            </li>
+            <li>Masing-masing bagian terdiri dari beberapa pertanyaan yang sudah disesuaikan</li>
+            <li>Pengisian biodata khususnya email aktif, dan nomor handphone</li>
+            <li>
+              Kecakapan 1 sampai 6 di isi dengan cara memilih pernyataan yang PALING MEREPRESENTASIKAN KONDISI
+              dan PENGALAMAN bapak/ibu guru saat ini, Mohon baca dengan seksama setiap pilihan pernyataan
+            </li>
+            <li>
+              Pada bagian 7, bapak/ibu memilih opsi jawaban dengan skala likert, jawab sesuai dengan kondisi
+              yang bapak/ibu guru rasakan dan alami
+            </li>
+            <li>
+              Bapak/ibu Guru masih dapat memperbaiki jawaban setiap pertanyaan yang diberikan, tidak ada batas
+              waktu yang diberikan selama pengisian Instrumen
+            </li>
+            <li>
+              Pastikan jawaban tidak ada yang terlewat dan setiap pertanyaan sudah sesuai dengan kondisi dan
+              pengalaman bapak/ibu saat ini, pop up konfirmasi submisi asesmen akan muncul untuk memastikan
+              ulang pengisian instrumen
+            </li>
+            <li>
+              Jika bapak/ibu sudah mengisi dan mengkonfirmasi submisi asesmen, bapak/ibu tidak bisa mengisi
+              kembali dengan akun email yang sama, mohon tidak mengisi berulang kali agar tidak terjadi
+              distorsi data
+            </li>
+            <li>Hasil Asesmen akan langsung keluar di akhir sesi</li>
+            <li>
+              PERINGATAN: Hasil Asesmen bukan merupakan judgment atau hal-hal terkait peringkat dll, TIDAK ADA
+              HASIL BURUK/HASIL BAIK, semua hasil asesmen tersebut adalah modal bapak/ibu guru untuk
+              mengembangkan potensi dan kemampuan/kecakapan digital bapak/ibu guru berikutnya
+            </li>
+          </ol>
           <h5 className={styles.subtitle}>Ekspektasi Grade:</h5>
           <div className={styles.expectationwrapper}>
             {formatSelectOption(GRADES).map((grade) => (
@@ -58,11 +95,11 @@ export default function Home() {
                 key={grade.value}
                 type="button"
                 className={
-                  intro.ekspektasi_grade === grade.value
+                  ekspektasiGrade === grade.value
                     ? styles.expectationactive
                     : styles.expectationinactive
                 }
-                onClick={() => dispatch(setIntro({ ekspektasi_grade: grade.value }))}
+                onClick={() => dispatch(setExpectation1(grade.value))}
               >
                 <PlusRound className={styles.expectationicon} />
                 <p>{grade.label}</p>
@@ -73,7 +110,7 @@ export default function Home() {
             <IconButton
               className="pagination-button"
               title="Berikutnya"
-              disabled={intro.ekspektasi_grade === ''}
+              disabled={ekspektasiGrade === ''}
               icon={<SortDown />}
               type="submit"
               color="cyan"
@@ -84,37 +121,6 @@ export default function Home() {
           </div>
         </motion.div>
       </AnimatePresence>
-      {/* <Form
-        fluid
-        className={styles.form}
-        formValue={intro}
-        model={MODEL_HOME}
-        onChange={(values) => dispatch(setIntro(values))}
-        onCheck={(errors) => dispatch(setIntroError(errors))}
-        onSubmit={handleSubmit}
-      >
-        <Field
-          name="ekspektasi_grade"
-          label="Ekspektasi Grade"
-          placeholder="Masukkan ekspektasi grade anda"
-          accepter={SelectPicker}
-          error={introError.ekspektasi_grade}
-          data={formatSelectOption(GRADES)}
-          searchable={false}
-          block
-          required
-        />
-        <Form.Group className={styles.button}>
-          <IconButton
-            className="pagination-button"
-            icon={<SortDown />}
-            type="submit"
-            color="cyan"
-            appearance="primary"
-            circle
-          />
-        </Form.Group>
-      </Form> */}
     </div>
   );
 }

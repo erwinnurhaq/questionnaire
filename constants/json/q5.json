@@ -1,0 +1,179 @@
+{
+  "id": 5,
+  "no": 5,
+  "name": "EMPOWERING LEARNERS",
+  "questions": [
+    {
+      "id": 1,
+      "no": 1,
+      "name": "Pemberdayaan Peserta Didik – Aksebilitas dan Inklusifitas",
+      "question": "Memastikan akses pada sumber belajar digital dan aktivitas belajar untuk seluruh siswa, dengan mempertimbangkan batasan kontekstual, kondisi fisik, atau kognitif apapun untuk penggunaannya",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "Saya <b>menyadari</b> tentang potensi keterbatasan dan hambatan yang mungkin dihadapi siswa dalam kaitannya dengan teknologi digital (keterbatasan akses pada perangkat digital dan atau konteksi internet, serta kesulitan belajar lainya)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "Saya <b>telah mencoba</b> teknologi digital yang dapat diadaptasi untuk konteks dan kebutuhan siswa (menyesuaikan dengan perangkat milik siswa, akses infrastruktur, konteks keluarga, dan siswa ABK)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "Saya <b>menggunakan </b>beragam teknologi digital untuk mempromosikan Pendidikan yang adil dan inklusif untuk seluruh siswa saya (teknologi yang mudah dan adaptif seperti pembaca layar, papan ketik alternatif, atau alat aksebilitas lainnya)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "Saya <b>memilih </b>dan menerapkan teknologi digital dalam desain pembelajaran saya, utuk mengembangkan aktivitas pembelajaran yang inklusif dan sumber belajar yang aksesibel bergantung pada kebutuhan dan kapabilitas siswa saya (mengintegrasikan beragam alat, menggunakan tata letak, struktur dan bahasa yang aksesibel)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "Saya <b>merefleksikan dan mendesain ulang</b> pengajaran dan pembelajaran dengan menggunakan teknologi digital untuk memastikan pendekatan aksebilitas dan inklusifitas yang memenuhi kebutuhan, serta kemampuan seluruh siswa saya, termasuk didalamnya anak-anak berkebutuhan khusus (menyediakan presentasi/media informasi yang multimoda, menyesuaian fitur aksebilitas seperti ukuran font/huruf dan tata letak, mengembangkan kemampuan digital siswa)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "Saya <b>menginisiasi </b>dan <b>mempromosikan </b>strategi untuk akses pendidikan yang adil dan inklusif melalui teknologi digital di dalam sekolah dan komunitas yang lebih luas (diskusi teknologi bersama siswa dan orang tua, kolaborasi dengan industri dalam ketersediaan infrastruktur)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "no": 2,
+      "name": "Pemberdayaan Peserta Didik – Diferensiasi dan Personalisasi",
+      "question": "Menggunakan teknologi digital untuk mengatasi perbedaan kebutuhan dan kemampuan belajar, dengan memperbolehkan siswa dapat maju pada level/tingkat, dan kecepatan belajar yang berbeda dan mengikuti tujuan dan jalur belajar individu",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "Saya <b>menyadari</b> bahwa teknologi digital dapat digunakan untuk membedakan dan mempersonalisasikan pembelajaran (mengadaptasi instruksi agar sesuai dengan kebutuhan kelompok siswa yang berbeda, menyediakan dukungan individu kepada siswa)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "Saya <b>telah mencoba</b> teknologi digital yang dapat memungkinkan diferensiasi dan personalisasi pembelajaran (kuis online dengan timbal balik yang diperosnalisasikan, permainan edukasi dengan tingkat kesulitan yang berbeda, lingkungan belajar online dengan materi yang adaptif)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "Saya <b>menggunakan </b>beragam teknologi digital dalam pengajaran dan pembelajaran untuk mengakomodasi kebutuhan pembelajaran secara individu (membuat daftar aktivitas belajar mandiri, aktivitas praktik/Latihan yang terdiferensiasi, timbal balik yang otomatis)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "Saya <b>memilih </b>dan menggunakan teknologi digital yang dapat membantu saya penyediaan, penerimaan, dan analisa timbal balik untuk menginformasi kegiatan pengajaran dan meningkatkan desain pemebelajaran secara terus menerus (poling dan survey online, instrument digital untuk manajemen nilai dan timbal balik, timbal balik yang bergantung pada konteks)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "Saya <b>merefleksikan dan melibatkan </b>siswa saya dalam penggunaan teknologi digital untuk mengumpulkan dan menganalisa timbal balik untuk perencaaan tindakan perbakan lebih lanjut (dokumen yang dibagikan, blog, alat mind mapping, catatan refleksi pembelajaran, jurnal pembelajaran, portofolio digital)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "Saya <b>menginisiasi </b>dan <b>mempromosikan </b>strategi di dalam sekolah dan komunitas yang lebih luas dalam penggunaan teknologi digital yang memfasilitasi pemberian, penerimaan, dan analisa timbal balik untuk mendukung perencanaan Tindakan perbaikan lebih lanjut dari pembelajaran (portofolio digital, timbal balik yang bergantung konteks, cerita digital)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "no": 3,
+      "name": "Pemberdayaan Peserta Didik – Melibatkan Pelajar secara aktif",
+      "question": "Menggunakan teknologi untuk mendorong keterlibatan aktif dan kreatif siswa dalam pembelajaran mereka",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "Saya <b>menyadari</b> saya dapat menggunakan teknologi digital untuk melibatkan siswa dalam pembelajaran aktif (permainan, aktivitasi interaktif, dunia virtual, simulasi)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "Saya <b>telah mencoba</b> menggunakan teknologi digital untuk melibatkan siswa dalam pembelajaran aktif (menggunakan blog dan Wikipedia, portofolio digital, realitas virtual dan buatan)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "Saya <b>menggunakan </b>beragam teknologi digital untuk melibatkan siswa dalam pembelajaran aktif (siswa mengeksplorasi objek virtual, review kelompok, diskusi model jigsaw, debat online)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "Saya <b>memilih </b>dan menggunakan teknologi digital dalam desain pembelajaran untuk mendorong keterlibatan aktif siswa dalam pembelajaran individu dan kolaboratif (penulisan kolaboratif, permainan dan simulasi, realitas virtual dan buatan, pembelajaran dengan struktur kelompok)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "Saya <b>mendesain ulang </b>aktivitas pembelajaran berdasarkan timbal balik siswa, membuat bersama cara baru untuk mereka dapat berinteraksi dan terlibat secara aktif dengan teknologi digital (pelibatan siswa dalam kegiatan langsung, pembelajaran berbasis pengalaman, diskusi online, pengajaran dan <i>coaching</i> antar rekan, mengkonstruksi pembelajaran mereka bersama)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "Saya <b>menginisiasi </b>dan <b>mempromosikan </b>ruang belajar yang didukung teknologi digital di dalam sekolah dan komunitas yang lebih luas, dimana siswa dapat secara aktif terlibat dalam aktivitas pembelajaran (robotika, pemrograman computer, ruang kreasi, portofolio digital)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "no": 4,
+      "name": "Pemberdayaan Peserta Didik – Pembelajaran Campuran (<i>Blended</i>)",
+      "question": "Menggunakan sumber belajar dan alat digital, lingkungan belajar online dan <i>platform</i> untuk memastikan pembelajaran siswa didalam dan diluar kelas",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "Saya <b>menyadari</b> bahwa teknologi digital dapat digunakan untuk mengkombinasikan pembelajaran di tempat/tatap muka/luring dan daring/online, sinkronis dan asinkronis (menggunakan sumber belajar digital, pertemuan online via aplikasi, atau grup di media sosial/pesan instan)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "Saya <b>telah mencoba</b> menggunakan teknologi digital yang memfasilitasi pembelajaran baik didalam kelas maupun diluar kelas (alat/aplikasi pertemuan online, lingkungan belajar online, forum diskusi, chat, dunia virtual)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "Saya <b>menggunakan </b>beragam alat dan <i>platform</i> digital untuk mendukung pendekatan pembelajaran jarak jauh dan <i>blended/</i>campuran untuk meningkatkan proses dan hasil belajar siswa (pembelajaran menggunakan video, aplikasi media sosial, sumber belajar lainnya)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "Saya <b>menanalisa </b>teknologi digital berdasarkan fitur-fiturnya dan menggunakannya dalam desain pembelajaran untuk mendukung pembelajaran jarak jauh dan campuran (alat/aplikasi kolaborasi online, chat, forum, blog, dan sosial media)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "Saya <b>merefleksikan dan mendesain ulang</b> pengajaran dan pembelajaran untuk konteks pembelajaran jarak jauh dan campuran dan untuk memastikan keterlibatan aktif siswa pada proses pembelajaran baik didalam dan diluar kelas (pembelajaran online, pembelajaran <i>hybrid</i>, laboratorium virtual, alat kolaborasi online, aktivitas sinkronis dan asinkronis, tugas individu dan kelompok)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "Saya <b>berkontribusi </b>untuk mendesain strategi pembelajaran jarak jauh dan campuran di sekolah saya dan mendukung implementasinya untuk memfasiltasi pendekatan pembelajaran inovatif dan inklusif baik didalam maupun diluar sekolah (memastikan akses kepada infrastruktur dan perangkat digital, dukungan terhadap orang tua dan siswa, pertukaran informasi secara regular, kode etik untuk perilaku dan norma online, pengelolaan dan keamanan data personal, praktik komunikasi yang baik"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    }
+  ]
+}

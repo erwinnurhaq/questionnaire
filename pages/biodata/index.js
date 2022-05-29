@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { IconButton, Form, Input, SelectPicker } from 'rsuite';
+import { IconButton, Form, Input, SelectPicker, Message, toaster } from 'rsuite';
 import SortDown from '@rsuite/icons/SortDown';
 import SortUp from '@rsuite/icons/SortUp';
 import { useDispatch, useSelector } from 'react-redux';
@@ -27,16 +27,33 @@ export default function Biodata() {
   const { latest } = useSelector((state) => state.step);
   const { biodata, biodata_error } = useSelector((state) => state.biodata);
 
+  function toastMessage(message, type) {
+    return (
+      <Message showIcon type={type || 'warning'}>
+        {message || 'Error'}.
+      </Message>
+    );
+  }
+
   function handlePrev() {
     router.push('/');
   }
 
-  function handleSubmit(isValid, ev) {
+  async function handleSubmit(isValid, ev) {
     ev.preventDefault();
     if (!isValid) return;
-    dispatch(setLatestStep(STEPS[2]));
-    dispatch(setCurrentStep(STEPS[2]));
-    router.push(`/proficiencies/1`);
+    try {
+      const response = await fetch(`/api/check_user?email=${biodata.email}`);
+      const result = await response.json();
+      if (response.status >= 400) {
+        throw new Error(result.message);
+      }
+      dispatch(setLatestStep(STEPS[2]));
+      dispatch(setCurrentStep(STEPS[2]));
+      router.push(`/proficiencies/1`);
+    } catch (err) {
+      toaster.push(toastMessage(err.message));
+    }
   }
 
   useEffect(() => {
@@ -88,6 +105,15 @@ export default function Biodata() {
               type="email"
               accepter={Input}
               error={biodata_error.email}
+              required
+            />
+            <Field
+              name="nomor_telepon"
+              label="No. Telepon"
+              placeholder="08xxx..."
+              type="number"
+              accepter={Input}
+              error={biodata_error.nomor_telepon}
               required
             />
             <Field

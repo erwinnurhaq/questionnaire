@@ -1,0 +1,54 @@
+{
+  "id": 7,
+  "no": 7,
+  "name": "Pertanyaan Tambahan 1",
+  "choices": [
+    {
+      "id": 1,
+      "value": 1,
+      "text": "Sangat Tidak Setuju"
+    },
+    {
+      "id": 2,
+      "value": 2,
+      "text": "Tidak Setuju"
+    },
+    {
+      "id": 3,
+      "value": 3,
+      "text": "Netral"
+    },
+    {
+      "id": 4,
+      "value": 4,
+      "text": "Setuju"
+    },
+    {
+      "id": 5,
+      "value": 5,
+      "text": "Sangat Setuju"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "no": 1,
+      "question": "Saya merasa mudah untuk bekerja dengan menggunakan teknologi dan alat digital (seperti komputer, tablet, smartphone)"
+    },
+    {
+      "id": 2,
+      "no": 2,
+      "question": "Saya menggunakan internet secara luas dan ekstensif dalam kegiatan sehari-hari"
+    },
+    {
+      "id": 3,
+      "no": 3,
+      "question": "Saya adalah anggota dari berbagai jaringan daring/online (pada media sosial, jaringan profesional/komunitas belajar)"
+    },
+    {
+      "id": 4,
+      "no": 4,
+      "question": "Saya banyak mencoba teknologi-teknologi baru (aplikasi, program/perangkat lunak, perangkat teknologi, sumber daya teknologi lainnya)"
+    }
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "id": 6,
+  "no": 6,
+  "name": "FACILITATING LEARNERS’ DIGITAL COMPETENCES",
+  "questions": [
+    {
+      "id": 1,
+      "no": 1,
+      "name": "Memfasilitasi Kompetensi Digital Siswa – Literasi Informasi dan Data",
+      "question": "Menggabungkan aktivitas pembelajaran, yang membutuhkan siswa menggunakan teknologi digital untuk mencari, mengevaluasi, dan mengelola informasi dan data dalam lingkungan digital",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "Saya <b>menyadari</b> tentang aktivitas pembelajaran dan sumber-sumber pembelajarn yang dapat meningkatkan literasi informasi dan data siswa (pencarian informasi secara digital, mengevaluasi informasi yang ditemukan, membaca grafik, membaca dan memahami data)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "Saya <b>telah mencoba</b> aktivitas pembelajarn yang dapat mendorong siswa untuk mencari, mengevaluasi dan mengelola informasi serta data dalam lingkungan digital (mengatur kriteria pencarian, membandingkan berbagai sumber informasi, menginterpretasi data)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "Saya <b>mengimplementasikan </b>beragam aktivitas pembelajaran yang mengharuskan siswa untuk secara kritis mencari, mengevaluasi dan mengelola informasi serta data dalam lingkungan digital yang berebda, bergantung pada kebutuhan pembelajaran (mengatur kriteria seleksi, mengidentifikasi ketidak akuratan, kekurangan, atau bias data/informasi, pemeriksaan silang berbagai sumber untuk menilai kredibilitas, mengelola misinformasi, rasisme dan xenophobia/ketidak sukaan pada hal-hal yang asing)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "Saya <b>mendesain </b>pembelajaran yang mendukung siswa untuk secara kritis mencari, mengevaluasi dan mengelola informasi dan data (menganalisa pemilihan media informasi, sumbernya, dan tujuannya, transparansi terhadap algoritma pencarian yang dgunakan untuk menentukan informasi dan data apa yang muncul)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "Saya <b>memimpin </b>inisiatif berbasis proyek dimana siswa, sebagai penerima dan kreator konten pembelajarn, untuk melalui proses kritis dalam mencari, mengevaluasi dan mengelola informasi dan data (mengubah/mengedit buletni sekolah, mengorganisasi akses informasi dan data menggunakan taksonomid an kategori)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "Saya dan murid-murid saya <b>berkontribusi</b> pada pembuatan/kreasi strategi untuk mempromosikan cara menggunakan teknologi digital untuk meningkatkan literasi informasi dan data di seluruh sekolah dan komunitasnya yang lebih luas (melalui workshop, debat, dan aktivitas berbasis pengalaman)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "no": 2,
+      "name": "Memfasilitasi Kompetensi Digital Siswa – Komunikasi dan Kolaborasi",
+      "question": "Mengimplementasikan aktivitas pembelajaran yang membutuhkan komunikasi dan kolaborasi menggunakan teknologi digital",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "Saya <b>menyadari</b> tentang aktivitas pembelajaran yang dapat meningkatkan komunikasi dan kolaborasi digital siswa (menggunakan email, aplikasi pesan singkat, media sosial, dll, untuk berkomunikasi dengan guru dan rekan-rekan lainnya)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "Saya <b>telah mencoba</b> aktivitas pembelajarn yang dapat mendorong siswa untuk berkomunikasi dan berkolaborasi bersama guru dan siswa lainnya menggunakan teknologi digital (menggunakan aplikasi pertemuan online, dalam forum diskusi)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "Saya <b>mengimplementasikan </b>beragam aktivitas pembelajaran yang mengharuskan siswa untuk berkomunikasi dan berkolaborasi dalam konteks digital bergantung pada kebutuhan belajar mereka (menggunakan medium yang sesuai untuk komunikasi siswa, menggunakan alat digital yang mendukung penuh kolaborasi siswa, mengelola sebuah ruang berbagi daring, mengubah dokumen berbagi secara online)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "Saya <b>mendesain </b>pembelajaran untuk mendukung siswa dalam menggunakan teknologi digital dalam komunikasi dan kolaborasi dengan tetap menghormati sikap dan norma komunikasi yang baik (menghormati ide dan perbedaan dengan orang lain sambil berkontribusi dalam kerja tim, berbagi pesan kepada jaringan yang multikultur, membangun koneksi positif)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "Saya <b>berefleksi </b>terhadap kesesuaian praktik pengajaran dalam rangka membina komunikasi dan kolaborasi digital siswa, dan<b> menyesuaikannya kembali</b> (bertukar praktik baik dengan kolega guru lainnya, berdiskusi dengan kebutuhan komunikasi dan kolaborasi siswa, eksplorasi terhadap alat-alat digital baru)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "Saya dan murid-murid saya <b>menginisiasi </b>dan <b>mempromosikan</b> jaringan komunikasi dan kolaborasi dengan sekolah dan pemegang kepentingan dalam Pendidikan lainnya (tingkat nasional dan atau internasional) untuk bertukar pengalaman belajar, aktivitas, dan mengejar proyek bersama (berpartisipasi dalam inisiatif, kompetisi, atau kreasi bersama dalam Pendidikan tingkat nasional/internasional)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "no": 3,
+      "name": "Memfasilitasi Kompetensi Digital Siswa – Kreasi Konten",
+      "question": "Menggabungkan aktivitas pembelajaran, yang mendorong siswa dapat mengekspresikan diri mereka dengan membuat karya digital",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "Saya <b>menyadari</b> tentang aktivitas pembelajaran yang dapat mendorong siswa mengekspresikan diri mereka melalui bentuk digital (baik dalam format teks, foto, gambar, atau presentasi)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "Saya <b>telah mencoba</b> aktivitas pembelajarn yang dapat mendorong siswa untuk membuat dan memodifikasi konten digital (teks, presentasi, audio, atau video)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "Saya <b>mengimplementasikan </b>beragam aktivitas pembelajaran yang mengharuskan siswa untuk mengekspresikan dan menyampaikan ide mereka secara kreatif, dengan menggunakan alat digital yang sesuai (visualisasi, simulasi, cerita digital)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "Saya <b>mendesain </b>pembelajaran untuk melibatkan siswa dalam proses desain kreatif untuk mengkreasi ulang konten digital yang berkualitas, sambil tetap menghormati aturan lisensi dan hak cipta (membimbing siswa untuk melalu proses desain dan pengembangan konten, memfasilitasi siswa untuk memilih alat digital yang tepat, memandu siswa untuk memahami hak cipta, lisensi atribusi dan pemberian kredit)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "Saya <b>merefleksikan dan mendesain ulang </b>kegiatan pembelajaran untuk mendorong re-kreasi ekspresi dan konten digital siswa, sambil tetap mendorong mereka untuk berbagi praktik baik (cerita digital, portofolio digital)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "Saya dan murid-murid saya <b>menginisasi dan mempromosikan </b>strategi pada sekolah secara menyeluruh dan komunitasnya yang lebih luas yang mengijinkan siswa untuk terlibat dalam mendesain, mengembangkan, dan menerbitkan re-kreasi digital mereka, sambil membagikannya dengan cara-cara baru (kreasi bersama aplikasi mobile, mengelola ruang kreasi, mempromosikan siaran video dan audio)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "no": 4,
+      "name": "Memfasilitasi Kompetensi Digital Siswa – Keamanan dan Kesehatan",
+      "question": "Memberdayakan pembelajar untuk menggunakan teknologi digital secara aman, sambil memitigasi resiko untuk memastikan Kesehatan sosial dan psikologi mereka",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "Saya <b>menyadari</b> tentang aktivitas pembelajaran yang dapat mendorong siswa untuk menggunakan teknologi digital secara aman (memberikan informasi tentang proteksi data dan privasi, membaca ketentuan penggunaan, menghidari pengasingan sosial, mencegah kekerasan dalam lingkungan digital)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "Saya <b>telah mencoba</b> aktivitas pembelajaran yang memungkinkan siswa untuk memperhitungkan tentang implikasi keamanan dan Kesehatan dalam penggunaan teknologi digital (mengidentifikasi perilaku yang tidak pantas, berdiskusi tentang isu penggunaan berlebihan/ketergantungan)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "Saya <b>mengimplementasikan </b>beragam aktivitas pembelajaran untuk mendorong siswa bertindak dengan cara yang bertanggung jawab dan etis ketika membuat, dan mengkonsumsi informasi digital (menyesuaikan pengaturan di media sosial mereka, memproteksi personal data dan privasi, mengatur kata sandi yang kuat, memblokir dan melaporkan individu-individu yang membuat mereka merasa tidak nyaman)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "Saya <b>mendesain </b>pembelajaran untuk membantu siswa mengembangkan strategi penggunaan teknologi digital yang bertanggung jawab dan etis, untuk menjaga reputasi mereka, dan mempromosikan Kesehatan sosial (menyeimbangkan antara aktivitas online &amp; offline, mengenali dan menghadapi <i>cyberbullying/sexting/</i>rasisme dll, dalam lingkungan digital)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "Saya <b>merefleksi dan mendesain ulang</b> aktivitas pembelajaran berdasarkan pengembangan berkelanjutan dari resiko dan ancaman online, sehinga memungkinkan siswa untuk mengikuti dan mengadopsi praktik yang positif terhadap kesejahteraan fisik, fisiologis, dan sosial mereka dan teman sebayanya (belajar bagaimana perusahaan-perusahaan mengumpulkan dan menggunakan data individu-individu, dan bagaimana media sosial dapat berdampak pada hubungan emosi dan sosial mereka)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "Saya dan murid-murid saya <b>berkontribusi</b> untuk membuat kultur di sekolah dan lingkungannya yang lebih luas, dimana penggunaan teknologi digital secara positif dan negative dapat didiskusikan secara terbuka dan cara-cara menghindari resiko dan ancaman dunia digital ( workshop tentang pengalaman keamanan digital, <i>coaching </i>Kesehatan mental digital untuk guru dan siswa)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "no": 5,
+      "name": "Memfasilitasi Kompetensi Digital Siswa – Penggunaan yang Bertanggung Jawab",
+      "question": "Memberdayakan pembelajar untuk menggunakan teknologi digital secara bertanggung jawab dan etis, mengelola identitas digital, jejak digital, dan reputasi digital mereka",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "Saya <b>menyadari</b> tentang aktivitas pembelajaran untuk memberdayakan siswa untuk memahami tentang implikasi hukum dan etika dalam penggunaan teknologi digital (sadar tentang aturan berbagi informasi personal atau orang lain yang sensitif, memahami bagaimana pengaturan privasi dalam aplikasi online)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "Saya <b>telah mencoba</b> aktivitas pembelajaran yang dapat mendorong siswa untuk memahami tentang implikasi hukum dan etika ketika menggunakan teknologi digital (berbagi konten digital yang ber-hak cipta, memahami resiko penerimaan izin penggunaan data ketika menginstal aplikasi)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "Saya <b>mengimplementasikan </b>beragam aktivitas pembelajaran yang mengharuskan siswa untuk bertindak dalam cara bertanggung jawab dan etis baik sebagai konsumen maupun kreator konten dan informasi digital (secara kritis menilai informasi online, bereaksi terhadap misinformasi, bersikap positif secara online, mematuhi aturan hak cipta dan proteksi data, menghormati perbedaan dan opini yang berbeda)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "Saya <b>mendesain </b>pembelajaran untuk menyediakan kesempatan bagi siswa dalam mengelola identitas dan reputasi digital mereka (melacak jejak digital mereka, mengelola identitas digital mereka, menyadari tentang syarat penggunaan dari berbagai media dan aplikasi, mengelola pengaturan aplikasi"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "Saya <b>berefleksi dan mendesain ulang </b>aktivitas pembelajaran saya untuk memungkinkan siswa dapat memikirkan etika dan dampak potensial dari perilaku mereka secara digital dalam situasi sebenarnya (mempertimbangkan tentang hal yang mereka unggah secara online bisa jadi menyakitkan untuk beberapa orang, saling menghargai perbedaan pendapat dalam kolom komentar)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "Saya dan murid-murid saya <b>menginisiasi dan mempromosikan </b>strategi secara meyeluruh di sekolah dan lingkungan komunitasnya yang lebih luas yang mempromosikan penggunaan teknologi digital secara bertanggung jawab dan etis kepada staff sekolah, siswa, dan orang tua (melalui workshop, <i>coaching</i> rekan, orang tua, dan guru)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "no": 6,
+      "name": "Memfasilitasi Kompetensi Digital Siswa – Pemecahan Masalah",
+      "question": "Menggabungkan aktivitas belajar dimana siwa menggunakan teknologi digital untuk memahami dan memecahkan masalah",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "Saya <b>menyadari</b> tentang aktivitas pembelajaran yang mendorong siswa untuk menggunakan teknologi digital untuk memahami dan memecahkan masalah (menggunakan mesin pencarian, fitur bantuan, aplikasi untuk merekan dan mengelola informasi untuk keperluan analisa)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "Saya <b>telah mencoba</b> aktivitas pembelajaran yang dapat mendorong siswa menggunakan tekologi digital untuk memahami dan memecahkan masalah (<i>brainstorming, mapping,</i> menggunakan alat visualisasi dll, untuk menganalisa masalah dan mengembangkan solusi yang mungkin bisa diambil)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "Saya <b>mengimplementasikan </b>beragam aktivitas pembelajaran yang memungkinkan siswa untuk mengaplikasikan proses pemebcahan masalah dengan dukungan teknologi digital (mencari dan mengelola informasi, menganalisa, menyimpulkan, memprediksi hasil, dan membuat analogi serta formulasi ide)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "Saya <b>mendesain </b>pembelajaran yang memungkinkan siswa untuk melihat inovasi lain dan membuat solusi kreatif yang dapat diaplikasikan pada situasi dan konteks yang baru (menghasilkan/menguji coba ide dan solusi, simulasi,dan modeling)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "Saya<b> berefleksi </b>pada praktik pengajaran saya dan <b>mendesain ulang</b> kegiatan belajar mengajar untuk mengaktifkan kreasi bersama dalam proses pemecahan masalah bersama siswa dan menemukan solusi yang melibatkan teknologi digital (representrasi model abstrak, mengidentifikasi kesalahan, mengurai masalah menjadi bagian-bagian kecil)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "Saya dan murid-murid saya <b>berkontribusi</b> untuk eksploarsi dan pengembangan solusi inovatif dan kreatif pada tantangan dunia nyata baik didalam maupun diluar sekolah (tantangan sosial, lingkungan, dan teknologi)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    }
+  ]
+}

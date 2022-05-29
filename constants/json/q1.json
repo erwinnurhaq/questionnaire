@@ -1,0 +1,394 @@
+{
+  "id": 1,
+  "no": 1,
+  "name": "PROFESSIONAL ENGAGEMENT",
+  "questions": [
+    {
+      "id": 1,
+      "no": 1,
+      "name": "Keterlibatan Profesional – Komunikasi Organisasi",
+      "question": "Menggunakan teknologi digital untuk meningkatkan komunikasi dengan kolega guru dan atau siswa dan atau orang tua siswa",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "<p>Saya <b>menyadari</b> bahwa teknologi digital dapat digunakan untuk komunikasi dalam organisasi (menggunakan email, aplikasi pesan singkat, media sosial, dll)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "<p>Saya <b>telah mencoba</b> menggunakan teknologi digital untuk membantu saya dalam berkomunikasi dengan kolega guru, siswa, maupun orang tua siswa (menggunakan email, aplikasi pesan singkat, media sosial, dll)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "<p>Saya <b>menggunakan beragam</b> teknologi digital untuk memenuhi kebutuhan komunikasi di organisasi/institusi saya (untuk tujuan komunikasi, pencapaian target dan kontekstual lainnya)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "<p>Saya <b>menganalisa dan memilih</b> teknologi digital yang sesuai dengan kebutuhan komunikasi saya berdasarkan fitur-fitur yang tersedia (agar komunikasi lebih efektif, efisien dan professional)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "<p>Saya <b>mendukung dan memberikan saran</b> kepada kolega dalam penggunaan teknologi untuk komunikasi pada organisasi (untuk komunikasi yang efektif, efisien, aman, bertanggung jawab dan inklusif pada tingkat sekolah)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "<p>Saya <b>berkontribusi</b> dalam mengembangkan praktek komunikasi menggunakan teknologi digital di organisasi/institusi saya (untuk komunikasi yang efektif, efisien, aman, bertanggungjawab, dan inklusif"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "<p>Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "no": 2,
+      "name": "Keterlibatan Profesional – Pembelajaran Daring",
+      "question": "Mengelola lingkungan pembelajaran daring mempertimbangkan manajemen data dan etika digital",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "<p>Saya <b>sadar</b> bahwa Ketika mengelola lingkungan belajar daring/<i>online</i>, harus mempertimbangkan masalah etika digital dan menggunakan metode manajemen data yang sesuai (menyadari adanya akses terbuka dan terbatas, dan peraturan tentang proteksi data umum)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "<p>Saya <b>sudah mencoba</b> berbagai pengaturan yang berbeda untuk memastikan lingkungan belajar online telah mematuhi aturan etika digital dan strategi manajemen data yang baik (memahami tentang proteksi data pengguna, kebijakan akes, syarat penggunaan konten, manajemen data, dan masalah-masalah kebijakan digital lainnya)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "<p>Saya<b> mengelola</b> pembelajaran daring/<i>online</i> yang sesuai dengan masalah etika digital dan strategi manajemen data yang baik (pengelolaan konten dan data siswa secara digital)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "<p>Saya <b>menganalisa</b> fitur dari aplikasi pembelajaran daring/<i>online</i> dan menggunakan salah satu yang paling sesuai dengan pertimbangan etika digital dan strategi manajemen data pada konteks pekerjaan saya sebagai guru (keamanan pengguna, pengelolaan data pengguna, kebijakan data, dan <i>hosting</i> data)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "<p>Saya <b>mendukung dan memberikan saran</b> kepada kolega dalam praktik masalah etika digital dan manajemen data Ketika menggunakan aplikasi/perangkat pembelajaran daring (mengingatkan tentang penggunaan password yang kuat, enkripsi data, dan prosedur keamanan data)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "<p>Saya <b>menginisiasi dan mempromosikan</b> pada tingkat sekolah tentang <i>data policy</i> dan kode etik pada praktik pembelajaran daring"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "<p>Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "no": 3,
+      "name": "Keterlibatan Profesional – Kolaborasi Profesional",
+      "question": "Menggunakan Teknologi digital untuk ikut serta berkolaborasi dan berinteraksi dengan kolega guru dan atau pemangku kepentingan Pendidikan lainnya",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "<p>Saya <b>sadar</b> bahwa teknologi digital dapat digunakan untuk berkolaborasi dan berinteraksi dengan kolega guru dan atau pemangku kepentingan Pendidikan lainnya (untuk bertukar konten melalui email)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "<p>Saya <b>telah mencoba</b> menggunakan teknologi digital untuk berkolaborasi dan berinteraksi dengan kolega guru dan atau pemangku kepentingan pendidikan lainnya (bertukar konten menggunakan layanan daring lainnya, berpartisipasi pada jaringan profesional guru secara daring)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "<p>Saya<b> menggunakan beragam</b> teknologi digital, bergantung pada kebutuhannya, untuk berkolaborasi dan berinteraksi dengan kolega guru dan pemangku kepentingan Pendidikan lainnya (berbagi konten, praktik, dan atau ide pembelajaran)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "<p>Saya<b> menganalisa dan memilih</b> teknologi digital berdasarkan fitur-fiturnya dan bagaimana aplikasi/perangkat tersebut dapat mendukung tugas kolaborasi yang harus saya lakukan dengan kolega guru dan atau pemangku kepentingan Pendidikan lainnya (aktif pada kegiatan kolaborasi secara daring)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "<p>Saya<b> memimpin</b> tugas-tugas kolaborasi dengan kolega guru dan pemangku kepentingan Pendidikan lainnya menggunakan teknologi digital (berkolaborasi dan berkreasi bersama untuk mendesain pembelajaran, dan mengimplementasikan proyek bersama)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "<p>Saya <b>menginisiasi dan mempromosikan</b> kegiatan-kegiatan kolaboratif antara sekolah saya dan lingkungan pendidikan yang lebih luas menggunakan teknologi digital (memiliki jaringan kolaboratif, peran dan sinergi pada komunitas, serta Kerjasama dengan komunitas lokal dan komunitas yang lebih luas)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "<p>Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "no": 4,
+      "name": "Keterlibatan Profesional – Teknologi digital dan infrastrukturnya pada tingkat sekolah",
+      "question": "Menggunakan teknologi digital (perangkat, <i>platform</i>, perangkat lunak) dan infrastruktur (akses internet, jaringan lokal) yang tersedia di sekolah untuk meningkatkan praktik Pendidikan di sekolah",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "<p>Saya <b>sadar</b> bahwa teknologi digital yang tersedia di sekolah dapat membantu praktik profesional Pendidikan saya (perangkat, aplikasi, dan infrastruktur yang ada di sekolah)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "<p>Saya <b>telah mencoba</b> menggunakan teknologi digital yang ada di sekolah yang dapat mendukung praktik profesional Pendidikan saya (menggunakan papan tulis interaktif, proyektor, tablet, intrnet dan internet)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "<p>Saya <b>menggunakan beragam</b> teknologi digital yang tersedia di sekolah berdasarkan pada kebutuhan praktik profesional saya (<i>learning management system,</i> layanan daring berbasis <i>cloud</i>)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "<p>Saya <b>menganalisa dan memilih</b> teknologi digital yang tersedia di sekolah berdasarkan fitur-fiturnya dan kesesuaiannya untuk meningkatkan praktik profesional saya (pembelajaran daring, teknologi imersif, dll)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "<p>Saya <b>mendukung dan memberikan masukan</b> kepada guru lainnya tentang bagaimana menggunakan teknologi digital yang tersedia di sekolah untuk keperluan peningkatan praktek profesional mereka (memberikan presentasi, mengorganisasi <i>workshop</i>, atau mengembangkan sumber belajar digital)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "<p>Saya <b>mengusulkan</b> teknologi digital baru yang dapat digunakan untuk praktik profesional guru-guru di sekolah (teknologi imersif, aplikasi, dan atau infrastruktur teknologi sekolah yang baru)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "<p>Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "no": 5,
+      "name": "Keterlibatan Profesional – Praktik Refleksi",
+      "question": "Refleksi terhadap diri sendiri dan praktik kolektif bersama kolega menggunakan teknologi digital",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "<p>Saya <b>sadar</b> bahwa refleksi terhadap penggunaan teknologi digital dapat meningkatkan kualitas praktik profesional saya (menggunakan catatan harian online, atau refleksi secara ­<i>peer to peer</i>)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "<p>Saya <b>telah mencoba</b> metode-metode refleksi pada penggunaan teknologi digital untuk lebih jauh mengembangkan kompetensi digital saya (menggunakan alat refleksi diri secara online, catatan refleksi diri, atau menulis hasil releksi secara online)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "<p>Saya <b>menggunakan beragam</b> metode refleksi agar dapat meningkatkan dan memperbarui kemampuan profesional dalam praktik digital (<i>co-teaching</i>, merekam pembelajaran, atau tanya jawab secara online)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "<p>Saya <b>menganalisa</b> luaran hasil refleksi saya untuk meningkatkan penggunaan teknologi digital dalam praktik profesional saya sebagai guru (menganalisa timbal balik dari rekan-rekan, menggunakan rubrik <i>mind mapping </i>atau rubrik lainnya yang memiliki dukungan anotasi, berkomentar menggunakan audio atau video, dan lainnya)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "<p>Saya <b>mendukung dan memberikan saran</b> kepada kolega guru lainnya tentang bagaimana mengembangkan penggunaan teknologi dalam praktik profesional mereka menggunakan refleksi kritis, baik personal maupun refleksi bersama (melalui forum diskusi, blog, media sosial, dan komunitas profesional secara online)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "<p>Saya <b>menginisiasi dan berkontribusi</b> terhadap pengembangan kultur pembelajaran yang reflektif yang dapat meningkatkan penggunaan teknologi digital di sekolah dan sekitarnya (desain pembelajaran kolaboratif, <i>coaching, mentoring</i>, dan lainnya)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "<p>Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "no": 6,
+      "name": "Keterlibatan Profesional – Kehidupan Digital",
+      "question": "Berkontribusi positif dan etis dalam dunia digital dengan mempertimbangkan keamanan, dan tanggung jawab dalam praktik-praktik di dunia digital",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "<p>Saya <b>sadar</b> bahwa aktivitas digital saya dapat berimplikasi pada reputasi saya juga sekolah saya (sadar tentang membagikan informasi pribadi, atau menggunakan Bahasa yang tidak sesuai)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "<p>Saya <b>mengetahui</b> resiko dan ancaman yang mungkin berpengaruh pada reputasi saya dan juga sekolah saya terhadap aktivitas saya pada dunia digital (privasi, data personal, bullying, dan misinformasi)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "<p>Saya <b>menggunakan</b> Langkah-langkah mitigasi untuk mempertahankan profil digital yang positif (memahami tentang syarat penggunaan yang tersedia, menelusuri jejak digital saya, dan mengelola pengaturan privasi saya)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "<p>Saya <b>menganalisa dan menilai</b> jejak digital saya untuk menyesuaikan perilaku saya dan membantu mengkurasi reputasi online saya juga sekolah saya (menghindari konten dan orang-orang yang mencurigakan di dunia digital, menerapkan pedoman sekolah pada aktivitas digital)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "<p>Saya <b>mendukung dan menyediakan</b> saran untuk kolega guru lainnya dalam membuat dan mengkurasi etika dan tanggung jawab pada profil digital mereka (melalui presentasi, workshop, modul-modul yang mendukung, maupun aktivitas lainnya)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "<p>Saya <b>menginisasi dan mempromosikan</b> strategi pada tingkat sekolah yang dapat mendorong staff sekolah dan siswa dalam kontribusi, tanggung jawab, dan etika positif di dunia digital (menyediakan data-data yang transparan dan mengelola prosedur konten-konten digital, juga mengembangkan kode etik dalam dunia digital di sekolah)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "<p>Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "no": 7,
+      "name": "Keterlibatan Profesional – Pembelajaran Profesional (Melalui Teknologi Digital)",
+      "question": "Menggunakan teknologi digital untuk kepentingan belajar dan peningkatan profesionalisme diri",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "<p>Saya <b>menyadari</b> bahwa teknologi digital dapat mendukung dan menambah pembelajaran profesional saya (menggunakan alat dan sumber digital untuk belajar, kursus atau pembelajaran untuk peningkatan kompetensi)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "<p>Saya <b>telah mencoba</b> menggunakan teknologi digital untuk pembelajaran profesional saya (mencari informasi secara online, bergabung dengan kursus online, workshop atau seminar, menggunakan aplikasi pembelajaran online untuk belajar, berkunjung ke perpustakaan dan repositori digital)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "<p>Saya <b>menggunakan</b> beragam teknologi digital untuk kepentingan pembelajaran profesional saya (berdiskusi di forum digital, mengunggah materi-materi, memberi dan menerima <i>feedback</i> dari siswa, guru maupun orang tua)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "<p>Saya <b>menganalisa dan memilah</b> sumber dan kegiatan belajar online yang sesuai dengan kebutuhan belajar profesional saya (mengikuti webinar-webinar, kurus online interaktif, dan aktif di komunitas online)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "<p>Saya <b>mendukung dan memberikan</b> saran kepada kolega guru lainnya untuk menggunakan teknologi digital dalam peningkatan dan pembelajaran profesional mereka (memberikan informasi tentang komunitas belajar online, repositori sumber materi/media pembelajaran, dan memiliki portofolio digital)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "<p>Saya <b>menginisiasi dan mempromosikan</b> perencanaan dan strategi untuk mendukung kolega guru lainnya untuk meningkatkan secara digital kemampuan profesional mereka (menyediakan/mengadakan webinar, atau pelatihan online baik sebagai pembicara maupun penyelenggara, menginisiasi komunitas online, dan memberikan repositori sumber belajar)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "<p>Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "no": 8,
+      "name": "Keterlibatan Profesional – Pembelajaran Profesional (Melalui Teknologi Digital)",
+      "question": "Terlibat dalam kegiatan pembelajaran profesional untuk meningkatkan kemampuan dan kecakapan digital guru lainnya",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "<p>Saya <b>menyadari</b> bahwa terlibat dalam kegiatan pembelajaran profesional pada penggunaan teknologi digital dapat meningkatkan dan mengembangkan kemampuan/kecakapan digital saya (melalui webinar atau workshop penggunaan teknologi digital dalam kegiatan belajar-mengajar)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "<p>Saya <b>telah mengikuti</b> kegiatan pembelajaran profesional tentang penggunaan teknologi digital untuk dapat mengembangkan kompetensi digital saya (workshop dan micro-teaching dalam penggunaan teknologi digital pada kegiatan belajar mengajar)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "<p>Saya <b>berpartisipasi aktif</b> dalam beragam kegiatan belajar profesional baik formal maupun informal pada penggunaan teknologi digital untuk saya dapat meningkatkan kecakapan/kemampuan digital diri saya (pelatihan langsung pada penggunaan konsep pedagogi dalam teknologi digital, pendekatan pembelajaran online, dan asesmen secara digital)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "<p>Saya <b>menganalisa dan memilih</b> kegiatan belajar profesional pada penggunaan teknologi digital yang cocok dan sesuai untuk kebutuhan diri saya (menggunakan alat/rubrik <i>self-reflection </i>pada kompetensi digital pribadi, menentukan tujuan belajar, mendesain bagaimana saya akan belajar teknologi digital, dan kemudian berefleksi terhadap hasil belajar saya)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "<p>Saya <b>menyediakan</b> aktvitas belajar profesional tentang penggunaan teknologi digital dan mendukung kolega guru lainnya dalam pengembangan kompetensi digital mereka (mengadakan workshop, sesi diskusi informal dengan kolega guru, dan <i>micro-teaching</i> pada penggunaan teknologi digital dalam belajar-mengajar)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "<p>Saya <b>berkontribusi</b> dalam mendesain program aktivitas belajar profesional untuk kolega guru, yang bertujuan untuk meningkatkan kompetensi digital guru lainnya (menggunakan <i>project-based learning</i> menggunakan teknologi digital dalam pelatihan guru, desain pembelajarn yang ditingkatkan secara digital, dan saling bertukar praktik baik)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "<p>Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "no": 9,
+      "name": "Keterlibatan Profesional – Kemampuan Berpikir Komputasi",
+      "question": "Terlibat pada konsep berpikir komputasi dan proses-prosesnya sebagai bagian dari kompetensi digital guru",
+      "choices": [
+        {
+          "id": 1,
+          "value": 1,
+          "text": "<p>Saya <b>menyadari</b> bahwa konsep berpikir komputasi dan proses-prosesnya dan bagaimana hal tersebut berhubungan dengan kompetensi digital guru pada umumnya (mampu menganalisa masalah dan menemukan solusi, mengenali aspek-aspek pemikiran komputasional disekitar)"
+        },
+        {
+          "id": 2,
+          "value": 2,
+          "text": "<p>Saya <b>telah mencoba</b> menggunakan proses berpikir komputasional untuk mengeksplorasi solusi atas suatu masalah (menguraikan masalah, membuat tahapan-tahapan dari solusi, menganalisa kumpulan instruksi yang diterapkan pada solusi tersebut)"
+        },
+        {
+          "id": 3,
+          "value": 3,
+          "text": "<p>Saya <b>menggunakan</b> beragam alat digital dalam mengeksplorasi solusi terhadap masalah mengikuti proses berpikir komputasi (menggunakan alat programming visual, alat pengedit dan pembuat program)"
+        },
+        {
+          "id": 4,
+          "value": 4,
+          "text": "<p>Saya <b>menganalisa dan memilih</b> respon yang dihasilkan oleh algoritma (ranking pada hasil pencarian, iklan, dan bagaimana robot/AI dapat merespon)"
+        },
+        {
+          "id": 5,
+          "value": 5,
+          "text": "<p>Saya <b>memimpin</b> kegiatan berpikir komputasi di sekolah untuk mendukung peningkatan kompetensi digital guru dan siswa (membuat kelas atau kompetisi programming, atau kegiatan diskusi programming)"
+        },
+        {
+          "id": 6,
+          "value": 6,
+          "text": "<p>Saya <b>berkontribusi</b> untuk mendesain dan mengembangkan aplikasi Pendidikan digital (membuat game digital, aplikasi <i>mobile</i>, alat asesmen online, dan kostumisasi pada perangkat/alat virtual/digital)"
+        },
+        {
+          "id": 7,
+          "value": 0,
+          "text": "<p>Saya tidak mengetahui kompetensi ini"
+        }
+      ]
+    }
+  ]
+}
