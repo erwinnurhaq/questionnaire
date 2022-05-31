@@ -1,0 +1,57 @@
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 1024px;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+.resultgrade {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0 1rem 0;
+}
+
+.resultexplanation,
+.thankyou {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.resultgraph {
+  margin: 2rem 0;
+  padding: 1rem;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.resultgraphitem {
+  width: 120px;
+  display: inline-block;
+  margin: 0.5rem;
+}
+
+.resultgraphitemtext {
+  margin: 1rem 0 0.5rem 0;
+}
+
+.note {
+  margin: 1rem 0;
+  font-size: 0.75rem;
+}
+
+.note > div:first-child {
+  padding: 1rem;
+}
+
+.buttoncontainer a:last-child {
+  margin-left: 0.5rem;
+}

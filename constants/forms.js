@@ -35,12 +35,12 @@ export const MAPEL = [
 ];
 
 export const GRADES = [
-  { id: 1, name: 'Pemula', min: 0, max: 31 },
-  { id: 2, name: 'Eksplorasi', min: 32, max: 62 },
-  { id: 3, name: 'Integrator', min: 63, max: 93 },
-  { id: 4, name: 'Ahli', min: 94, max: 124 },
-  { id: 5, name: 'Pemimpin', min: 125, max: 155 },
-  { id: 6, name: 'Pelopor', min: 156, max: 186 },
+  { id: 1, name: 'Pemula', min: 0, max: 32, iconPath: '/images/awareness.png' },
+  { id: 2, name: 'Eksplorasi', min: 33, max: 64, iconPath: '/images/exploration.png' },
+  { id: 3, name: 'Integrator', min: 65, max: 96, iconPath: '/images/integration.png' },
+  { id: 4, name: 'Ahli', min: 97, max: 128, iconPath: '/images/expertise.png' },
+  { id: 5, name: 'Pemimpin', min: 129, max: 160, iconPath: '/images/leadership.png' },
+  { id: 6, name: 'Pelopor', min: 161, max: 192, iconPath: '/images/innovation.png' },
 ];
 
 export const MODEL_BIODATA = Schema.Model({

@@ -20,20 +20,13 @@ import Field from '~/components/Field';
 import { setBiodata, setBiodataError } from '~/store/slices/biodataSlice';
 import { setCurrentStep, setLatestStep } from '~/store/slices/stepSlice';
 import styles from '~/styles/Biodata.module.css';
+import ToastMessage from '~/components/ToastMessage';
 
 export default function Biodata() {
   const router = useRouter();
   const dispatch = useDispatch();
   const { latest } = useSelector((state) => state.step);
   const { biodata, biodata_error } = useSelector((state) => state.biodata);
-
-  function toastMessage(message, type) {
-    return (
-      <Message showIcon type={type || 'warning'}>
-        {message || 'Error'}.
-      </Message>
-    );
-  }
 
   function handlePrev() {
     router.push('/');
@@ -43,7 +36,7 @@ export default function Biodata() {
     ev.preventDefault();
     if (!isValid) return;
     try {
-      const response = await fetch(`/api/check_user?email=${biodata.email}`);
+      const response = await fetch(`/api/check_user_exist?email=${biodata.email}`);
       const result = await response.json();
       if (response.status >= 400) {
         throw new Error(result.message);
@@ -52,7 +45,7 @@ export default function Biodata() {
       dispatch(setCurrentStep(STEPS[2]));
       router.push(`/proficiencies/1`);
     } catch (err) {
-      toaster.push(toastMessage(err.message));
+      toaster.push(ToastMessage({ message: err.message }));
     }
   }
 

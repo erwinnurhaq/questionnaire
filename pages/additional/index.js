@@ -2,13 +2,21 @@ import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
-import { Button, Radio } from 'rsuite';
+import { Button, Loader, Radio, toaster } from 'rsuite';
 import { AnimatePresence, motion } from 'framer-motion';
 
+import { setExpectation2 } from '~/store/slices/expectationSlice';
+import { setAdditionalAnswers } from '~/store/slices/additionalSlice';
+import { setScores } from '~/store/slices/proficiencySlice';
+import { setCurrentStep, setLatestStep } from '~/store/slices/stepSlice';
+
 import ConfirmSubmit from '~/components/ConfirmSubmit';
+import GradeExpectation from '~/components/GradeExpectation';
+import ToastMessage from '~/components/ToastMessage';
 import { questions, additionals } from '~/constants/questions';
 import { MODAL } from '~/constants/modals';
-import { setAdditionalAnswers } from '~/store/slices/additionalSlice';
+import { STEPS } from '~/constants/steps';
+import formatPayloadSubmit from '~/helpers/formatPayloadSubmit';
 import styles from '~/styles/Additional.module.css';
 
 export async function getServerSideProps() {
@@ -20,12 +28,17 @@ export default function Additional({ additionals, lastProficiency }) {
   const router = useRouter();
   const dispatch = useDispatch();
   const { latest } = useSelector((state) => state.step);
-  const answers = useSelector((state) => state.additional.answers);
+  const biodata = useSelector((state) => state.biodata.biodata);
+  const expectation = useSelector((state) => state.expectation);
+  const proficienciesAnswers = useSelector((state) => state.proficiency.answers);
+  const additionalsAnswers = useSelector((state) => state.additional.answers);
+  const scores = useSelector((state) => state.proficiency.scores);
 
   const [modal, setModal] = useState('');
+  const [loading, setLoading] = useState(false);
 
   function handleGetAnswer(additionalNo, questionNo) {
-    const savedAnswers = answers[additionalNo] || [];
+    const savedAnswers = additionalsAnswers[additionalNo] || [];
     const savedAnswer = savedAnswers[questionNo - 1];
     return savedAnswer;
   }
@@ -39,8 +52,12 @@ export default function Additional({ additionals, lastProficiency }) {
   }
 
   function handleIsSubmitDisabled() {
-    return additionals.some((additional) =>
-      additional.questions.some((question) => handleGetAnswer(additional.no, question.no) === undefined)
+    return (
+      additionals.some((additional) =>
+        additional.questions.some((question) => handleGetAnswer(additional.no, question.no) === undefined)
+      ) ||
+      !expectation.ekspektasi_grade_2 ||
+      !!scores.grade
     );
   }
 
@@ -50,7 +67,38 @@ export default function Additional({ additionals, lastProficiency }) {
     router.push(`/proficiencies/${lastProficiencyNo}/${lastQuestionNo}`);
   }
 
-  function handleSubmit() {}
+  async function handleSubmit() {
+    setModal('');
+    setLoading(true);
+    try {
+      // check existing user again
+      let response = await fetch(`/api/check_user_exist?email=${biodata.email}`);
+      let result = await response.json();
+      if (response.status >= 400) {
+        throw new Error(result.message);
+      }
+
+      // submit answers
+      const data = formatPayloadSubmit({ biodata, expectation, proficienciesAnswers, additionalsAnswers });
+      response = await fetch('/api/questionnaire/send', {
+        headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+        method: 'POST',
+        body: JSON.stringify(data),
+      });
+      result = await response.json();
+      if (response.status >= 400) {
+        throw new Error(result.message);
+      }
+
+      dispatch(setScores(result.data));
+      dispatch(setLatestStep(STEPS[9]));
+      dispatch(setCurrentStep(STEPS[9]));
+      router.push(`/result`);
+    } catch (err) {
+      toaster.push(ToastMessage({ message: err.message }));
+      setLoading(false);
+    }
+  }
 
   useEffect(() => {
     if (latest.step < 8) {
@@ -60,6 +108,7 @@ export default function Additional({ additionals, lastProficiency }) {
 
   return (
     <div className={styles.container}>
+      {loading && <Loader backdrop content="loading..." vertical />}
       <Head>
         <title>Additional | Questionnaire</title>
       </Head>
@@ -78,7 +127,9 @@ export default function Additional({ additionals, lastProficiency }) {
         >
           {additionals.map((additional) => (
             <div key={additional.id} className={styles.additionalcontainer}>
-              <h4 className={styles.subtitle}>{additional.no}. {additional.name}</h4>
+              <h4 className={styles.subtitle}>
+                {additional.no}. {additional.name}
+              </h4>
               <div className={styles.questionscontainer}>
                 {additional.questions.map((question) => (
                   <div key={question.id}>
@@ -106,6 +157,11 @@ export default function Additional({ additionals, lastProficiency }) {
               </div>
             </div>
           ))}
+          <GradeExpectation
+            sublabel="Setelah mengisi asesmen ini, bagaimana Anda mendeskripsikan kompetensi / kecakapan digital Anda saat ini?"
+            value={expectation.ekspektasi_grade_2}
+            onChange={(value) => dispatch(setExpectation2(value))}
+          />
           <div className={styles.buttonwrapper}>
             <Button className="pagination-button" onClick={handlePrev}>
               Kembali
@@ -122,7 +178,11 @@ export default function Additional({ additionals, lastProficiency }) {
           </div>
         </motion.div>
       </AnimatePresence>
-      <ConfirmSubmit open={modal === MODAL.CONFIRM_SUBMIT} handleClose={() => setModal('')} />
+      <ConfirmSubmit
+        open={modal === MODAL.CONFIRM_SUBMIT}
+        handleSubmit={handleSubmit}
+        handleClose={() => setModal('')}
+      />
     </div>
   );
 }

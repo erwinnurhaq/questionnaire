@@ -23,14 +23,14 @@ export default function Proficiency({ proficiency, previousProficiency }) {
 
   function handlePrev() {
     if (previousProficiency) {
-      router.push(`/proficiencies/${previousProficiency.no}/${previousProficiency.questions.length}`);
+      router.push(`/proficiencies/${previousProficiency.no}`);
     } else {
       router.push(`/biodata`);
     }
   }
 
   function handleNext() {
-    router.push(`/proficiencies/${proficiency.no}/1`);
+    router.push(`/proficiencies/${proficiency.no}/questions`);
   }
 
   return (

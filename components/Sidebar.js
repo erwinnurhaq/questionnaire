@@ -1,10 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import { Steps } from 'rsuite';
+import { IconButton, Steps } from 'rsuite';
+import ReloadIcon from '@rsuite/icons/Reload';
 
-import { STEPS } from '~/constants/steps';
+import { persistor } from '~/store';
 import { setCurrentStep } from '~/store/slices/stepSlice';
+import { STEPS } from '~/constants/steps';
+import { STORAGE_KEY } from '~/constants/storageKeys';
 import styles from '~/styles/components/Sidebar.module.css';
 import StepIcons from './StepIcons';
 
@@ -13,9 +16,15 @@ export default function Sidebar() {
   const dispatch = useDispatch();
   const { latest } = useSelector((state) => state.step);
 
+  async function handleResetForm() {
+    await persistor.purge();
+    localStorage.removeItem(`persist:${STORAGE_KEY}`)
+    window.location.replace('/');
+  }
+
   function handleOnClickStep(step) {
     if (step.step <= latest.step) {
-      dispatch(setCurrentStep(step))
+      dispatch(setCurrentStep(step));
       router.push(step.path);
     }
   }
@@ -38,6 +47,11 @@ export default function Sidebar() {
             />
           ))}
         </Steps>
+        {latest.step > 0 && (
+          <IconButton icon={<ReloadIcon />} appearance="primary" onClick={handleResetForm}>
+            Clear and Reset Form
+          </IconButton>
+        )}
       </div>
     </aside>
   );

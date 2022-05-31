@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  ekspektasi_grade: '',
-  ekspektasi_grade_2: '',
+  ekspektasi_grade_1: undefined,
+  ekspektasi_grade_2: undefined,
 };
 
 export const expectationSlice = createSlice({
@@ -10,7 +10,7 @@ export const expectationSlice = createSlice({
   initialState,
   reducers: {
     setExpectation1: (state, { payload }) => {
-      state.ekspektasi_grade = payload;
+      state.ekspektasi_grade_1 = payload;
     },
     setExpectation2: (state, { payload }) => {
       state.ekspektasi_grade_2 = payload;

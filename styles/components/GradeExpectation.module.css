@@ -1,0 +1,57 @@
+.expectationContainer {
+  display: block;
+  background-color: var(--light-gray-bg-2);
+  margin: 3rem 0 1rem 0;
+  padding: 2rem 1rem 1rem 1rem;
+  border-radius: 4px;
+}
+
+.expectationtitle {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.expectationsubtitle {
+  text-align: center;
+}
+
+.expectationwrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.expectationactive {
+  margin: 0.5rem;
+  padding: 1rem 0.5rem;
+  width: 7rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.expectationinactive {
+  margin: 0.5rem;
+  padding: 1rem 0.5rem;
+  width: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.expectationinactive:hover {
+  background-color: white;
+}
+
+.expectationlabel {
+  margin-top: 0.5rem;
+}

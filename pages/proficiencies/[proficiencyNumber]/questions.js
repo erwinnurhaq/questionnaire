@@ -17,25 +17,28 @@ import QuestionsLayout from '~/layouts/QuestionsLayout';
 
 export async function getServerSideProps({ query }) {
   const proficiencyNumber = Number(query.proficiencyNumber);
-  const questionNumber = Number(query.questionNumber);
   const proficiency = questions.find((p) => p.no === proficiencyNumber);
-  const question = proficiency.questions.find((q) => q.no === questionNumber);
   const nextProficiency = questions.find((p) => p.no === proficiencyNumber + 1) || null;
-  return !proficiency || !question
+  return !proficiency
     ? { redirect: { destination: '/404', permanent: false } }
-    : { props: { proficiency, question, nextProficiency } };
+    : { props: { proficiency, nextProficiency } };
 }
 
-export default function ProficiencyQuestion({ proficiency, question, nextProficiency }) {
+export default function ProficiencyQuestions({ proficiency, nextProficiency }) {
   const router = useRouter();
   const dispatch = useDispatch();
   const answers = useSelector((state) => state.proficiency.answers);
+  const [question, setQuestion] = useState(handleFindQuestion(1));
   const [isPrevClicked, setIsPrevClicked] = useState(false);
 
   const answer = useMemo(() => {
     const currentAnswers = answers[proficiency.no] || [];
     return currentAnswers[question.no - 1];
   }, [answers, question.no, proficiency.no]);
+
+  function handleFindQuestion(no) {
+    return proficiency.questions.find((item) => item.no === no)
+  }
 
   function handleCheckRadio(value) {
     const data = {
@@ -49,7 +52,7 @@ export default function ProficiencyQuestion({ proficiency, question, nextProfici
   function handlePrev() {
     setIsPrevClicked(true);
     if (question.no > 1) {
-      router.push(`/proficiencies/${proficiency.no}/${question.no - 1}`);
+      setQuestion(handleFindQuestion(question.no - 1))
     } else {
       router.push(`/proficiencies/${proficiency.no}`);
     }
@@ -58,7 +61,7 @@ export default function ProficiencyQuestion({ proficiency, question, nextProfici
   function handleNext() {
     setIsPrevClicked(false);
     if (question.no < proficiency.questions.length) {
-      router.push(`/proficiencies/${proficiency.no}/${question.no + 1}`);
+      setQuestion(handleFindQuestion(question.no + 1))
       return;
     }
     dispatch(setLatestStep(STEPS[proficiency.no + 2]));
@@ -87,14 +90,14 @@ export default function ProficiencyQuestion({ proficiency, question, nextProfici
           </h4>
           <AnimatePresence exitBeforeEnter>
             <motion.div
-              key={router.asPath}
+              key={question.no}
               initial="hidden"
               animate="enter"
               exit="exit"
               variants={{
-                hidden: { opacity: 0, x: 0, y: isPrevClicked ? 50 : -100 },
+                hidden: { opacity: 0, x: 0, y: isPrevClicked ? 20 : -30 },
                 enter: { opacity: 1, x: 0, y: 0 },
-                exit: { opacity: 0, x: 0, y: isPrevClicked ? -100 : 50 },
+                exit: { opacity: 0, x: 0, y: isPrevClicked ? -30 : 20 },
               }}
               transition={{ duration: 0.4, type: 'tween', ease: 'easeOut' }}
             >

@@ -3,20 +3,18 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { IconButton } from 'rsuite';
 import SortDown from '@rsuite/icons/SortDown';
-import PlusRound from '@rsuite/icons/PlusRound';
 import { AnimatePresence, motion } from 'framer-motion';
 
-import { GRADES } from '~/constants/forms';
-import formatSelectOption from '~/helpers/formatSelectOption';
 import { setExpectation1 } from '~/store/slices/expectationSlice';
 import styles from '~/styles/Home.module.css';
 import { setCurrentStep, setLatestStep } from '~/store/slices/stepSlice';
 import { STEPS } from '~/constants/steps';
+import GradeExpectation from '~/components/GradeExpectation';
 
 export default function Home() {
   const router = useRouter();
   const dispatch = useDispatch();
-  const ekspektasiGrade = useSelector((state) => state.expectation.ekspektasi_grade);
+  const ekspektasiGrade = useSelector((state) => state.expectation.ekspektasi_grade_1);
 
   function handleNext() {
     dispatch(setLatestStep(STEPS[1]));
@@ -43,7 +41,7 @@ export default function Home() {
           transition={{ duration: 0.4, type: 'tween', ease: 'easeOut' }}
         >
           <h2 className={styles.title}>Assessment Kompetensi Digital</h2>
-          <h4>Instrusksi Pengisian Instrumen</h4>
+          <h4 className={styles.subtitle}>Instrusksi Pengisian Instrumen</h4>
           <p>
             Terima kasih telah meluangkan waktu bapak/ibu guru untuk mengisi instrumen Asesmen Kompetensi
             Digital untuk mengukur kemampuan penggunaan Teknologi Digital bapak/ibu guru dalam kapasitasnya
@@ -51,8 +49,8 @@ export default function Home() {
             aturan dan hal-hal yang harus diperhatikan dalam asesmen ini agar data yang dihasilkan dapat valid
             dan reliabel.
           </p>
-          <p>Persiapan:</p>
-          <ol>
+          <p className={styles.instruction}>Persiapan:</p>
+          <ol className={styles.instructionitems}>
             <li>
               Instrumen Asesmen Digital ini memiliki 8 bagian yang teridiri dari Pengisian Biodata, 6
               tingkatan Kecakapan, dan informasi tambahan yang harus bapak/ibu isi seluruhnya
@@ -88,29 +86,16 @@ export default function Home() {
               mengembangkan potensi dan kemampuan/kecakapan digital bapak/ibu guru berikutnya
             </li>
           </ol>
-          <h5 className={styles.subtitle}>Ekspektasi Grade:</h5>
-          <div className={styles.expectationwrapper}>
-            {formatSelectOption(GRADES).map((grade) => (
-              <button
-                key={grade.value}
-                type="button"
-                className={
-                  ekspektasiGrade === grade.value
-                    ? styles.expectationactive
-                    : styles.expectationinactive
-                }
-                onClick={() => dispatch(setExpectation1(grade.value))}
-              >
-                <PlusRound className={styles.expectationicon} />
-                <p>{grade.label}</p>
-              </button>
-            ))}
-          </div>
+          <GradeExpectation
+            sublabel="Sebelum memulai asesmen ini, bagaimana Anda mendeskripsikan kompetensi / kecakapan digital Anda saat ini?"
+            value={ekspektasiGrade}
+            onChange={(value) => dispatch(setExpectation1(value))}
+          />
           <div className={styles.buttonwrapper}>
             <IconButton
               className="pagination-button"
               title="Berikutnya"
-              disabled={ekspektasiGrade === ''}
+              disabled={!ekspektasiGrade}
               icon={<SortDown />}
               type="submit"
               color="cyan"

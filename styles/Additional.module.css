@@ -43,7 +43,7 @@
 
 .buttonwrapper {
   margin: 1rem 0;
-  float: right;
+  text-align: center;
 }
 
 @media screen and (max-width: 900px) {
