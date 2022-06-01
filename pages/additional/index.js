@@ -19,13 +19,11 @@ import { STEPS } from '~/constants/steps';
 import formatPayloadSubmit from '~/helpers/formatPayloadSubmit';
 import styles from '~/styles/Additional.module.css';
 
-export async function getServerSideProps() {
-  const lastProficiency = questions[questions.length - 1];
-  return { props: { additionals, lastProficiency } };
-}
-
-export default function Additional({ additionals, lastProficiency }) {
+export default function Additional() {
   const router = useRouter();
+  
+  const lastProficiency = questions[questions.length - 1];
+  
   const dispatch = useDispatch();
   const { latest } = useSelector((state) => state.step);
   const biodata = useSelector((state) => state.biodata.biodata);

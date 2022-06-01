@@ -24,6 +24,7 @@ import ToastMessage from '~/components/ToastMessage';
 
 export default function Biodata() {
   const router = useRouter();
+  
   const dispatch = useDispatch();
   const { latest } = useSelector((state) => state.step);
   const { biodata, biodata_error } = useSelector((state) => state.biodata);
@@ -46,7 +47,6 @@ export default function Biodata() {
       }
       dispatch(setLatestStep(STEPS[2]));
       dispatch(setCurrentStep(STEPS[2]));
-      setLoading(false);
       router.push(`/proficiencies/1`);
     } catch (err) {
       toaster.push(ToastMessage({ message: err.message }));

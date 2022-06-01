@@ -16,28 +16,27 @@ import styles from '~/styles/ProficienciesQuestions.module.css';
 import QuestionsLayout from '~/layouts/QuestionsLayout';
 
 export async function getServerSideProps({ query }) {
-  const proficiencyNumber = Number(query.proficiencyNumber);
-  const proficiency = questions.find((p) => p.no === proficiencyNumber);
-  const nextProficiency = questions.find((p) => p.no === proficiencyNumber + 1) || null;
-  return !proficiency
-    ? { redirect: { destination: '/404', permanent: false } }
-    : { props: { proficiency, nextProficiency } };
+  return { props: { proficiencyNumber: Number(query.proficiencyNumber) } };
 }
 
-export default function ProficiencyQuestions({ proficiency, nextProficiency }) {
+export default function ProficiencyQuestions({ proficiencyNumber }) {
   const router = useRouter();
+
+  const proficiency = questions.find((p) => p.no === proficiencyNumber);
+  const nextProficiency = questions.find((p) => p.no === proficiencyNumber + 1);
+
   const dispatch = useDispatch();
   const answers = useSelector((state) => state.proficiency.answers);
   const [question, setQuestion] = useState(handleFindQuestion(1));
   const [isPrevClicked, setIsPrevClicked] = useState(false);
 
-  const answer = useMemo(() => {
-    const currentAnswers = answers[proficiency.no] || [];
-    return currentAnswers[question.no - 1];
-  }, [answers, question.no, proficiency.no]);
+  const answer = useMemo(
+    () => (!proficiency || !question ? undefined : (answers[proficiency.no] || [])[question.no - 1]),
+    [answers, question, proficiency]
+  );
 
   function handleFindQuestion(no) {
-    return proficiency.questions.find((item) => item.no === no)
+    return proficiency?.questions.find((item) => item.no === no);
   }
 
   function handleCheckRadio(value) {
@@ -50,14 +49,14 @@ export default function ProficiencyQuestions({ proficiency, nextProficiency }) {
   }
 
   function handleScrollTop() {
-    window.scrollTo(0,0)
+    window.scrollTo(0, 0);
   }
 
   function handlePrev() {
     setIsPrevClicked(true);
     if (question.no > 1) {
-      setQuestion(handleFindQuestion(question.no - 1))
-      handleScrollTop()
+      setQuestion(handleFindQuestion(question.no - 1));
+      handleScrollTop();
     } else {
       router.push(`/proficiencies/${proficiency.no}`);
     }
@@ -66,8 +65,8 @@ export default function ProficiencyQuestions({ proficiency, nextProficiency }) {
   function handleNext() {
     setIsPrevClicked(false);
     if (question.no < proficiency.questions.length) {
-      setQuestion(handleFindQuestion(question.no + 1))
-      handleScrollTop()
+      setQuestion(handleFindQuestion(question.no + 1));
+      handleScrollTop();
       return;
     }
     dispatch(setLatestStep(STEPS[proficiency.no + 2]));
@@ -77,6 +76,11 @@ export default function ProficiencyQuestions({ proficiency, nextProficiency }) {
     } else {
       router.push('/additional');
     }
+  }
+
+  if (!proficiency || !question) {
+    router.push('/404');
+    return null;
   }
 
   return (

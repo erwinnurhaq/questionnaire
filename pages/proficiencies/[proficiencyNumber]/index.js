@@ -10,16 +10,14 @@ import { questions } from '~/constants/questions';
 import styles from '~/styles/Proficiencies.module.css';
 
 export async function getServerSideProps({ query }) {
-  const proficiencyNumber = Number(query.proficiencyNumber);
-  const proficiency = questions.find((p) => p.no === proficiencyNumber);
-  const previousProficiency = questions.find((p) => p.no === proficiencyNumber - 1) || null;
-  return !proficiency
-    ? { redirect: { destination: '/404', permanent: false } }
-    : { props: { proficiency, previousProficiency } };
+  return { props: { proficiencyNumber: Number(query.proficiencyNumber) } };
 }
 
-export default function Proficiency({ proficiency, previousProficiency }) {
+export default function Proficiency({proficiencyNumber}) {
   const router = useRouter();
+  
+  const proficiency = questions.find((p) => p.no === proficiencyNumber);
+  const previousProficiency = questions.find((p) => p.no === proficiencyNumber - 1);
 
   function handlePrev() {
     if (previousProficiency) {
@@ -31,6 +29,11 @@ export default function Proficiency({ proficiency, previousProficiency }) {
 
   function handleNext() {
     router.push(`/proficiencies/${proficiency.no}/questions`);
+  }
+
+  if (!proficiency) {
+    router.push('/404')
+    return null;
   }
 
   return (
