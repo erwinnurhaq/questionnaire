@@ -17,7 +17,7 @@ export default function Result() {
   const LINK = {
     DIGCOMP:
       'https://publications.jrc.ec.europa.eu/repository/bitstream/JRC107466/pdf_digcomedu_a4_final.pdf',
-    GFORM: 'https://publications.jrc.ec.europa.eu/repository/bitstream/JRC107466/pdf_digcomedu_a4_final.pdf',
+    GFORM: 'bit.ly/interviewkompetensidigital',
   };
 
   function handleFormatPercentage(scorePart, scoreMax) {
@@ -89,8 +89,8 @@ export default function Result() {
             <Button as="a" href={LINK.DIGCOMP} target="_blank" color="cyan" appearance="primary">
               Download Panduan (PDF)
             </Button>
-            <Button as="a" href={LINK.DIGCOMP} target="_blank" color="cyan" appearance="primary">
-              Form Google
+            <Button as="a" href={LINK.GFORM} target="_blank" color="cyan" appearance="primary">
+              Form Interview Kompetensi Digital
             </Button>
           </div>
         </motion.div>

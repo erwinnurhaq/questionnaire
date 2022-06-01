@@ -49,10 +49,15 @@ export default function ProficiencyQuestions({ proficiency, nextProficiency }) {
     dispatch(setAnswers(data));
   }
 
+  function handleScrollTop() {
+    window.scrollTo(0,0)
+  }
+
   function handlePrev() {
     setIsPrevClicked(true);
     if (question.no > 1) {
       setQuestion(handleFindQuestion(question.no - 1))
+      handleScrollTop()
     } else {
       router.push(`/proficiencies/${proficiency.no}`);
     }
@@ -62,6 +67,7 @@ export default function ProficiencyQuestions({ proficiency, nextProficiency }) {
     setIsPrevClicked(false);
     if (question.no < proficiency.questions.length) {
       setQuestion(handleFindQuestion(question.no + 1))
+      handleScrollTop()
       return;
     }
     dispatch(setLatestStep(STEPS[proficiency.no + 2]));

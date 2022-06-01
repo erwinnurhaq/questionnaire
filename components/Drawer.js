@@ -1,10 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import { Steps, Drawer as DrawerRSuite } from 'rsuite';
+import { IconButton, Steps, Drawer as DrawerRSuite } from 'rsuite';
+import ReloadIcon from '@rsuite/icons/Reload';
 
-import { STEPS } from '~/constants/steps';
+import { persistor } from '~/store';
 import { setCurrentStep } from '~/store/slices/stepSlice';
+import { STEPS } from '~/constants/steps';
+import { STORAGE_KEY } from '~/constants/storageKeys';
 import styles from '~/styles/components/Drawer.module.css';
 import StepIcons from './StepIcons';
 
@@ -13,6 +16,12 @@ export default function Drawer({ isOpenDrawer, setIsOpenDrawer }) {
   const dispatch = useDispatch();
   const { latest } = useSelector((state) => state.step);
 
+  async function handleResetForm() {
+    await persistor.purge();
+    localStorage.removeItem(`persist:${STORAGE_KEY}`)
+    window.location.replace('/');
+  }
+  
   function handleOnClickStep(step) {
     if (step.step <= latest.step) {
       dispatch(setCurrentStep(step));
@@ -47,6 +56,11 @@ export default function Drawer({ isOpenDrawer, setIsOpenDrawer }) {
                 />
               ))}
             </Steps>
+            {latest.step > 0 && (
+              <IconButton icon={<ReloadIcon />} appearance="primary" onClick={handleResetForm}>
+                Clear and Reset Form
+              </IconButton>
+            )}
           </div>
         </aside>
       </DrawerRSuite.Body>
