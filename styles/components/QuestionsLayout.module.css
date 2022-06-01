@@ -4,7 +4,7 @@
 }
 
 .progresscontainer {
-  background-color: white;
+  background-color: var(--white);
   width: 100%;
   margin-bottom: 1rem;
 }
@@ -17,7 +17,7 @@
 }
 
 .progressbarcomplete > div > div{
-  background: var(--light-green-text-1);
+  background: var(--light-blue-bg-2);
 }
 
 .progressinfo {
@@ -27,7 +27,7 @@
 
 @media screen and (max-width: 768px) {
   .progresscontainer {
-    background-color: white;
+    background-color: var(--white);
     width: 100%;
     position: fixed;
     top: 0;

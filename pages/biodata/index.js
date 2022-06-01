@@ -172,7 +172,6 @@ export default function Biodata() {
                 title="Berikutnya"
                 icon={<SortDown />}
                 type="submit"
-                color="cyan"
                 appearance="primary"
                 circle
               />

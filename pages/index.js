@@ -98,7 +98,6 @@ export default function Home() {
               disabled={!ekspektasiGrade}
               icon={<SortDown />}
               type="submit"
-              color="cyan"
               appearance="primary"
               circle
               onClick={handleNext}

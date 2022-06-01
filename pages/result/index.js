@@ -86,10 +86,10 @@ export default function Result() {
             </Message>
           </div>
           <div className={styles.buttoncontainer}>
-            <Button as="a" href={LINK.DIGCOMP} target="_blank" color="cyan" appearance="primary">
+            <Button as="a" href={LINK.DIGCOMP} target="_blank" appearance="primary">
               Download Panduan (PDF)
             </Button>
-            <Button as="a" href={LINK.GFORM} target="_blank" color="cyan" appearance="primary">
+            <Button as="a" href={LINK.GFORM} target="_blank" appearance="primary">
               Form Interview Kompetensi Digital
             </Button>
           </div>

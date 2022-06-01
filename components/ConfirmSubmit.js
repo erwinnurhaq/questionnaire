@@ -10,7 +10,7 @@ export default function ConfirmSubmit({ open, handleClose, handleSubmit }) {
         Apakah anda yakin? Setelah terkirim jawaban dan hasil tidak dapat diubah.
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={handleSubmit} color="cyan" appearance="primary">
+        <Button onClick={handleSubmit} appearance="primary">
           Ya
         </Button>
         <Button onClick={handleClose} appearance="subtle">

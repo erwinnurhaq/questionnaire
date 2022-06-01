@@ -144,7 +144,6 @@ export default function ProficiencyQuestions({ proficiencyNumber }) {
                   className="pagination-button"
                   title="Berikutnya"
                   icon={<SortDown />}
-                  color="cyan"
                   appearance="primary"
                   circle
                   disabled={answer === undefined}

@@ -166,7 +166,6 @@ export default function Additional() {
             </Button>
             <Button
               className="pagination-button"
-              color="cyan"
               appearance="primary"
               disabled={handleIsSubmitDisabled()}
               onClick={() => setModal(MODAL.CONFIRM_SUBMIT)}
