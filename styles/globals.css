@@ -53,8 +53,8 @@ a:hover {
 }
 
 .rs-steps-item-title {
-  font-size: 0.75rem;
-  padding-top: 0.2rem;
+  font-size: 0.75rem !important;
+  padding-top: 0.2rem !important;
 }
 
 .rs-steps-item-status-finish:hover,
