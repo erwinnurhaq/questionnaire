@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { IconButton, Form, Input, SelectPicker, Message, toaster } from 'rsuite';
+import { IconButton, Form, Input, SelectPicker, Loader, toaster } from 'rsuite';
 import SortDown from '@rsuite/icons/SortDown';
 import SortUp from '@rsuite/icons/SortUp';
 import { useDispatch, useSelector } from 'react-redux';
@@ -28,6 +28,8 @@ export default function Biodata() {
   const { latest } = useSelector((state) => state.step);
   const { biodata, biodata_error } = useSelector((state) => state.biodata);
 
+  const [loading, setLoading] = useState(false);
+
   function handlePrev() {
     router.push('/');
   }
@@ -35,6 +37,7 @@ export default function Biodata() {
   async function handleSubmit(isValid, ev) {
     ev.preventDefault();
     if (!isValid) return;
+    setLoading(true);
     try {
       const response = await fetch(`/api/check_user_exist?email=${biodata.email}`);
       const result = await response.json();
@@ -43,9 +46,11 @@ export default function Biodata() {
       }
       dispatch(setLatestStep(STEPS[2]));
       dispatch(setCurrentStep(STEPS[2]));
+      setLoading(false);
       router.push(`/proficiencies/1`);
     } catch (err) {
       toaster.push(ToastMessage({ message: err.message }));
+      setLoading(false);
     }
   }
 
@@ -57,6 +62,7 @@ export default function Biodata() {
 
   return (
     <div className={styles.container}>
+      {loading && <Loader backdrop content="loading..." vertical />}
       <Head>
         <title>Biodata | Questionnaire</title>
       </Head>
