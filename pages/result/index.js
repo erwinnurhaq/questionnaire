@@ -37,7 +37,7 @@ export default function Result() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Biodata | Questionnaire</title>
+        <title>Result | Questionnaire</title>
       </Head>
       <AnimatePresence exitBeforeEnter>
         <motion.div
