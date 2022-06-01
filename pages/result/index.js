@@ -17,7 +17,7 @@ export default function Result() {
   const LINK = {
     DIGCOMP:
       'https://publications.jrc.ec.europa.eu/repository/bitstream/JRC107466/pdf_digcomedu_a4_final.pdf',
-    GFORM: 'bit.ly/interviewkompetensidigital',
+    GFORM: 'https://bit.ly/interviewkompetensidigital',
   };
 
   function handleFormatPercentage(scorePart, scoreMax) {
