@@ -21,16 +21,15 @@ import styles from '~/styles/Additional.module.css';
 
 export default function Additional() {
   const router = useRouter();
-  
+
   const lastProficiency = questions[questions.length - 1];
-  
+
   const dispatch = useDispatch();
   const { latest } = useSelector((state) => state.step);
   const biodata = useSelector((state) => state.biodata.biodata);
   const expectation = useSelector((state) => state.expectation);
   const proficienciesAnswers = useSelector((state) => state.proficiency.answers);
   const additionalsAnswers = useSelector((state) => state.additional.answers);
-  const scores = useSelector((state) => state.proficiency.scores);
 
   const [modal, setModal] = useState('');
   const [loading, setLoading] = useState(false);
@@ -53,9 +52,7 @@ export default function Additional() {
     return (
       additionals.some((additional) =>
         additional.questions.some((question) => handleGetAnswer(additional.no, question.no) === undefined)
-      ) ||
-      !expectation.ekspektasi_grade_2 ||
-      !!scores.grade
+      ) || !expectation.ekspektasi_grade_2
     );
   }
 
