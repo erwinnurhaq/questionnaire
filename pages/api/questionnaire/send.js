@@ -1,3 +1,4 @@
+import moment from 'moment-timezone';
 import formatScores from '~/helpers/formatScores';
 import { db, excuteQuery } from '~/lib/db';
 
@@ -27,29 +28,35 @@ export default async function handler(req, res) {
       answers_part_4,
       answers_part_5,
       answers_part_6,
-    })
+    });
+
+    const currentTime = moment().utc();
+    const timeUTC = currentTime.format('YYYY-MM-DD HH:mm:ss');
+    const timeLocal7 = moment(currentTime).tz('Asia/Jakarta').format('YYYY-MM-DD HH:mm:ss');
 
     const insertedUser = await excuteQuery({
       query: 'INSERT INTO users SET ?',
-      values: user,
+      values: { ...user, created_at: timeUTC, created_at_local: timeLocal7 },
     });
 
     const user_id = insertedUser.insertId;
     const result = await db
       .transaction()
-      .query('INSERT INTO answers_part_1 SET ?', { user_id, ...answers_part_1 })
-      .query('INSERT INTO answers_part_2 SET ?', { user_id, ...answers_part_2 })
-      .query('INSERT INTO answers_part_3 SET ?', { user_id, ...answers_part_3 })
-      .query('INSERT INTO answers_part_4 SET ?', { user_id, ...answers_part_4 })
-      .query('INSERT INTO answers_part_5 SET ?', { user_id, ...answers_part_5 })
-      .query('INSERT INTO answers_part_6 SET ?', { user_id, ...answers_part_6 })
-      .query('INSERT INTO answers_misc_1 SET ?', { user_id, ...answers_misc_1 })
-      .query('INSERT INTO answers_misc_2 SET ?', { user_id, ...answers_misc_2 })
-      .query('INSERT INTO scores SET ?', { user_id, ...scores })
-      .rollback(() => excuteQuery({
-        query: 'DELETE FROM users WHERE id = ?',
-        values: [user_id],
-      }))
+      .query('INSERT INTO answers_part_1 SET ?', { user_id, created_at: timeUTC, ...answers_part_1 })
+      .query('INSERT INTO answers_part_2 SET ?', { user_id, created_at: timeUTC, ...answers_part_2 })
+      .query('INSERT INTO answers_part_3 SET ?', { user_id, created_at: timeUTC, ...answers_part_3 })
+      .query('INSERT INTO answers_part_4 SET ?', { user_id, created_at: timeUTC, ...answers_part_4 })
+      .query('INSERT INTO answers_part_5 SET ?', { user_id, created_at: timeUTC, ...answers_part_5 })
+      .query('INSERT INTO answers_part_6 SET ?', { user_id, created_at: timeUTC, ...answers_part_6 })
+      .query('INSERT INTO answers_misc_1 SET ?', { user_id, created_at: timeUTC, ...answers_misc_1 })
+      .query('INSERT INTO answers_misc_2 SET ?', { user_id, created_at: timeUTC, ...answers_misc_2 })
+      .query('INSERT INTO scores SET ?', { user_id, created_at: timeUTC, ...scores })
+      .rollback(() =>
+        excuteQuery({
+          query: 'DELETE FROM users WHERE id = ?',
+          values: [user_id],
+        })
+      )
       .commit();
 
     if (result.error) {

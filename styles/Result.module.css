@@ -52,6 +52,6 @@
   padding: 1rem;
 }
 
-.buttoncontainer a:last-child {
-  margin-left: 0.5rem;
+.buttoncontainer a {
+  margin: 0.5rem;
 }
