@@ -1,21 +1,20 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { IconButton } from 'rsuite';
-import SortDown from '@rsuite/icons/SortDown';
-import SortUp from '@rsuite/icons/SortUp';
-import { AnimatePresence, motion } from 'framer-motion';
 
 import ProficiencyLayout from '~/layouts/ProficiencyLayout';
 import { questions } from '~/constants/questions';
 import styles from '~/styles/Proficiencies.module.css';
+import Animate from '~/components/Animate';
+import PageTitle from '~/components/PageTitle';
+import PaginationButtons from '~/components/PaginationButtons';
 
 export async function getServerSideProps({ query }) {
   return { props: { proficiencyNumber: Number(query.proficiencyNumber) } };
 }
 
-export default function Proficiency({proficiencyNumber}) {
+export default function Proficiency({ proficiencyNumber }) {
   const router = useRouter();
-  
+
   const proficiency = questions.find((p) => p.no === proficiencyNumber);
   const previousProficiency = questions.find((p) => p.no === proficiencyNumber - 1);
 
@@ -32,7 +31,7 @@ export default function Proficiency({proficiencyNumber}) {
   }
 
   if (!proficiency) {
-    router.push('/404')
+    router.push('/404');
     return null;
   }
 
@@ -41,43 +40,14 @@ export default function Proficiency({proficiencyNumber}) {
       <Head>
         <title>{proficiency.name} | Questionnaire</title>
       </Head>
-      <AnimatePresence exitBeforeEnter>
-        <motion.div
-          key={router.asPath}
-          initial="hidden"
-          animate="enter"
-          exit="exit"
-          variants={{
-            hidden: { opacity: 0 },
-            enter: { opacity: 1},
-            exit: { opacity: 0 },
-          }}
-          transition={{ duration: 0.4, type: 'tween', ease: 'easeOut' }}
-        >
-          <div className={styles.container}>
-            <h2 className={styles.title}>
-              {proficiency.no}. {proficiency.name}
-            </h2>
-            <div>
-              <IconButton
-                className="pagination-button"
-                title="Kembali"
-                icon={<SortUp />}
-                circle
-                onClick={handlePrev}
-              />
-              <IconButton
-                className="pagination-button"
-                title="Berikutnya"
-                icon={<SortDown />}
-                appearance="primary"
-                circle
-                onClick={handleNext}
-              />
-            </div>
-          </div>
-        </motion.div>
-      </AnimatePresence>
+      <Animate.Fade keyMotion={router.asPath}>
+        <div className={styles.container}>
+          <h2 className={styles.title}>
+            {proficiency.no}. {proficiency.name}
+          </h2>
+          <PaginationButtons alignment="center" onClickPrev={handlePrev} onClickNext={handleNext} />
+        </div>
+      </Animate.Fade>
     </ProficiencyLayout>
   );
 }

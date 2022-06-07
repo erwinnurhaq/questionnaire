@@ -19,7 +19,12 @@ export default async function handler(req, res) {
       answers_part_6,
       answers_misc_1,
       answers_misc_2,
+      token
     } = req.body;
+
+    if (!token) {
+      throw new Error('Token is required!');
+    }
 
     const scores = formatScores({
       answers_part_1,

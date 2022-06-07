@@ -16,5 +16,5 @@ export default function ProficiencyLayout({ number, children }) {
     }
   }, [latest.step, number]); // eslint-disable-line
 
-  return <div>{children}</div>;
+  return <>{children}</>;
 }

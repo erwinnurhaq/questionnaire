@@ -6,6 +6,7 @@ export default function formatPayloadSubmit({
   expectation,
   proficienciesAnswers,
   additionalsAnswers,
+  token
 }) {
   const reduceAnswers = (arr) =>
     arr.reduce((prev, curr, idx) => {
@@ -13,7 +14,7 @@ export default function formatPayloadSubmit({
       return prev;
     }, {});
 
-  const data = {};
+  const data = { token };
   // biodata with expectations
   data.user = { ...biodata };
   // expectations

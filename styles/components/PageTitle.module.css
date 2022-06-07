@@ -1,0 +1,14 @@
+.alignmentLeft {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.alignmentRight {
+  margin-bottom: 1rem;
+  text-align: right;
+}
+
+.alignmentCenter {
+  margin-bottom: 1rem;
+  text-align: center;
+}

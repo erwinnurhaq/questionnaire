@@ -3,7 +3,7 @@ import styles from '~/styles/components/QuestionsLayout.module.css';
 
 export default function QuestionsLayout({ questionNo, totalNo, isAnswered, isAllAnswered, children }) {
   return (
-    <div className={styles.container}>
+    <div className="confined-container">
       <div className={styles.progresscontainer}>
         <div className={styles.progresswrapper}>
           <Progress.Line

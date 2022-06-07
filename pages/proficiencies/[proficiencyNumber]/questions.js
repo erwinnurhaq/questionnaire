@@ -2,18 +2,17 @@ import { useMemo, useState } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
-import { IconButton, Radio } from 'rsuite';
-import SortDown from '@rsuite/icons/SortDown';
-import SortUp from '@rsuite/icons/SortUp';
-import { AnimatePresence, motion } from 'framer-motion';
+import { Radio } from 'rsuite';
 
-import ProficiencyLayout from '~/layouts/ProficiencyLayout';
 import { setCurrentStep, setLatestStep } from '~/store/slices/stepSlice';
 import { setAnswers } from '~/store/slices/proficiencySlice';
 import { questions } from '~/constants/questions';
 import { STEPS } from '~/constants/steps';
-import styles from '~/styles/ProficienciesQuestions.module.css';
+import ProficiencyLayout from '~/layouts/ProficiencyLayout';
 import QuestionsLayout from '~/layouts/QuestionsLayout';
+import Animate from '~/components/Animate';
+import PaginationButtons from '~/components/PaginationButtons';
+import styles from '~/styles/ProficienciesQuestions.module.css';
 
 export async function getServerSideProps({ query }) {
   return { props: { proficiencyNumber: Number(query.proficiencyNumber) } };
@@ -94,65 +93,37 @@ export default function ProficiencyQuestions({ proficiencyNumber }) {
         <Head>
           <title>{proficiency.name} | Questionnaire</title>
         </Head>
-        <div className={styles.container}>
-          <h4 className={styles.title}>
-            {proficiency.no}. {proficiency.name}
-          </h4>
-          <AnimatePresence exitBeforeEnter>
-            <motion.div
-              key={question.no}
-              initial="hidden"
-              animate="enter"
-              exit="exit"
-              variants={{
-                hidden: { opacity: 0, x: 0, y: isPrevClicked ? 20 : -30 },
-                enter: { opacity: 1, x: 0, y: 0 },
-                exit: { opacity: 0, x: 0, y: isPrevClicked ? -30 : 20 },
-              }}
-              transition={{ duration: 0.4, type: 'tween', ease: 'easeOut' }}
-            >
-              <div className={styles.questioncard}>
-                <div className={styles.question}>
-                  <p
-                    dangerouslySetInnerHTML={{ __html: `${proficiency.no}.${question.no}. ${question.name}` }}
-                  ></p>
-                  <p dangerouslySetInnerHTML={{ __html: question.question }}></p>
-                </div>
-                <div>
-                  {question.choices.map((choice) => (
-                    <Radio
-                      key={choice.id}
-                      className={styles.questionradio}
-                      value={choice.value}
-                      checked={answer === choice.value}
-                      onClick={() => handleCheckRadio(choice.value)}
-                    >
-                      <span dangerouslySetInnerHTML={{ __html: choice.text }}></span>
-                    </Radio>
-                  ))}
-                </div>
-              </div>
-              <div className={styles.buttonwrapper}>
-                <IconButton
-                  className="pagination-button"
-                  title="Kembali"
-                  icon={<SortUp />}
-                  circle
-                  onClick={handlePrev}
-                />
-                <IconButton
-                  className="pagination-button"
-                  title="Berikutnya"
-                  icon={<SortDown />}
-                  appearance="primary"
-                  circle
-                  disabled={answer === undefined}
-                  onClick={handleNext}
-                />
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
+        <h4 className={styles.title}>
+          {proficiency.no}. {proficiency.name}
+        </h4>
+        <Animate.Slide keyMotion={question.no} isReversed={isPrevClicked}>
+          <div className={styles.questioncard}>
+            <div className={styles.question}>
+              <p
+                dangerouslySetInnerHTML={{ __html: `${proficiency.no}.${question.no}. ${question.name}` }}
+              ></p>
+              <p dangerouslySetInnerHTML={{ __html: question.question }}></p>
+            </div>
+            <div>
+              {question.choices.map((choice) => (
+                <Radio
+                  key={choice.id}
+                  className={styles.questionradio}
+                  value={choice.value}
+                  checked={answer === choice.value}
+                  onFocus={() => handleCheckRadio(choice.value)}
+                >
+                  <span dangerouslySetInnerHTML={{ __html: choice.text }}></span>
+                </Radio>
+              ))}
+            </div>
+          </div>
+        </Animate.Slide>
+        <PaginationButtons
+          isDisableNext={answer === undefined}
+          onClickPrev={handlePrev}
+          onClickNext={handleNext}
+        />
       </QuestionsLayout>
     </ProficiencyLayout>
   );

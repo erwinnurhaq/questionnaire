@@ -1,0 +1,21 @@
+.alignmentLeft {
+  width: 100%;
+  margin-top: 2rem;
+  text-align: left;
+}
+.alignmentRight {
+  width: 100%;
+  margin-top: 2rem;
+  text-align: right;
+}
+.alignmentCenter {
+  width: 100%;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.alignmentLeft button,
+.alignmentRight button,
+.alignmentCenter button {
+  margin: 0.5rem;
+}

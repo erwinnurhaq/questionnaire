@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { IconButton, Form, Input, SelectPicker, Loader, toaster } from 'rsuite';
-import SortDown from '@rsuite/icons/SortDown';
-import SortUp from '@rsuite/icons/SortUp';
+import { Form, Input, SelectPicker, Loader, toaster } from 'rsuite';
 import { useDispatch, useSelector } from 'react-redux';
-import { AnimatePresence, motion } from 'framer-motion';
 
+import { setExpectation1 } from '~/store/slices/expectationSlice';
+import { setBiodata, setBiodataError } from '~/store/slices/biodataSlice';
+import { setCurrentStep, setLatestStep } from '~/store/slices/stepSlice';
 import {
   MAPEL,
   PENGALAMAN_MENGAJAR,
@@ -17,17 +17,20 @@ import {
 import { STEPS } from '~/constants/steps';
 import formatSelectOption from '~/helpers/formatSelectOption';
 import Field from '~/components/Field';
-import { setBiodata, setBiodataError } from '~/store/slices/biodataSlice';
-import { setCurrentStep, setLatestStep } from '~/store/slices/stepSlice';
-import styles from '~/styles/Biodata.module.css';
 import ToastMessage from '~/components/ToastMessage';
+import GradeExpectation from '~/components/GradeExpectation';
+import PaginationButtons from '~/components/PaginationButtons';
+import PageTitle from '~/components/PageTitle';
+import Animate from '~/components/Animate';
+import styles from '~/styles/Biodata.module.css';
 
 export default function Biodata() {
   const router = useRouter();
-  
+
   const dispatch = useDispatch();
   const { latest } = useSelector((state) => state.step);
   const { biodata, biodata_error } = useSelector((state) => state.biodata);
+  const ekspektasiGrade = useSelector((state) => state.expectation.ekspektasi_grade_1);
 
   const [loading, setLoading] = useState(false);
 
@@ -61,124 +64,101 @@ export default function Biodata() {
   }, []); // eslint-disable-line
 
   return (
-    <div className={styles.container}>
+    <div className="confined-container">
       {loading && <Loader backdrop content="loading..." vertical />}
       <Head>
         <title>Biodata | Questionnaire</title>
       </Head>
-      <h2 className={styles.title}>Biodata</h2>
-      <AnimatePresence exitBeforeEnter>
-        <motion.div
-          key={router.route}
-          initial="hidden"
-          animate="enter"
-          exit="exit"
-          variants={{
-            hidden: { opacity: 0 },
-            enter: { opacity: 1 },
-            exit: { opacity: 0 },
-          }}
-          transition={{ duration: 0.4, type: 'tween', ease: 'easeOut' }}
+      <Animate.Fade keyMotion={router.route}>
+        <Form
+          id="biodata-form"
+          className={styles.form}
+          fluid
+          model={MODEL_BIODATA}
+          formValue={biodata}
+          onChange={(values) => dispatch(setBiodata(values))}
+          onCheck={(error) => dispatch(setBiodataError(error))}
+          onSubmit={handleSubmit}
         >
-          <Form
-            className={styles.form}
-            fluid
-            model={MODEL_BIODATA}
-            formValue={biodata}
-            onChange={(values) => dispatch(setBiodata(values))}
-            onCheck={(error) => dispatch(setBiodataError(error))}
-            onSubmit={handleSubmit}
-          >
-            <Field
-              name="nama"
-              label="Nama"
-              placeholder="Masukkan nama anda"
-              accepter={Input}
-              error={biodata_error.nama}
-              required
-            />
-            <Field
-              name="email"
-              label="Email"
-              placeholder="Masukkan email anda"
-              type="email"
-              accepter={Input}
-              error={biodata_error.email}
-              required
-            />
-            <Field
-              name="nomor_telepon"
-              label="No. Telepon"
-              placeholder="08xxx..."
-              type="number"
-              accepter={Input}
-              error={biodata_error.nomor_telepon}
-              required
-            />
-            <Field
-              name="tingkat_sekolah"
-              label="Tingkat Sekolah"
-              placeholder="Pilih salah satu"
-              accepter={SelectPicker}
-              error={biodata_error.tingkat_sekolah}
-              data={formatSelectOption(TINGKAT_SEKOLAH)}
-              searchable={false}
-              block
-              required
-            />
-            <Field
-              name="mata_pelajaran"
-              label="Mata Pelajaran"
-              placeholder="Pilih salah satu"
-              accepter={SelectPicker}
-              error={biodata_error.mata_pelajaran}
-              data={formatSelectOption(MAPEL)}
-              searchable={false}
-              block
-              required
-            />
-            <Field
-              name="pengalaman_mengajar"
-              label="Pengalaman Mengajar"
-              placeholder="Pilih salah satu"
-              accepter={SelectPicker}
-              error={biodata_error.pengalaman_mengajar}
-              data={formatSelectOption(PENGALAMAN_MENGAJAR)}
-              searchable={false}
-              block
-              required
-            />
-            <Field
-              name="pengalaman_digital"
-              label="Pengalaman Menggunakan Teknologi Digital"
-              placeholder="Pilih salah satu"
-              accepter={SelectPicker}
-              error={biodata_error.pengalaman_digital}
-              data={formatSelectOption(PENGALAMAN_DIGITAL)}
-              searchable={false}
-              block
-              required
-            />
-            <Form.Group className={styles.button}>
-              <IconButton
-                className="pagination-button"
-                title="Kembali"
-                icon={<SortUp />}
-                circle
-                onClick={handlePrev}
-              />
-              <IconButton
-                className="pagination-button"
-                title="Berikutnya"
-                icon={<SortDown />}
-                type="submit"
-                appearance="primary"
-                circle
-              />
-            </Form.Group>
-          </Form>
-        </motion.div>
-      </AnimatePresence>
+          <PageTitle>Biodata</PageTitle>
+          <Field
+            name="nama"
+            label="Nama"
+            placeholder="Masukkan nama anda"
+            accepter={Input}
+            error={biodata_error.nama}
+            required
+          />
+          <Field
+            name="email"
+            label="Email"
+            placeholder="Masukkan email anda"
+            type="email"
+            accepter={Input}
+            error={biodata_error.email}
+            required
+          />
+          <Field
+            name="nomor_telepon"
+            label="No. Telepon"
+            placeholder="08xxx..."
+            type="number"
+            accepter={Input}
+            error={biodata_error.nomor_telepon}
+            required
+          />
+          <Field
+            name="tingkat_sekolah"
+            label="Tingkat Sekolah"
+            placeholder="Pilih salah satu"
+            accepter={SelectPicker}
+            error={biodata_error.tingkat_sekolah}
+            data={formatSelectOption(TINGKAT_SEKOLAH)}
+            searchable={false}
+            block
+            required
+          />
+          <Field
+            name="mata_pelajaran"
+            label="Mata Pelajaran"
+            placeholder="Pilih salah satu"
+            accepter={SelectPicker}
+            error={biodata_error.mata_pelajaran}
+            data={formatSelectOption(MAPEL)}
+            searchable={false}
+            block
+            required
+          />
+          <Field
+            name="pengalaman_mengajar"
+            label="Pengalaman Mengajar"
+            placeholder="Pilih salah satu"
+            accepter={SelectPicker}
+            error={biodata_error.pengalaman_mengajar}
+            data={formatSelectOption(PENGALAMAN_MENGAJAR)}
+            searchable={false}
+            block
+            required
+          />
+          <Field
+            name="pengalaman_digital"
+            label="Pengalaman Menggunakan Teknologi Digital"
+            placeholder="Pilih salah satu"
+            accepter={SelectPicker}
+            error={biodata_error.pengalaman_digital}
+            data={formatSelectOption(PENGALAMAN_DIGITAL)}
+            searchable={false}
+            block
+            required
+          />
+        </Form>
+        <GradeExpectation
+          sublabel="Sebelum memulai asesmen ini, bagaimana Anda mendeskripsikan kompetensi / kecakapan digital Anda saat ini?"
+          value={ekspektasiGrade}
+          onChange={(value) => dispatch(setExpectation1(value))}
+        />
+        <PaginationButtons alignment="center" onClickPrev={handlePrev} isSubmit form="biodata-form" />
+      </Animate.Fade>
     </div>
   );
 }

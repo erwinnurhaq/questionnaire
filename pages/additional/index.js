@@ -3,24 +3,27 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button, Loader, Radio, toaster } from 'rsuite';
-import { AnimatePresence, motion } from 'framer-motion';
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 import { setExpectation2 } from '~/store/slices/expectationSlice';
 import { setAdditionalAnswers } from '~/store/slices/additionalSlice';
 import { setScores } from '~/store/slices/proficiencySlice';
 import { setCurrentStep, setLatestStep } from '~/store/slices/stepSlice';
 
+import { MODAL } from '~/constants/modals';
+import { STEPS } from '~/constants/steps';
+import { questions, additionals } from '~/constants/questions';
+import formatPayloadSubmit from '~/helpers/formatPayloadSubmit';
 import ConfirmSubmit from '~/components/ConfirmSubmit';
 import GradeExpectation from '~/components/GradeExpectation';
 import ToastMessage from '~/components/ToastMessage';
-import { questions, additionals } from '~/constants/questions';
-import { MODAL } from '~/constants/modals';
-import { STEPS } from '~/constants/steps';
-import formatPayloadSubmit from '~/helpers/formatPayloadSubmit';
+import Animate from '~/components/Animate';
+import PaginationButtons from '~/components/PaginationButtons';
 import styles from '~/styles/Additional.module.css';
 
 export default function Additional() {
   const router = useRouter();
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   const lastProficiency = questions[questions.length - 1];
 
@@ -63,9 +66,17 @@ export default function Additional() {
   }
 
   async function handleSubmit() {
+    if (!executeRecaptcha) {
+      toaster.push(ToastMessage({ message: 'Execute recaptcha not yet available' }));
+      return;
+    }
+
     setModal('');
     setLoading(true);
     try {
+      // execute recaptcha
+      const token = await executeRecaptcha('submit-final');
+
       // check existing user again
       let response = await fetch(`/api/check_user_exist?email=${biodata.email}`);
       let result = await response.json();
@@ -74,7 +85,13 @@ export default function Additional() {
       }
 
       // submit answers
-      const data = formatPayloadSubmit({ biodata, expectation, proficienciesAnswers, additionalsAnswers });
+      const data = formatPayloadSubmit({
+        biodata,
+        expectation,
+        proficienciesAnswers,
+        additionalsAnswers,
+        token,
+      });
       response = await fetch('/api/questionnaire/send', {
         headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
         method: 'POST',
@@ -102,76 +119,57 @@ export default function Additional() {
   }, []); // eslint-disable-line
 
   return (
-    <div className={styles.container}>
+    <div className="confined-container">
       {loading && <Loader backdrop content="loading..." vertical />}
       <Head>
         <title>Additional | Questionnaire</title>
       </Head>
-      <AnimatePresence exitBeforeEnter>
-        <motion.div
-          key={router.asPath}
-          initial="hidden"
-          animate="enter"
-          exit="exit"
-          variants={{
-            hidden: { opacity: 0, x: 0, y: -100 },
-            enter: { opacity: 1, x: 0, y: 0 },
-            exit: { opacity: 0, x: 0, y: 50 },
-          }}
-          transition={{ duration: 0.4, type: 'tween', ease: 'easeOut' }}
-        >
-          {additionals.map((additional) => (
-            <div key={additional.id} className={styles.additionalcontainer}>
-              <h4 className={styles.subtitle}>
-                {additional.no}. {additional.name}
-              </h4>
-              <div className={styles.questionscontainer}>
-                {additional.questions.map((question) => (
-                  <div key={question.id}>
-                    <p>
-                      <b>
-                        {additional.no}.{question.no}.
-                      </b>{' '}
-                      <span dangerouslySetInnerHTML={{ __html: question.question }}></span>
-                    </p>
-                    <div className={styles.questionradiowrapper}>
-                      {additional.choices.map((choice) => (
-                        <Radio
-                          key={choice.id}
-                          className={styles.questionradio}
-                          value={choice.value}
-                          checked={handleIsRadioChecked(additional.no, question.no, choice.value)}
-                          onClick={() => handleCheckRadio(additional.no, question.no, choice.value)}
-                        >
-                          <span dangerouslySetInnerHTML={{ __html: choice.text }}></span>
-                        </Radio>
-                      ))}
-                    </div>
+      <Animate.Fade keyMotion={router.asPath}>
+        {additionals.map((additional) => (
+          <div key={additional.id} className={styles.additionalcontainer}>
+            <h4 className={styles.subtitle}>
+              {additional.no}. {additional.name}
+            </h4>
+            <div className={styles.questionscontainer}>
+              {additional.questions.map((question) => (
+                <div key={question.id}>
+                  <p>
+                    <b>
+                      {additional.no}.{question.no}.
+                    </b>{' '}
+                    <span dangerouslySetInnerHTML={{ __html: question.question }}></span>
+                  </p>
+                  <div className={styles.questionradiowrapper}>
+                    {additional.choices.map((choice) => (
+                      <Radio
+                        key={choice.id}
+                        className={styles.questionradio}
+                        value={choice.value}
+                        checked={handleIsRadioChecked(additional.no, question.no, choice.value)}
+                        onFocus={() => handleCheckRadio(additional.no, question.no, choice.value)}
+                      >
+                        <span dangerouslySetInnerHTML={{ __html: choice.text }}></span>
+                      </Radio>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-          ))}
-          <GradeExpectation
-            sublabel="Setelah mengisi asesmen ini, bagaimana Anda mendeskripsikan kompetensi / kecakapan digital Anda saat ini?"
-            value={expectation.ekspektasi_grade_2}
-            onChange={(value) => dispatch(setExpectation2(value))}
-          />
-          <div className={styles.buttonwrapper}>
-            <Button className="pagination-button" onClick={handlePrev}>
-              Kembali
-            </Button>
-            <Button
-              className="pagination-button"
-              appearance="primary"
-              disabled={handleIsSubmitDisabled()}
-              onClick={() => setModal(MODAL.CONFIRM_SUBMIT)}
-            >
-              Selesai dan Lihat Hasil
-            </Button>
           </div>
-        </motion.div>
-      </AnimatePresence>
+        ))}
+        <GradeExpectation
+          sublabel="Setelah mengisi asesmen ini, bagaimana Anda mendeskripsikan kompetensi / kecakapan digital Anda saat ini?"
+          value={expectation.ekspektasi_grade_2}
+          onChange={(value) => dispatch(setExpectation2(value))}
+        />
+        <PaginationButtons
+          alignment="center"
+          isDisableNext={handleIsSubmitDisabled()}
+          onClickPrev={handlePrev}
+          onClickNext={() => setModal(MODAL.CONFIRM_SUBMIT)}
+          options={{ labelNext: 'Selesai dan Lihat Hasil' }}
+        />
+      </Animate.Fade>
       <ConfirmSubmit
         open={modal === MODAL.CONFIRM_SUBMIT}
         handleSubmit={handleSubmit}
