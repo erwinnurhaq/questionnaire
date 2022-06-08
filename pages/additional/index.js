@@ -75,7 +75,7 @@ export default function Additional() {
     setLoading(true);
     try {
       // execute recaptcha
-      const token = await executeRecaptcha('submit-final');
+      const token = await executeRecaptcha('questionnaire_submit');
 
       // check existing user again
       let response = await fetch(`/api/check_user_exist?email=${biodata.email}`);
