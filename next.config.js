@@ -1,10 +1,14 @@
 const ContentSecurityPolicy = `
   default-src 'self';
-  frame-src 'self' https://www.google.com/recaptcha/;
   script-src 'self' https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/;
   style-src 'self' fonts.googleapis.com 'unsafe-inline';
   font-src 'self' fonts.googleapis.com fonts.gstatic.com;  
   img-src 'self' data:;
+  connect-src 'self';
+  form-action 'self';
+  frame-src 'self' https://www.google.com/recaptcha/;
+  frame-ancestors 'none';
+  manifest-src 'self';
 `
 
 const securityHeaders = [
