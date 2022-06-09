@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 
 import { setCurrentStep, setLatestStep } from '~/store/slices/stepSlice';
 import { STEPS } from '~/constants/steps';
-import Instruction from '~/components/pages/Home/Instruction';
+import Introduction from '~/components/pages/Home/Introduction';
 import PaginationButtons from '~/components/PaginationButtons';
 import Animate from '~/components/Animate';
 import PageTitle from '~/components/PageTitle';
@@ -25,8 +25,8 @@ export default function Home() {
         <title>Introduction | Questionnaire</title>
       </Head>
       <Animate.Fade keyMotion={router.route}>
-        <PageTitle>Assessment Kompetensi Digital</PageTitle>
-        <Instruction />
+        <PageTitle alignment="center">ASESMEN KOMPETENSI DIGITAL</PageTitle>
+        <Introduction />
         <PaginationButtons isShowPrev={false} onClickNext={handleNext} />
       </Animate.Fade>
     </div>

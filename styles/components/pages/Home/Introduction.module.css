@@ -1,0 +1,37 @@
+.introduction {
+  padding: 0 2rem;
+}
+
+.introduction h4 {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.introduction p,
+.introduction ol li {
+  line-height: 1.5rem;
+  text-align: justify;
+}
+
+.introduction ol {
+  padding: 1rem 0 1rem 1rem;
+}
+
+.introduction ol li {
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.image {
+  padding: 1rem 0;
+}
+
+.image, .image > p {
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .introduction {
+    padding: 0 0;
+  }
+}
