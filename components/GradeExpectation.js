@@ -6,7 +6,7 @@ import styles from '~/styles/components/GradeExpectation.module.css';
 export default function GradeExpectation({ sublabel, value, onChange }) {
   return (
     <div className={styles.expectationContainer}>
-      <h5 className={styles.expectationtitle}>Ekspektasi Grade</h5>
+      <h5 className={styles.expectationtitle}>Tingkat Kecakapan</h5>
       <p  className={styles.expectationsubtitle}>{sublabel}</p>
       <div className={styles.expectationwrapper}>
         {GRADES.map((grade) => (
