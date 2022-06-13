@@ -2,14 +2,35 @@
   width: 100%;
   position: absolute;
   bottom: 1rem;
-  right: 5rem;
+  /* right: 5rem; */
   color: var(--light-gray-text-1);
   font-size: 0.75rem;
   text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: calc(100% - 26rem);
 }
 
 .footer p {
   margin: 0;
+}
+
+.footer .supporter {
+  text-align: left;
+}
+
+.footer .supporter p {
+  padding-bottom: 0.5rem;
+}
+
+.footer .supporter .supporterImages {
+  height: 40px;
+  display: flex;
+}
+
+.footer .supporter .supporterImages > div{
+  margin: 0 0.5rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -20,5 +41,12 @@
     color: var(--light-gray-text-1);
     font-size: 0.75rem;
     text-align: center;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 4rem);
+  }
+  .footer .supporter {
+    text-align: center;
+    padding-bottom: 1rem;
   }
 }

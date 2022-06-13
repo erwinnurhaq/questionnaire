@@ -11,7 +11,7 @@
   height: 100%;
   min-height: 100vh;
   position: relative;
-  padding: 2rem 2rem 10rem 20rem;
+  padding: 2rem 2rem 14rem 20rem;
 }
 
 .drawertrigger {
@@ -27,7 +27,7 @@
 
 @media screen and (max-width: 768px) {
   .content {
-    padding: 4rem 2rem 10rem 2rem;
+    padding: 4rem 2rem 14rem 2rem;
   }
   .drawertrigger {
     display: block;
