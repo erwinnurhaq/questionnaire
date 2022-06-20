@@ -66,6 +66,19 @@ export default function Result() {
             </div>
           ))}
         </div>
+        <div className={styles.buttoncontainer}>
+          <IconButton
+            as="a"
+            size="lg"
+            href={LINK.GFORM}
+            target="_blank"
+            icon={<TextImageIcon />}
+            placement="right"
+            appearance="primary"
+          >
+            Lanjut ke Form Berikutnya
+          </IconButton>
+        </div>
         <div className={styles.thankyou}>
           <p>
             Terima kasih telah mengisi Asesmen Kompetensi Digital ini, Anda dapat mencari informasi lebih
@@ -73,32 +86,20 @@ export default function Result() {
           </p>
           <Message className={styles.note} type="info">
             <p>
-              <i>note:</i> Panduan menggunakan bahasa inggris, pastikan Anda memiliki kemampuan yang cukup
+              <i>Note:</i> Panduan menggunakan bahasa inggris, pastikan Anda memiliki kemampuan yang cukup
               agar dapat memahami secara utuh tentang Kompetensi Digital untuk Guru.
             </p>
-            <IconButton
-              as="a"
-              href={LINK.DIGCOMP}
-              target="_blank"
-              icon={<FileDownloadIcon />}
-              placement="right"
-              appearance="ghost"
-              size='sm'
-            >
-              Download Panduan (PDF)
-            </IconButton>
           </Message>
-        </div>
-        <div className={styles.buttoncontainer}>
           <IconButton
             as="a"
-            href={LINK.GFORM}
+            href={LINK.DIGCOMP}
             target="_blank"
-            icon={<TextImageIcon />}
+            icon={<FileDownloadIcon />}
             placement="right"
-            appearance="primary"
+            appearance="ghost"
+            size="sm"
           >
-            Lanjut ke Form Selanjutnya
+            Download Panduan (PDF)
           </IconButton>
         </div>
       </Animate.Fade>

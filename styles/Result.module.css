@@ -18,6 +18,10 @@
   margin: 0 auto;
 }
 
+.thankyou {
+  text-align: center;
+}
+
 .resultgraph {
   margin: 2rem 0;
   padding: 1rem;
@@ -35,6 +39,7 @@
 
 .resultgraphitemtext {
   margin: 1rem 0 0.5rem 0;
+  text-align: center;
 }
 
 .note {
@@ -55,9 +60,22 @@
 }
 
 .buttoncontainer {
-  margin-top: 2rem;
+  margin: 1rem 0 3rem 0;
   display: grid;
   place-content: center;
+}
+
+.buttoncontainer a {
+  width: 500px;
+  height: 50px;
+  font-size: 1.2rem;
+  display: grid;
+  place-content: center;
+}
+
+.buttoncontainer a svg {
+  width: 50px !important;
+  height: 50px !important;
 }
 
 @media screen and (max-width: 900px) {
