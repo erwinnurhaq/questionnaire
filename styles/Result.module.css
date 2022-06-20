@@ -18,6 +18,10 @@
   margin: 0 auto;
 }
 
+.resultexplanation {
+  text-align: justify;
+}
+
 .thankyou {
   text-align: center;
 }
