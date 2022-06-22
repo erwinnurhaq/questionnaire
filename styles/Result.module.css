@@ -51,44 +51,22 @@
   font-size: 0.75rem;
 }
 
-.note > div > div > div {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-template-rows: 1fr;
-}
-
-.note > div > div > div > a {
-  width: 14rem;
-  height: 2rem;
-  margin: 0.5rem;
-}
-
 .buttoncontainer {
   margin: 1rem 0 3rem 0;
-  display: grid;
-  place-content: center;
+  text-align: center;
 }
 
 .buttoncontainer a {
-  width: 500px;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
   height: 50px;
   font-size: 1.2rem;
-  display: grid;
-  place-content: center;
+  line-height: 1.8rem !important;
 }
 
 .buttoncontainer a svg {
   width: 50px !important;
   height: 50px !important;
-}
-
-@media screen and (max-width: 900px) {
-  .note > div > div > div {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    text-align: center;
-  }
-  .note > div > div > div > a {
-    margin: 0.5rem auto;
-  }
 }
