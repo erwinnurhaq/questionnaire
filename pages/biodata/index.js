@@ -41,6 +41,11 @@ export default function Biodata() {
   async function handleSubmit(isValid, ev) {
     ev.preventDefault();
     if (!isValid) return;
+    if (!ekspektasiGrade) {
+      toaster.push(ToastMessage({ message: 'Tolong isi ekspektasi grade anda.' }));
+      return;
+    }
+
     setLoading(true);
     try {
       const response = await fetch(`/api/check_user_exist?email=${biodata.email}`);
