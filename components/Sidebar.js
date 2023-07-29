@@ -4,10 +4,8 @@ import Image from 'next/image';
 import { IconButton, Steps } from 'rsuite';
 import ReloadIcon from '@rsuite/icons/Reload';
 
-import { persistor } from '~/store';
 import { setCurrentStep } from '~/store/slices/stepSlice';
 import { STEPS } from '~/constants/steps';
-import { STORAGE_KEY } from '~/constants/storageKeys';
 import styles from '~/styles/components/Sidebar.module.css';
 import StepIcons from './StepIcons';
 
@@ -17,8 +15,6 @@ export default function Sidebar() {
   const { latest } = useSelector((state) => state.step);
 
   async function handleResetForm() {
-    await persistor.purge();
-    localStorage.removeItem(`persist:${STORAGE_KEY}`)
     window.location.replace('/');
   }
 

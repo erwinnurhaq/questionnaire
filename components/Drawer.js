@@ -4,10 +4,8 @@ import Image from 'next/image';
 import { IconButton, Steps, Drawer as DrawerRSuite } from 'rsuite';
 import ReloadIcon from '@rsuite/icons/Reload';
 
-import { persistor } from '~/store';
 import { setCurrentStep } from '~/store/slices/stepSlice';
 import { STEPS } from '~/constants/steps';
-import { STORAGE_KEY } from '~/constants/storageKeys';
 import styles from '~/styles/components/Drawer.module.css';
 import StepIcons from './StepIcons';
 
@@ -17,11 +15,9 @@ export default function Drawer({ isOpenDrawer, setIsOpenDrawer }) {
   const { latest } = useSelector((state) => state.step);
 
   async function handleResetForm() {
-    await persistor.purge();
-    localStorage.removeItem(`persist:${STORAGE_KEY}`)
     window.location.replace('/');
   }
-  
+
   function handleOnClickStep(step) {
     if (step.step <= latest.step) {
       dispatch(setCurrentStep(step));

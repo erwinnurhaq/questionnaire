@@ -1,8 +1,5 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import { persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
 
-import { STORAGE_KEY } from '~/constants/storageKeys';
 import step from './slices/stepSlice';
 import expectation from './slices/expectationSlice';
 import biodata from './slices/biodataSlice';
@@ -14,15 +11,7 @@ const rootReducer = combineReducers({
   expectation,
   biodata,
   proficiency,
-  additional
+  additional,
 });
 
-const persistConfig = {
-  key: STORAGE_KEY,
-  version: 1,
-  storage,
-};
-
-const persistedReducer = persistReducer(persistConfig, rootReducer);
-
-export default persistedReducer;
+export default rootReducer;
