@@ -9,7 +9,7 @@ export default async function handler(req, res) {
 
     const { email } = req.query;
     const result = await excuteQuery({
-      query: 'SELECT * FROM users WHERE email = ?',
+      query: 'SELECT * FROM participants WHERE email = ?',
       values: [email],
     });
     if (result.error) {
