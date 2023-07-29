@@ -19,7 +19,7 @@ export default async function handler(req, res) {
       answers_part_6,
       answers_misc_1,
       answers_misc_2,
-      token
+      token,
     } = req.body;
 
     if (!token) {
@@ -36,30 +36,30 @@ export default async function handler(req, res) {
     });
 
     const currentTime = moment().utc();
-    const timeUTC = currentTime.format('YYYY-MM-DD HH:mm:ss');
-    const timeLocal7 = moment(currentTime).tz('Asia/Jakarta').format('YYYY-MM-DD HH:mm:ss');
+    const created_at = currentTime.format('YYYY-MM-DD HH:mm:ss');
+    const created_at_local = moment(currentTime).tz('Asia/Jakarta').format('YYYY-MM-DD HH:mm:ss');
 
     const insertedUser = await excuteQuery({
-      query: 'INSERT INTO users SET ?',
-      values: { ...user, created_at: timeUTC, created_at_local: timeLocal7 },
+      query: 'INSERT INTO participants SET ?',
+      values: { ...user, created_at, created_at_local },
     });
 
-    const user_id = insertedUser.insertId;
+    const participant_id = insertedUser.insertId;
     const result = await db
       .transaction()
-      .query('INSERT INTO answers_part_1 SET ?', { user_id, created_at: timeUTC, ...answers_part_1 })
-      .query('INSERT INTO answers_part_2 SET ?', { user_id, created_at: timeUTC, ...answers_part_2 })
-      .query('INSERT INTO answers_part_3 SET ?', { user_id, created_at: timeUTC, ...answers_part_3 })
-      .query('INSERT INTO answers_part_4 SET ?', { user_id, created_at: timeUTC, ...answers_part_4 })
-      .query('INSERT INTO answers_part_5 SET ?', { user_id, created_at: timeUTC, ...answers_part_5 })
-      .query('INSERT INTO answers_part_6 SET ?', { user_id, created_at: timeUTC, ...answers_part_6 })
-      .query('INSERT INTO answers_misc_1 SET ?', { user_id, created_at: timeUTC, ...answers_misc_1 })
-      .query('INSERT INTO answers_misc_2 SET ?', { user_id, created_at: timeUTC, ...answers_misc_2 })
-      .query('INSERT INTO scores SET ?', { user_id, created_at: timeUTC, ...scores })
+      .query('INSERT INTO answers_part_1 SET ?', { participant_id, created_at, ...answers_part_1 })
+      .query('INSERT INTO answers_part_2 SET ?', { participant_id, created_at, ...answers_part_2 })
+      .query('INSERT INTO answers_part_3 SET ?', { participant_id, created_at, ...answers_part_3 })
+      .query('INSERT INTO answers_part_4 SET ?', { participant_id, created_at, ...answers_part_4 })
+      .query('INSERT INTO answers_part_5 SET ?', { participant_id, created_at, ...answers_part_5 })
+      .query('INSERT INTO answers_part_6 SET ?', { participant_id, created_at, ...answers_part_6 })
+      .query('INSERT INTO answers_misc_1 SET ?', { participant_id, created_at, ...answers_misc_1 })
+      .query('INSERT INTO answers_misc_2 SET ?', { participant_id, created_at, ...answers_misc_2 })
+      .query('INSERT INTO scores SET ?', { participant_id, created_at, ...scores })
       .rollback(() =>
         excuteQuery({
-          query: 'DELETE FROM users WHERE id = ?',
-          values: [user_id],
+          query: 'DELETE FROM participants WHERE id = ?',
+          values: [participant_id],
         })
       )
       .commit();
