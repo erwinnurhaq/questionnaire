@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "1.8.1",
+    "@vercel/analytics": "1.0.1",
     "framer-motion": "6.3.4",
     "moment-timezone": "0.5.34",
     "next": "12.1.5",

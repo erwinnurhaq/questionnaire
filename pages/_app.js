@@ -1,9 +1,10 @@
-import { useEffect } from 'react';
+import { Fragment, useEffect } from 'react';
 import Head from 'next/head';
 import Router from 'next/router';
 import { Provider } from 'react-redux';
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import { PersistGate } from 'redux-persist/integration/react';
+import { Analytics } from '@vercel/analytics/react';
 import NProgress from 'nprogress';
 import 'rsuite/dist/rsuite.min.css';
 import 'nprogress/nprogress.css';
@@ -32,18 +33,21 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}>
-      <Head>
-        <title>Questionnaire</title>
-        <meta name="description" content="Questionnaire app" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-          <MainLayout>{getLayout(<Component {...pageProps} />)}</MainLayout>
-        </PersistGate>
-      </Provider>
-    </GoogleReCaptchaProvider>
+    <Fragment>
+      <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}>
+        <Head>
+          <title>Questionnaire</title>
+          <meta name="description" content="Questionnaire app" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <Provider store={store}>
+          <PersistGate loading={null} persistor={persistor}>
+            <MainLayout>{getLayout(<Component {...pageProps} />)}</MainLayout>
+          </PersistGate>
+        </Provider>
+      </GoogleReCaptchaProvider>
+      <Analytics />
+    </Fragment>
   );
 }
 
