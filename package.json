@@ -20,7 +20,7 @@
     "react-redux": "8.0.2",
     "redux-persist": "6.0.0",
     "rsuite": "5.13.0",
-    "serverless-mysql": "1.5.4"
+    "serverless-mysql": "1.5.5"
   },
   "devDependencies": {
     "eslint": "8.13.0",
