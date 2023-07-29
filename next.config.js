@@ -1,6 +1,6 @@
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/${
+  script-src 'self' *.vercel-scripts.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/${
     process.env.NODE_ENV === 'development' ? ` 'unsafe-eval'` : ''
   };
   style-src 'self' fonts.googleapis.com 'unsafe-inline';
